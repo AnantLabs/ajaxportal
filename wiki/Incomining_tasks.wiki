@@ -1,5 +1,0 @@
-Incomining tasks:
-  * support timer for ajax4all
-  * new theme for static version
-  * Seam implementation for *Personalization Service*
-  * DWR implementation for *Personalization Service*
