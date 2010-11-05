@@ -1,0 +1,12 @@
+#labels Featured
+
+= Coollaboration =
+
+= New members wanted: =
+
+    # <b>Designers for new portlet and container/region themes (hot position)</b>
+    # Java developers
+    # .NET developer for component development
+    # PHP developer for component development
+    # <b>Technical writers (hot position)</b>
+    # QA 
