@@ -1,0 +1,25 @@
+#labels Featured
+= About me =
+
+
+== General ==
+
+I'm a lead software engineer in SaM-solutions company.
+
+== My books ==
+
+<b>[http://www.asenevtsi.com/index.php?p=book&book=46 CSS3 в примери + CD.]</b>
+336 стр.; формат 165х235; мека подвързия; 2009; Асеневци (Болгария).
+
+<b>[http://www.williamspublishing.com/Books/978-5-8459-1337-1.html CSS 3 в примерах.]</b>
+352 стр., с ил.; ISBN 978-5-8459-1337-1; формат 70x100/16; мягкий переплет; CD-ROM; серия Профессиональная работа; 2007, 4 кв.; Вильямс. 
+
+<b>[http://www.williamspublishing.com/Books/978-5-8459-1192-6.html HTML и CSS в примерах, типовых решениях и задачах.]</b>
+416 стр., с ил.; ISBN 978-5-8459-1192-6; формат 70x100/16; мягкий переплет; CD-ROM; серия Профессиональная работа; 2007, 1 кв.; Вильямс. 
+
+<b>[http://www.williamspublishing.com/Books/5-8459-1029-3.html JavaScript в примерах, типовых решениях и задачах.]</b>
+592 стр., с ил.; ISBN 5-8459-1029-3; формат 70x100/16; CD-ROM; серия Профессиональная работа; 2006; Вильямс.
+
+== Contacts ==
+
+<b>My E-Mail:</b> s-sokolov@tut.by.
