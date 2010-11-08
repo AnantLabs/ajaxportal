@@ -4,6 +4,7 @@
 
 == General ==
 
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/sergei_sokolov.jpg">
 I'm a lead software engineer in SaM-solutions company.
 
 == My books ==
