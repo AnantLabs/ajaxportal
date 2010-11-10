@@ -5,25 +5,15 @@
 == General ==
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/sergei_sokolov.jpg">
-I'm a lead software engineer in SaM-solutions company.
+
+I'm a lead software engineer with 18 years of development experience. My specialty is database and web development for business applications. Last 6 years I've been concentrated on the development under Java platform, though I had good experience C, C++, C#, VB (VBScript), Perl and Flash (action script and animation) development. I had system architect role on my two last projects. I had deep experience in architecture documentation development. 
 
 == My books ==
 
-<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_css3_bolgaria_book.jpg">
-<b>[http://www.asenevtsi.com/index.php?p=book&book=46 CSS3 в примери + CD.]</b>
-336 стр.; формат 165х235; мека подвързия; 2009; Асеневци (Болгария).
+I've already published 4 books:
+||<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_css3_bolgaria_book.jpg"><b>[http://www.asenevtsi.com/index.php?p=book&book=46 CSS3 в примери + CD.]</b>336 pages, 2009, Asenevtsi (Bulgaria).||<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_css3_book.jpg"><b>[http://www.williamspublishing.com/Books/978-5-8459-1337-1.html CSS 3 в примерах.]</b>352 pages, 2007, Williams (Russia).||<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_html_and_css_book.jpg"><b>[http://www.williamspublishing.com/Books/978-5-8459-1192-6.html HTML и CSS в примерах, типовых решениях и задачах.]</b>416 pages, 2007, Williams (Russia).|| <img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_javascript_book.jpg"><b>[http://www.williamspublishing.com/Books/5-8459-1029-3.html JavaScript в примерах, типовых решениях и задачах.]</b>592 pages, 2006, Williams (Russia).||
 
-<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_css3_book.jpg">
-<b>[http://www.williamspublishing.com/Books/978-5-8459-1337-1.html CSS 3 в примерах.]</b>
-352 стр., с ил.; ISBN 978-5-8459-1337-1; формат 70x100/16; мягкий переплет; CD-ROM; серия Профессиональная работа; 2007, 4 кв.; Вильямс. 
-
-<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_html_and_css_book.jpg">
-<b>[http://www.williamspublishing.com/Books/978-5-8459-1192-6.html HTML и CSS в примерах, типовых решениях и задачах.]</b>
-416 стр., с ил.; ISBN 978-5-8459-1192-6; формат 70x100/16; мягкий переплет; CD-ROM; серия Профессиональная работа; 2007, 1 кв.; Вильямс. 
-
-<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_javascript_book.jpg">
-<b>[http://www.williamspublishing.com/Books/5-8459-1029-3.html JavaScript в примерах, типовых решениях и задачах.]</b>
-592 стр., с ил.; ISBN 5-8459-1029-3; формат 70x100/16; CD-ROM; серия Профессиональная работа; 2006; Вильямс.
+You can ask me Why didn't I publish a new book in this year? The reason is Ajax Portal...
 
 == Contacts ==
 
