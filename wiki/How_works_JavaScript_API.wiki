@@ -1,3 +1,4 @@
+#labels Featured
 <h1>How works JavaScript API in Ajax Portal</h1>
 
 Portal page defines the layout and position of each portlets. Each portlet has portlet header and portlet content. Portlet header contains icon, portlet title and behavior buttons. Portlet content is a wrapper of real content of the portlet which is downloaded from portlet server. Portlets defines by <B>DIV</b> tag.
