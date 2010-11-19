@@ -97,3 +97,30 @@ For IE browser we have issue with Submit button, because it's not call <b>submit
             }
         }
 }}}
+
+<h3>Transformation of the script and style links</h3>
+
+All links of scripts and style will be moved from source of portlets in the header of the portal page. The link URLs will be transform in absolute URLs. The sources of the scripts and styles will be moved in header of the portal page.
+
+Example of portlet (see script and style declarations):
+
+{{{
+<html>
+<head>
+    <title>Examples</title>
+    <link rel="stylesheet" type="text/css" href="styles/common.css"/>
+    <!--[if lte IE 6]>
+        <link href="ie.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <style type="text/css">
+        ...
+    </style>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript">
+        ...  
+    </script>
+</head>
+<body>
+    ...
+}}}
+
