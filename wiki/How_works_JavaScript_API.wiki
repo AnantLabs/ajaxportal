@@ -1,0 +1,98 @@
+<h1>How works JavaScript API in Ajax Portal</h1>
+
+Portal page defines the layout and position of each portlets. Each portlet has portlet header and portlet content. Portlet header contains icon, portlet title and behavior buttons. Portlet content is a wrapper of real content of the portlet which is downloaded from portlet server. Portlets defines by <B>DIV</b> tag.
+
+Regions help to defined layout of portal page. Region usage gives possibility to provide <b>drag and drop</b> effect for portlets (it's possible to move a portlet between regions in runtime mode. All changes are saved by Personalization Service of Ajax Portal. Regions define by <b>TD</b> tag of HTML table. 
+
+The portal page with one Region and Portlet is presented on the picture 1 (see below).
+
+                               <img src="http://ajaxportal.googlecode.com/svn/trunk/images/model.gif">
+                                                             Picture 1. Model of portal page
+
+The view and HTML code of start page of the MicroServlet demo portlet is presented below:
+
+                               <img src="http://ajaxportal.googlecode.com/svn/trunk/images/transformation_example1.gif">
+                                                             Picture 2. MicroServlet demo example 
+
+
+<h3>Transformation of the links</h3>
+
+Web application has simple link:
+
+{{{
+<a href="demo.action?method=list">Cancel</a>
+}}}
+
+Ajax Portal transform the link in (see example bellow) Ajax Call. The result of Ajax Call after new transformation will be injected in the portlet content wrapper.
+
+{{{
+<a href="javascript:ajaxCall('/microservlet_demo_users/demo.action?method=list', 'post', getCharset(), '', getTarget('obj2'));" id="obj1">Cancel</a>
+}}}
+
+<h3>Transformation of the form submit to Ajax Submit</h3>
+
+Ajax Submit is Ajax pattern. The idea is to polling form control and sending the data on the server by Ajax Call. The right way is to change prototype of all HTML form on portal page by the following script (see ajax4all_submit.js <b>Ajax4All</b> library):
+
+{{{
+    if (typeof HTMLFormElement != "undefined") {
+        HTMLFormElement.prototype.submit = function executeSubmit() {
+            if ((!this.onsubmit) || this.onsubmit(arguments)) {
+                ajaxSubmit(this, getTarget(this));
+            }
+        }
+        HTMLFormElement.prototype.suportedAjaxSubmit = true;
+        HTMLFormElement.prototype.processControlsForAjaxSubmit = false;
+    }
+}}}
+
+For IE6.0 and IE7.0 the change of HTML form behavior is provided by manual definition of submit method:
+
+{{{
+        if (!form.suportedAjaxSubmit) {
+            try {
+                form.submit = function executeSubmit() {
+                    if ((!this.onsubmit) || this.onsubmit()) {
+                        ajaxSubmit(this, getTarget(this));
+                    }
+                }
+                form.suportedAjaxSubmit = true;
+            } catch (e) {}
+        }
+}}}
+
+For IE browser we have issue with Submit button, because it's not call <b>submit</b> method of HTML form. We fix the issue by creation of the copy of the submit button. The copy of  the submit button call <b>submit</b> method of HTML form.
+
+{{{
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].type == "submit") {
+                if (!isIE) {  
+                    elements[i].type = "button";
+                    elements[i].onclick = function() {
+                        this.form.submit();
+                    }
+                } else {
+                    var button = document.createElement("input");
+                    button.setAttribute("type", "button");
+                    if (elements[i].id) {  
+                        button.setAttribute("id", elements[i].id);
+                    } 
+                    if (elements[i].name) { 
+                        button.setAttribute("name", elements[i].name);
+                    }
+                    if (elements[i].style.cssText) { 
+                        button.setAttribute("style", elements[i].style.cssText);
+                    }
+                    if (elements[i].className) {   
+                        button.setAttribute("class", elements[i].className);
+                    }
+                    button.setAttribute("value", elements[i].value);
+                    button.setAttribute("onclick", function () { this.form.submit(); } );
+
+                    var parentNode = elements[i].parentNode;
+                    var oldSubmitButton = elements[i];    
+                    parentNode.insertBefore(button, elements[i]);
+                    parentNode.removeChild(oldSubmitButton);
+                }
+            }
+        }
+}}}
