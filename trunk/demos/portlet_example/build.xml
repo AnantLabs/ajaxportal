@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="decoration" default="build" basedir=".">
+    <property file="${basedir}/../build.properties"/>
+
+
+    <property name="project.name" value="portlet_example-${release}"/>
+
+    <property name="lib.dir" value="${basedir}/../../lib"/>
+    <property name="source.pack.dir" value="${basedir}/../../sources"/>
+
+    <property name="build.dir" value="${basedir}/build"/>
+
+    <property name="src.dir" value="${basedir}/src/java"/>
+    <property name="web.dir" value="${basedir}/src/web"/>
+
+    <property name="source.pack" value="${build.dir}/${project.name}-sources"/>
+
+    <path id="build.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="servlet-api*.jar" />
+            <include name="microservlet*.jar" />
+            <include name="ajaxportal_core*.jar" />
+            <include name="ajaxportal_portlet*.jar" />
+            <include name="portlet_20.jar" />
+        </fileset>
+    </path>
+
+
+    <target name="clean" description="cleanup module">
+        <delete failonerror="false" includeemptydirs="true">
+            <fileset dir="${build.dir}" includes="**"/>
+        </delete>
+    </target>
+
+    <target name="init" depends="clean" description="Build initialization">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+
+    <target name="resource">
+        <delete dir="${build.dir}/${project.name}/WEB-INF/classes"/>
+        <mkdir  dir="${build.dir}/${project.name}/WEB-INF/classes"/>
+
+        <copy todir="${build.dir}/${project.name}/WEB-INF/classes" includeEmptyDirs="no">
+            <fileset dir="${src.dir}">
+                <patternset>
+                    <include name="**/*.conf"/>
+                    <include name="**/*.properties"/>
+                    <include name="**/*.xml"/>
+                </patternset>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="web">
+        <copy todir="${build.dir}/${project.name}/" includeEmptyDirs="no">
+            <fileset dir="${web.dir}">
+               <!--exclude name="WEB-INF/web.xml"/-->
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile" depends="clean,init,resource,web">
+        <javac srcdir="${src.dir}" destdir="${build.dir}/${project.name}/WEB-INF/classes">
+            <classpath refid="build.classpath"/>
+            <exclude name="**/*Test.java"/>
+        </javac>
+    </target>
+
+    <target name="build" depends="compile,source">
+        <mkdir dir="${build.dir}"/>
+        <war basedir="${build.dir}/${project.name}"
+            warfile="${build.dir}/${project.name}.war"
+            webxml="${build.dir}/${project.name}/WEB-INF/web.xml">
+
+            <!--exclude name="WEB-INF/${build.dir}/**"/-->
+            <!--exclude name="WEB-INF/src/**"/-->
+            <exclude name="WEB-INF/web.xml"/>
+        </war>
+
+        <copy file="${build.dir}/${project.name}.war" 
+              todir="${source.pack.dir}" 
+              overwrite="true"/>
+    </target>
+
+    <target name="source">           
+        <copy todir="${source.pack}/src" 
+              overwrite="true">
+            <fileset dir="${src.dir}"/>
+        </copy>
+
+        <copy todir="${source.pack}/web" 
+              overwrite="true">
+            <fileset dir="${web.dir}"/>
+        </copy>
+
+
+        <zip basedir="${source.pack}" 
+             destfile="${source.pack}.zip"/>
+
+        <copy file="${source.pack}.zip" 
+              todir="${source.pack.dir}" 
+              overwrite="true"/>
+    </target>
+
+
+</project>
