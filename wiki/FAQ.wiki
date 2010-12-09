@@ -2,9 +2,9 @@
 <h1>FAQ</h1>
 
 <b>How is Ajax used in Ajax Portal?</b>
-
-The portal page can be loaded without content of the portlet. The content for each portlet is loaded by Ajax Call, when the portal page is loaded completely.
-
+Usually the portal page is loaded without content of the portlet.
+The content for each portlet is loaded by Ajax Call, when the portal page is loaded completely.<br>
+Of course, the portal server can download a content of portlet and put it in the portal page. The portal server puts the high-usage content in the cashe.  
 
 <b>What is the principal difference between Ajax Portal and Classic Portal approaches?</b>
 
