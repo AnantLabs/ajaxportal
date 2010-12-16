@@ -1,6 +1,11 @@
 #labels Featured
 = Portlet API =
 
+Portlet API of Ajax Portal helps to develop Web application which can work as portlet (has portlet descriptor, implement portlet lifecycle, etc.). It means any portlet, which was developed by Portlet API of Ajax Portal, can be used as standard Web application.
+
+Current Portlet API implementation has some difference with JSR 286, but we try to follow JSR 286 in generally. We will propose a new JSR for Java community which will specify  portlets and portals of new generation.
+
+
 ==Portal Core==
 *TBD*
 ==Portlet API: Lifecycle==
