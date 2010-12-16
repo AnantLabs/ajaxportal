@@ -1,5 +1,6 @@
 #labels Featured
 = Portlet API =
+*Ajax Portal team proposes Portlet API which is based on* [http://sokolovbook.narod.ru/en/microservlet.html MicroServlet MVC framework]. 
 
 Portlet API of Ajax Portal helps to develop Web application which can work as portlet (has portlet descriptor, implement portlet lifecycle, etc.). It means any portlet, which was developed by Portlet API of Ajax Portal, can be used as standard Web application.
 
@@ -22,8 +23,6 @@ Invoke application phase supports *execution of portlet code*.
 
 Render response phase support *view generation* which is based on JSP.
 ==Portlet API==
-*Ajax Portal team proposes Portlet API which is based on* [http://sokolovbook.narod.ru/en/microservlet.html MicroServlet MVC framework]. 
-
 Portlet API uses the following annotation which come from MicroServlet API:
     * RenderForm - annotation defines class, scope, name for request form bean,
     * RenderJsp - annotation defines render JSP.
