@@ -1,4 +1,3 @@
-#labels Featured
 = Collaboration with other projects =
 
 == Way #1: You have Portal project ==
