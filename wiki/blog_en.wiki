@@ -2,7 +2,7 @@
 
 *The end of May 2009* - One of the trip in Munic, Germany. Too many free time  in the evenings. I started development of *Decoration module* of Ajax Portal. I generated a concept of region and its 5 states (1.no decoration, 2.window, 3.standard (portlet as window), 4.accordion, 5.tabs). I had the clear undestanding that portlet content is loeaded by Ajax calls.
 
-*Sep. of 2009* - The prototype where the portlet content is loeaded by Ajax calls was created (this concept is used by static version of Ajax Portal on [http://sokolovbook.narod.ru/en/ajaxportal.html NAROD.RU]).
+*Sep. of 2009* - The prototype where the portlet content is loeaded by Ajax calls was created (this concept is used by static version of Ajax Portal on [http://sokolovbook.narod.ru/en/ajaxportal.html NAROD.RU].
 
 *The start of Feb. 2010* - The page about Ajax Portal was created on free hosting provider [http://sokolovbook.narod.ru/en/ajaxportal.html NAROD.RU]).
 
