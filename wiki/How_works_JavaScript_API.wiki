@@ -30,6 +30,10 @@ Ajax Portal transform the link in (see example bellow) Ajax Call. The result of 
 <a href="javascript:ajaxCall('/microservlet_demo_users/demo.action?method=list', 'post', getCharset(), '', getTarget('link1'));" id="link1">Cancel</a>
 }}}
 
+The function getCharset() gets the charset which 1) definded by form (see acceptCharset attribute of the form object) 2) defined by document (see charset attribute of the document object).
+
+The function getTarget gets id of div HTML tag (content of portlet) with "portletContent" value in class attribute.
+
 <h3>Transformation of the form submit to Ajax Submit</h3>
 
 Ajax Submit is Ajax pattern. The idea is to polling form control and sending the data on the server by Ajax Call. The right way is to change prototype of all HTML form on portal page by the following script (see ajax4all_submit.js <b>Ajax4All</b> library):
