@@ -27,7 +27,7 @@ Web application has simple link:
 Ajax Portal transform the link in (see example bellow) Ajax Call. The result of Ajax Call after new transformation will be injected in the portlet content wrapper.
 
 {{{
-<a href="javascript:ajaxCall('/microservlet_demo_users/demo.action?method=list', 'post', getCharset(), '', getTarget('obj2'));" id="obj1">Cancel</a>
+<a href="javascript:ajaxCall('/microservlet_demo_users/demo.action?method=list', 'post', getCharset(), '', getTarget('link1'));" id="link1">Cancel</a>
 }}}
 
 <h3>Transformation of the form submit to Ajax Submit</h3>
@@ -123,4 +123,3 @@ Example of portlet (see script and style declarations):
 <body>
     ...
 }}}
-
