@@ -22,14 +22,14 @@
 
 *27 Aug 2010* - We had a new developer from Indonesia.
 
-*17-19 Sep. 2010* - We paticipated in HackDay #7 in Moscow. The dictionaries for Ajax Portal security profile was mplemented by SoftLocalization subproject.
+*17-19 Sep. 2010* - We paticipated in HackDay #7 in Moscow. The dictionaries for Ajax Portal security profile was mplemented by *SoftLocalization* subproject.
 
-*The end of Sep. 2010* - We had two main terms: Ajax Portal (technology name) and Enterprise Ajax Portal (product name).
+*The end of Sep. 2010* - We had two main terms: *Ajax Portal* (technology name) and *Enterprise Ajax Portal* (product name).
 
 *The start of Oct. 2010* - We added *Security* module as a new component of Ajax Portal.
 
 *22 октября 2010* - We registred for Web-Ready 2010 in St. Petersburg.
 
-*23-24 октября 2010* - We paticipated in HackDay #9 in St. Petersburg. We had two projects: 1) StartUpSecurity (profle of the user which is based on JSF 1.2) 2) Ajax Portal.
+*23-24 октября 2010* - We paticipated in HackDay #9 in St. Petersburg. We had two projects: 1) *StartUpSecurity* (profle of the user which is based on JSF 1.2) 2) *Ajax Portal*.
 
-*15 ноября 2010* - We fixed the main issue in Ajax Portal with Internet Explorer. We found workaround. See Alpha #2 of Enterprise Ajax Portal.
+*15 ноября 2010* - We fixed the main issue in Ajax Portal with Internet Explorer. We found workaround. See *Alpha #2 of Enterprise Ajax Portal*.
