@@ -10,7 +10,7 @@ The portal page with one Region and Portlet is presented on the picture 1 (see b
                                <img src="http://ajaxportal.googlecode.com/svn/trunk/images/model.gif">
                                                              Picture 1. Model of portal page
 
-The view and HTML code of start page of the MicroServlet demo portlet is presented below:
+The next picture represents the view of the start page of the MicroServlet demo in the browser and HTML code which build this view:
 
                                <img src="http://ajaxportal.googlecode.com/svn/trunk/images/transformation_example1.gif">
                                                              Picture 2. MicroServlet demo example 
