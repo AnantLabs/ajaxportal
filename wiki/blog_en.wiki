@@ -6,30 +6,30 @@
 
 *The start of Feb. 2010* - The page about Ajax Portal was created on free hosting provider NAROD.RU.
 
-*19 Feb. 2010* - Account on SourceForge is created. The project ajaxportal on SourceForge was already in used, but there's not any changes about 3 years.
+*19 Feb. 2010* - Account on SourceForge is created. The project *ajaxportal* on SourceForge was already in used, but there weren't any changes about 3 years.
 
-<b>24 Марта 2010</b> - Запущен механизм захвата проекта ajaxportal на SourceForge по причине его длительного неиспользования.
+*24 March 2010* - The assumption mechanizm for *ajaxportal* account on SourceForge, because it was not used any changes about 3 years.
 
-<b>26 апреля 2010</b> - Реализованы в полном объеме паттерны Ajax Submit и Content Aggregation. Как результат  создан базис Ajax Portal (но-хау).
+*26 April 2010* - We had the complete implementation of Ajax Submit and Content Aggregation patterns. We had the base for the new software product.
 
-<b>25 мая 2010</b> - Аккаунт ajaxportal на SourceForge захвачен.
+*25 May 2010* - We were the owner of the *ajaxportal* account on SourceForge.
 
-<b>26 мая 2010</b> - Захвачен не используемый аккаунт ajaxportal на Code.GOOGLE.
+*26 мая 2010* - We were the owner of the *ajaxportal* account on Code.GOOGLE (the same situation with unused account).
 
-<b>Июнь 2010</b> - Выделены три основных модуля Ajax Portal (Decoration, Personalization и HttpProxy/HttpRepeater), которые будут представляться на выставках и потенциальным инвесторам.
+*June 2010* - We had the concept of the three main modules (*Decoration*, *Personalization* and *HttpProxy/HttpRepeater*) of Ajax Portal, which are the base of the fisrt version.
 
-<b>28 июля 2010</b> - Бета версия Ajax Portal 1.0.0 плавно перешла в версию 1.0.1 – очень много концептуальных изменений. Речь идет все же о версии 1.0.1, т.к. не реализованы «фичи», запланированные на релиз 1.1.
+*28 July 2010* - The beta of Ajax Portal 1.0.0 transformed to *the vesion 1.0.1*. The reason is too many conceptual changes. It's not version 1.1, because the main features of the version 1.1 is not implemented.
 
-<b>27 августа 2010</b> - К проекту Ajax Portal пожелал присоединиться Java-разработчик из Индонезии.
+*27 Aug 2010* - We had a new developer from Indonesia.
 
-<b>17-19 сентября 2010</b> - Участие в HackDay7 в Москве. Выйти на домофест не получилось из-за технических проблем со связью. Тем не менее, в рамках проекта SoftLocalization созданы словари для профиля пользователя для Ajax Portal.
+*17-19 Sep. 2010* - We paticipated in HackDay #7 in Moscow. The dictionaries for Ajax Portal security profile was mplemented by SoftLocalization subproject.
 
-<b>Конец сентября</b> - Принято решение разделить понятие платформы (Ajax Portal) и конкретного продукта - Enterprise Ajax Portal (впереди явно не хватает названия компании или торговой марки, но они до сих пор не зарегистрированы).
+*The end of Sep. 2010* - We had two main terms: Ajax Portal (technology name) and Enterprise Ajax Portal (product name).
 
-<b>Начало октября</b> - В проект добавляется третий обязательный компонент – security модуль.
+*The start of Oct. 2010* - We added *Security* module as a new component of Ajax Portal.
 
-<b>22 октября 2010</b> - Подана заявка для участия в Web-Ready 2010.
+*22 октября 2010* - We registred for Web-Ready 2010 in St. Petersburg.
 
-<b>23-24 октября 2010</b> - Участие в HackDay9 в Санкт-Петербурге. Вышли на демофест с двумя проектами StartUpSecurity (реализована поддержка профиля пользователя) и самим Ajax Portal.
+*23-24 октября 2010* - We paticipated in HackDay #9 in St. Petersburg. We had two projects: 1) StartUpSecurity (profle of the user which is based on JSF 1.2) 2) Ajax Portal.
 
-<b>15 ноября 2010</b> - Ajax Portal заработал в Internet Explorer. Найден воркароунд для этого браузера. Смотрите Alpha #2.
+*15 ноября 2010* - We fixed the main issue in Ajax Portal with Internet Explorer. We found workaround. See Alpha #2 of Enterprise Ajax Portal.
