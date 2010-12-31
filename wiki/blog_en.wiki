@@ -4,7 +4,7 @@
 
 *Sep. of 2009* - The prototype where the portlet content is loeaded by Ajax calls was created (this concept is used by static version of Ajax Portal on [http://sokolovbook.narod.ru/en/ajaxportal.html NAROD.RU]).
 
-*The start of Feb. 2010* - The page about Ajax Portal was created on free hosting provider NAROD.RU.
+*The start of Feb. 2010* - The page about Ajax Portal was created on free hosting provider [http://sokolovbook.narod.ru/en/ajaxportal.html NAROD.RU]).
 
 *19 Feb. 2010* - Account on SourceForge is created. The project *ajaxportal* on SourceForge was already in used, but there weren't any changes about 3 years.
 
