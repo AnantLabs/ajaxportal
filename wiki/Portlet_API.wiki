@@ -17,9 +17,9 @@ Portlet API uses the same lifecycle like MicroServlet MVC framework:
     # Invoke application
     # Render response
 
-First three phases support *form bean* creation, get from session (for bean with SESSION scope), get parameter values from request, validation of parameter values.
+First three phases support *form bean* creation or get *form bean* from session (for bean with SESSION scope), get parameter values from the request, validation of the parameter values.
 
-Invoke application phase supports *execution of portlet code*.
+Invoke application phase executes *portlet code* in classic meaning.
 
 Render response phase support *view generation* which is based on JSP.
 ==Portlet API==
