@@ -15,7 +15,7 @@
 
 *25 May 2010* - We were the owner of the *ajaxportal* account on SourceForge.
 
-*26 мая 2010* - We were the owner of the *ajaxportal* account on Code.GOOGLE (the same situation with unused account).
+*26 May 2010* - We were the owner of the *ajaxportal* account on Code.GOOGLE (the same situation with unused account).
 
 *June 2010* - We had the concept of the three main modules (*Decoration*, *Personalization* and *HttpProxy/HttpRepeater*) of Ajax Portal, which are the base of the fisrt version.
 
@@ -29,8 +29,8 @@
 
 *The start of Oct. 2010* - We added *Security* module as a new component of Ajax Portal.
 
-*22 октября 2010* - We registred for Web-Ready 2010 in St. Petersburg.
+*22 Oct. 2010* - We registred for Web-Ready 2010 in St. Petersburg.
 
-*23-24 октября 2010* - We paticipated in HackDay #9 in St. Petersburg. We had two projects: 1) *StartUpSecurity* (profle of the user which is based on JSF 1.2) 2) *Ajax Portal*.
+*23-24 Oct. 2010* - We paticipated in HackDay #9 in St. Petersburg. We had two projects: 1) *StartUpSecurity* (profle of the user which is based on JSF 1.2) 2) *Ajax Portal*.
 
-*15 ноября 2010* - We fixed the main issue in Ajax Portal with Internet Explorer. We found workaround. See *Alpha #2 of Enterprise Ajax Portal*.
+*15 Nov. 2010* - We fixed the main issue in Ajax Portal with Internet Explorer. We found workaround. See *Alpha #2 of Enterprise Ajax Portal*.
