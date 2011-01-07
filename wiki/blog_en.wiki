@@ -19,7 +19,7 @@
 
 *June 2010* - We had the concept of the three main modules (*Decoration*, *Personalization* and *HttpProxy/HttpRepeater*) of Ajax Portal, which are the base of the fisrt version.
 
-*28 July 2010* - The beta of Ajax Portal 1.0.0 transformed to *the vesion 1.0.1*. The reason is too many conceptual changes. It's not version 1.1, because the main features of the version 1.1 is not implemented.
+*28 July 2010* - The beta of Ajax Portal 1.0.0 transformed to *the vesion 1.0.1 (Alpha #1)*. The reason is too many conceptual changes. It's not version 1.1, because the main features of the version 1.1 is not implemented.
 
 *27 Aug 2010* - We had a new developer from Indonesia.
 
@@ -34,3 +34,7 @@
 *23-24 Oct. 2010* - We paticipated in HackDay #9 in St. Petersburg. We had two projects: 1) *StartUpSecurity* (profle of the user which is based on JSF 1.2) 2) *Ajax Portal*.
 
 *15 Nov. 2010* - We fixed the main issue in Ajax Portal with Internet Explorer. We found workaround. See *Alpha #2 of Enterprise Ajax Portal*.
+
+*29 Dec. 2010* - Ajax Portal was announced on start-up school in Minsk. One business angel was interested in our project. The goal of the contact is not an investment, but it's the product selling to Belarusian enterprises and banks.
+
+*5 Jan. 2011* - Ajax Portal 1.0.2 (Alpha #3) was released. Support of IFRAME was implemented. The static client part of Ajax Portal was stabilized.
