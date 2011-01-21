@@ -1,4 +1,3 @@
-
 <h1>How to create static page</h1>
 
 This page describes how to develop a static HTML/XHTML page by *Decoration* module of Ajax Portal.
@@ -10,6 +9,31 @@ There're two ways how to use portlet:
 The main advantage of the region usage is *Drag&Drop* feature: the portlet can be move inside of current region (position of portlet in the current region) or in another region.
 
 <h2>Portlets on the page</h2>
+
+
+<h3>Static HTML</h3>
+
+<h3>Themes</h3>
+
+The Ajax Portal support the following themes for the portlet:
+    * <b>default</b> theme
+
+    * <b>blue</b> theme
+
+    * <b>green</b> theme
+
+    * <b>Alternative1</b> theme (there're no portlet icon and title)<br/>
+      <img src="http://sokolovbook.narod.ru/en/content/images/portlet_theme_alternative1_new.jpg" alt="Alternative1 theme"><br/>
+                                                             Picture 1. Alternative1 theme.
+    * <b>Alternative2</b> theme (<i>Portlet Content</i> follows after the portlet title)<br/>
+      <img src="http://sokolovbook.narod.ru/en/content/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
+                                                             Picture 2. Alternative2 theme.
+    * <b>Alternative3</b> theme<br/>
+      <img src="http://sokolovbook.narod.ru/en/content/images/portlet_theme_alternative3.jpg" alt="Alternative3 theme"><br/>
+                                                             Picture 3. Alternative3 theme.
+    * <b>Apple</b> theme<br/>
+      <img src="http://sokolovbook.narod.ru/en/content/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
+                                                             Picture 4. Apple theme.
 
 <h2>Region and Portlets</h2>
 
@@ -31,13 +55,10 @@ The following declarations of CSS files are required:
 }}}
 
 
-<h3>Themes</h3>
 
 
-<h3>Static HTML</h3>
+
+<h3>Required scripts</h3>
 
 
-<h2>Required scripts</h2>
-
-
-<h2>ajax4all scripts</h2>
+<h3>ajax4all scripts</h3>
