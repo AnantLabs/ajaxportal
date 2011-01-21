@@ -10,9 +10,11 @@ The main advantage of the region usage is *Drag&Drop* feature: the portlet can b
 
 <h2>Portlets on the page</h2>
 
+TBD
 
 <h3>Static HTML</h3>
 
+TBD
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_example.jpg" alt="HTML code of portlet example"><br/>
                                                              Picture 1. HTML code of portlet example.
@@ -66,9 +68,10 @@ The following declarations of CSS files are required:
 
 
 
-
-
 <h3>Required scripts</h3>
 
+TBD
 
 <h3>ajax4all scripts</h3>
+
+TBD
