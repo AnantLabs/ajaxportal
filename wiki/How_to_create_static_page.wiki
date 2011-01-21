@@ -16,24 +16,30 @@ The main advantage of the region usage is *Drag&Drop* feature: the portlet can b
 <h3>Themes</h3>
 
 The Ajax Portal support the following themes for the portlet:
-    * <b>default</b> theme
+    * *Default* theme<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1_new.jpg" alt="Default theme"><br/>
+                                                             Picture 1. Defaulf theme.
 
-    * <b>blue</b> theme
+    * *Blue* theme<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1_new.jpg" alt="Blue theme"><br/>
+                                                             Picture 2. Blue theme.
 
-    * <b>green</b> theme
+    * *Green* theme<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1_new.jpg" alt="Green theme"><br/>
+                                                             Picture 3. Green theme.
 
-    * <b>Alternative1</b> theme (there're no portlet icon and title)<br/>
-      <img src="http://sokolovbook.narod.ru/en/content/images/portlet_theme_alternative1_new.jpg" alt="Alternative1 theme"><br/>
-                                                             Picture 1. Alternative1 theme.
-    * <b>Alternative2</b> theme (<i>Portlet Content</i> follows after the portlet title)<br/>
-      <img src="http://sokolovbook.narod.ru/en/content/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
-                                                             Picture 2. Alternative2 theme.
-    * <b>Alternative3</b> theme<br/>
-      <img src="http://sokolovbook.narod.ru/en/content/images/portlet_theme_alternative3.jpg" alt="Alternative3 theme"><br/>
-                                                             Picture 3. Alternative3 theme.
-    * <b>Apple</b> theme<br/>
-      <img src="http://sokolovbook.narod.ru/en/content/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
-                                                             Picture 4. Apple theme.
+    * *Alternative1* theme (there're no portlet icon and title)<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1_new.jpg" alt="Alternative1 theme"><br/>
+                                                             Picture 4. Alternative1 theme.
+    * *Alternative2* theme (<i>Portlet Content</i> follows after the portlet title)<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
+                                                             Picture 5. Alternative2 theme.
+    * *Alternative3* theme<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative3.jpg" alt="Alternative3 theme"><br/>
+                                                             Picture 6. Alternative3 theme.
+    * *Apple* theme<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
+                                                             Picture 7. Apple theme.
 
 <h2>Region and Portlets</h2>
 
