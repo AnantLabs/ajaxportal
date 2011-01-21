@@ -1,0 +1,43 @@
+
+<h1>How to create static page</h1>
+
+This page describes how to develop a static HTML/XHTML page by *Decoration* module of Ajax Portal.
+
+There're two ways how to use portlet:
+    * Use classic approach - portlet is a window and the portal page defines the layout for the portlets.
+    * Use region as container of the portlets. The regions provide layout for the portlets. 
+
+The main advantage of the region usage is *Drag&Drop* feature: the portlet can be move inside of current region (position of portlet in the current region) or in another region.
+
+<h2>Portlets on the page</h2>
+
+<h2>Region and Portlets</h2>
+
+<h3>Required styles</h3>
+
+The following declarations of CSS files are required:
+    # region_nodecoration_common.css - defines region and portlets view if the region state is *NODECORATION*,
+    # region_window_common.css - defines region and portlets view if the region state is *WINDOW*,
+    # region_standard_common.css - defines region and portlets view if the region state is *STANDARD*,
+    # region_accordion_common.css - defines region and portlets view if the region state is *ACCORDION*,
+    # region_tabs_common.css - defines region and portlets view if the region state is *TABS*.
+
+{{{
+<link type="text/css" rel="stylesheet" href="portal/styles/region_nodecoration_common.css">
+<link type="text/css" rel="stylesheet" href="portal/styles/region_window_common.css">
+<link type="text/css" rel="stylesheet" href="portal/styles/region_standard_common.css">
+<link type="text/css" rel="stylesheet" href="portal/styles/region_accordion_common.css">
+<link type="text/css" rel="stylesheet" href="portal/styles/region_tabs_common.css">
+}}}
+
+
+<h3>Themes</h3>
+
+
+<h3>Static HTML</h3>
+
+
+<h2>Required scripts</h2>
+
+
+<h2>ajax4all scripts</h2>
