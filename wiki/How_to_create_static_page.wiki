@@ -17,19 +17,19 @@ The main advantage of the region usage is *Drag&Drop* feature: the portlet can b
 
 The Ajax Portal support the following themes for the portlet:
     * *Default* theme<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1_new.jpg" alt="Default theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_default.jpg" alt="Default theme"><br/>
                                                              Picture 1. Defaulf theme.
 
     * *Blue* theme<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1_new.jpg" alt="Blue theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_blue.jpg" alt="Blue theme"><br/>
                                                              Picture 2. Blue theme.
 
     * *Green* theme<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1_new.jpg" alt="Green theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_green.jpg" alt="Green theme"><br/>
                                                              Picture 3. Green theme.
 
     * *Alternative1* theme (there're no portlet icon and title)<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1_new.jpg" alt="Alternative1 theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1.jpg" alt="Alternative1 theme"><br/>
                                                              Picture 4. Alternative1 theme.
     * *Alternative2* theme (<i>Portlet Content</i> follows after the portlet title)<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
