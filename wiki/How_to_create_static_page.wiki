@@ -13,6 +13,10 @@ The main advantage of the region usage is *Drag&Drop* feature: the portlet can b
 
 <h3>Static HTML</h3>
 
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_example.jpg" alt="HTML code of portlet example"><br/>
+                                                             Picture 1. HTML code of portlet example.
+
 <h3>Themes</h3>
 
 The Ajax Portal support the following themes for the portlet:
