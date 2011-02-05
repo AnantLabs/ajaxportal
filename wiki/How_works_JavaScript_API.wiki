@@ -1,9 +1,20 @@
 #labels Featured
 <h1>How works JavaScript API in Ajax Portal</h1>
 
-Portal page defines the layout and position of each portlets. Each portlet has portlet header and portlet content. Portlet header contains icon, portlet title and behavior buttons. Portlet content is a wrapper of real content of the portlet which is downloaded from portlet server. Portlets defines by <B>DIV</b> tag.
+*Portal page* defines the layout and positions of each portlet on the portal page. Positions of each portlet may be changed by personalization settings when the page is loaded completely.
 
-Regions help to defined layout of portal page. Region usage gives possibility to provide <b>drag and drop</b> effect for portlets (it's possible to move a portlet between regions in runtime mode. All changes are saved by Personalization Service of Ajax Portal. Regions define by <b>TD</b> tag of HTML table. 
+*Portlet* is defined by <B>DIV</b> tag. Portlet should by marked by CSS markers (*portlet*, *portletNotActive*, *portletMaximized* and *portletHidden*), which define portlet state.
+
+Portlet can be decorated by: 
+  # JavaScript code on client side,
+  # JSP or JSF (facelet) tag libraries on server side,
+It's possible to decorate portlet manually by HTML/XHTML code. 
+
+Each portlet has the following parts: 
+  # *portlet header* contains icon, portlet title and behavior buttons. It's possible to hide portlet header by *noheader* CSS marker.
+  # *portlet content* is a wrapper of real content of the portlet which is downloaded from portlet server.
+
+*Regions* help to defined layout of portal page. Region usage gives possibility to provide *Drag and Drop* effect for portlets (it's possible to move a portlet between regions in runtime mode. All changes are saved by Personalization Service of Ajax Portal. Regions define by *TD* tag of HTML table. 
 
 The portal page with one Region and Portlet is presented on the picture 1 (see below).
 
