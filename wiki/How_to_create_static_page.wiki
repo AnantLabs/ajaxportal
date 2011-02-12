@@ -3,14 +3,59 @@
 This page describes how to develop a static HTML/XHTML page by *Decoration* module of Ajax Portal.
 
 There're two ways how to use portlet:
-    * Use classic approach - portlet is a window and the portal page defines the layout for the portlets.
-    * Use region as container of the portlets. The regions provide layout for the portlets. 
+    * Use classic approach - portlet is a window and the portal page defines the layout and positions of the portlets on the portal page.
+    * Use region as container of the portlets. The regions divide the por tal page by zone.  The regions provide layout for the portlets. 
 
 The main advantage of the region usage is *Drag&Drop* feature: the portlet can be move inside of current region (position of portlet in the current region) or in another region.
 
 <h2>Portlets on the page</h2>
 
-TBD
+The following example demonstrates a simple definition of the portlet:
+{{{
+<div id="portlet1" class="portlet" title="Test">
+
+</div>
+}}}
+The example defines:
+    # id of the portlet ("portlet1"),
+    # *NORMAL* state of the portlet ("portlet" is *CSS marker* of the *NORMAL* portlet state),
+    # the portlet title ("Test").
+
+The following JavaScript files are required:
+    # common.js - defines common functions
+    # portlet.js - defines *Portal* JavaScript object
+    # region.js - defines *Region* JavaScript object
+    # portal.js - defines *Portlet* JavaScript object
+    # ajax.js - defines common functions which supports Ajax calls.
+
+The CSS file is required for portlet decoration. The name of file is defined by formula: portal_<THEME>.css.
+
+You can see the full page of Portlet Demo below (the example uses BLUE theme for portlet decoration):
+{{{
+<html>
+<head id="head">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+
+    <link type="text/css" rel="stylesheet" href="portal/styles/*portlet_blue.css*">
+
+    <script type="text/javascript" language="javascript" src="portal/scripts/common.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/portlet.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/region.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/portal.js"></script>
+
+    <script type="text/javascript" language="javascript" src="portal/scripts/ajax.js"></script>
+
+    <script type="text/javascript">
+        com.sokolov.portal.Portal.startOnLoad(null);
+    </script>
+</head>
+<body>
+    <div id="portlet1" class="portlet" title="Test">
+        Portlet content...
+    </div>
+</body>
+<html>
+}}}
 
 <h3>Static HTML</h3>
 
