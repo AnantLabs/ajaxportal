@@ -30,6 +30,8 @@ The following JavaScript files are required:
 
 The CSS file is required for portlet decoration. The name of file is defined by formula: *portal_THEME.css*.
 
+The portlet decoration started by call of the static method *startOnLoad* of *Portal* object.
+
 You can see the full page of Portlet Demo below (the example uses *BLUE* theme for portlet decoration):
 {{{
 <html>
@@ -42,7 +44,6 @@ You can see the full page of Portlet Demo below (the example uses *BLUE* theme f
     <script type="text/javascript" language="javascript" src="portal/scripts/portlet.js"></script>
     <script type="text/javascript" language="javascript" src="portal/scripts/region.js"></script>
     <script type="text/javascript" language="javascript" src="portal/scripts/portal.js"></script>
-
     <script type="text/javascript" language="javascript" src="portal/scripts/ajax.js"></script>
 
     <script type="text/javascript">
