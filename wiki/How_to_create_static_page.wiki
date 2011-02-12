@@ -28,7 +28,7 @@ The following JavaScript files are required:
     # portal.js - defines *Portlet* JavaScript object
     # ajax.js - defines common functions which supports Ajax calls.
 
-The CSS file is required for portlet decoration. The name of file is defined by formula: portal_*THEME*.css.
+The CSS file is required for portlet decoration. The name of file is defined by formula: *portal_THEME.css*.
 
 You can see the full page of Portlet Demo below (the example uses *BLUE* theme for portlet decoration):
 {{{
