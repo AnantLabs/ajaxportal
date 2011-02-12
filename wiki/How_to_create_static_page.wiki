@@ -12,21 +12,21 @@ The main advantage of the region usage is *Drag&Drop* feature: the portlet can b
 
 The following example demonstrates a simple definition of the portlet:
 {{{
-<div id="portlet1" class="portlet" title="Test">
+<div id="polygon1" class="portlet" title="Test">
 
 </div>
 }}}
 The example defines:
-    # id of the portlet ("portlet1"),
+    # id of the portlet ("polygon1"),
     # *NORMAL* state of the portlet ("portlet" is *CSS marker* of the *NORMAL* portlet state),
     # the portlet title ("Test").
 
 The following JavaScript files are required:
-    # common.js - defines common functions
-    # portlet.js - defines *Portal* JavaScript object
-    # region.js - defines *Region* JavaScript object
-    # portal.js - defines *Portlet* JavaScript object
-    # ajax.js - defines common functions which supports Ajax calls.
+    # *common.js* - defines common functions
+    # *portlet.js* - defines *Portal* JavaScript object
+    # *region.js* - defines *Region* JavaScript object
+    # *portal.js* - defines *Portlet* JavaScript object
+    # *ajax.js* - defines common functions which supports Ajax calls.
 
 The CSS file is required for portlet decoration. The name of file is defined by formula: *portal_THEME.css*.
 
@@ -58,9 +58,38 @@ You can see the full page of Portlet Demo below (the example uses *BLUE* theme f
 <html>
 }}}
 
+<h4>Portlet States and CSS Markers</h4>
+
+The portlet states are defined by the following CSS markers:
+    # *portlet* - defines *NORMAL* state of the portlet,
+    # *portletNotActive* - defines *MINIMIZED* (the state of classic portal implementation) or *NOT ACTIVE* (the state is used for *TABS* and *ACCORDION* region states) state of the portlet,
+    # *portletHidden* - defines *NORMAL* state of the portlet,
+    # *portletMaximized* - not implemented.
+
+<h4>Special Portlet CSS Markers</h4>
+The portlet supports the following special portlet CSS markers:
+    # *draggable* - support *Drag&Drop* when the portlet is defined in a region,
+    # *iframe* - deletes padding of portlet content. The marker is used with *IFRAME* content of the portlet,
+    # *titleEditable* - allows to change the portlet title(temporary solution, should be changed).
+
+<h4>Attributes of DIV tag using for portlet parameter definition</h4>
+
+The portlet states are defined by the following CSS markers:
+    # *id* - defines unique identifier of the portlet,
+    # *class* - contains the CSS markers and additional CSS styles for the portlet,
+    # *title* - (the value is empty after portlet decoration)
+    # *url* - defines URL which contains the portlet content (the portlet content will be downloaded by Ajax call after portlet decoration),
+    # *help* - defines the HELP page for the portlet,
+    # *bodyHeight* - defines the fixed height of the portlet content.
+
 <h3>Static HTML</h3>
 
-TBD
+The picture 1 demonstrates all HTML-code which generated instead of following portlet definistion: 
+{{{
+<div id="polygon1" class="portlet titleEditable" title="Content area 2" help="content/help_poligon2.html">
+
+</div>
+}}}
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_example.jpg" alt="HTML code of portlet example"><br/>
                                                              Picture 1. HTML code of portlet example.
