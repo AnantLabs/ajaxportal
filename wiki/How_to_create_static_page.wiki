@@ -33,7 +33,7 @@ The CSS file is required for portlet decoration. The name of file is defined by 
 You can see the full page of Portlet Demo below (the example uses *BLUE* theme for portlet decoration):
 {{{
 <html>
-<head id="head">
+<head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
 
     <link type="text/css" rel="stylesheet" href="portal/styles/portlet_blue.css">
