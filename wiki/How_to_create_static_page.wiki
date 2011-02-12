@@ -86,7 +86,7 @@ The portlet states are defined by the following CSS markers:
 
 The picture 1 demonstrates all HTML-code which generated instead of following portlet definistion: 
 {{{
-<div id="polygon1" class="portlet titleEditable" title="Content area 2" help="content/help_poligon2.html">
+<div id="polygon1" class="portlet titleEditable" title="Content area 1" help="content/help_poligon1.html">
 
 </div>
 }}}
