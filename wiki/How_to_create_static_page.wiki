@@ -13,7 +13,7 @@ The main advantage of the region usage is *Drag&Drop* feature: the portlet can b
 
 ===Portlet States and CSS Markers===
 
-The idea of usage CSS Markers is implementation of [http://en.wikipedia.org/wiki/State_pattern *State* GoF pattern]. The state of the portlet is set by *CSS Marker*. The HTML structure of the portlet is the same and is transformed by different CSS class.
+The idea of usage CSS Markers is implementation of [http://en.wikipedia.org/wiki/State_pattern State GoF pattern]. The state of the portlet is set by *CSS Marker*. The HTML structure of the portlet is the same and is transformed by different CSS class.
 
 The portlet states are defined by the following CSS markers:
     # *portlet* - defines *NORMAL* state of the portlet,
