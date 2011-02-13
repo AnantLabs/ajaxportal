@@ -8,7 +8,38 @@ There're two ways how to use portlet:
 
 The main advantage of the region usage is *Drag&Drop* feature: the portlet can be move inside of current region (position of portlet in the current region) or in another region.
 
-<h2>Portlets on the page</h2>
+==Portlets on the page==
+
+===Portlet States and CSS Markers===
+
+The idea of usage CSS Markers is implementation of [http://en.wikipedia.org/wiki/State_pattern *State* GoF pattern]. The state of the portlet is set by *CSS Marker*. The HTML structure of the portlet is the same and is transformed by different CSS class.
+
+The portlet states are defined by the following CSS markers:
+    # *portlet* - defines *NORMAL* state of the portlet,
+    # *portletNotActive* - defines *MINIMIZED* (the state of classic portal implementation) or *NOT ACTIVE* (the state is used for *TABS* and *ACCORDION* region states) state of the portlet,
+    # *portletHidden* - defines *NORMAL* state of the portlet,
+    # *portletMaximized* - not implemented.
+
+===Special Portlet CSS Markers===
+
+CSS markers are used by Ajax Portal kernel for providing additional opportunity(ies) to the portlet (possibility to move portlet, to change title, etc.).
+
+The portlet supports the following special portlet CSS markers:
+    # *draggable* - support *Drag&Drop* when the portlet is defined in a region,
+    # *iframe* - deletes padding of portlet content. The marker is used with *IFRAME* content of the portlet,
+    # *titleEditable* - allows to change the portlet title(temporary solution, should be changed).
+
+===Attributes of DIV tag using for portlet parameter definition===
+
+The portlet states are defined by the following CSS markers:
+    # *id* - defines unique identifier of the portlet,
+    # *class* - contains the CSS markers and additional CSS styles for the portlet,
+    # *title* - (the value is empty after portlet decoration)
+    # *url* - defines URL which contains the portlet content (the portlet content will be downloaded by Ajax call after portlet decoration),
+    # *help* - defines the HELP page for the portlet,
+    # *bodyHeight* - defines the fixed height of the portlet content.
+
+===Example===
 
 The following example demonstrates a simple definition of the portlet:
 {{{
@@ -25,10 +56,10 @@ The example defines:
 
 The following JavaScript files are required:
     # *common.js* - defines common functions
-    # *portlet.js* - defines *Portal* JavaScript object
-    # *region.js* - defines *Region* JavaScript object
-    # *portal.js* - defines *Portlet* JavaScript object
+    # *portlet.js* - defines *Portlet* JavaScript object
     # *ajax.js* - defines common functions which supports Ajax calls.
+
+The *portal.js* (defines *Portal* JavaScript object) and *region.js* (defines *Region* JavaScript object) scripts are optional. *Portal* object has very helpful static method *startOnLoad*, which helps to fined and decorate portlets on the portal page.
 
 The CSS file is required for portlet decoration. The name of file is defined by formula: *portal_THEME.css*.
 
@@ -38,9 +69,10 @@ You can see the full page of Portlet Demo below (the example uses *BLUE* theme f
 {{{
 <html>
 <head>
+    <title>Portlet demo example</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
 
-    <link type="text/css" rel="stylesheet" href="portal/styles/portlet_blue.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/portlet_default.css">
 
     <script type="text/javascript" language="javascript" src="portal/scripts/common.js"></script>
     <script type="text/javascript" language="javascript" src="portal/scripts/portlet.js"></script>
@@ -60,36 +92,7 @@ You can see the full page of Portlet Demo below (the example uses *BLUE* theme f
 <html>
 }}}
 
-<h4>Portlet States and CSS Markers</h4>
-
-The idea of usage CSS Markers is implementation of [http://en.wikipedia.org/wiki/State_pattern *State* GoF pattern]. The state of the portlet is set by *CSS Marker*. The HTML structure of the portlet is the same and is transformed by different CSS class.
-
-The portlet states are defined by the following CSS markers:
-    # *portlet* - defines *NORMAL* state of the portlet,
-    # *portletNotActive* - defines *MINIMIZED* (the state of classic portal implementation) or *NOT ACTIVE* (the state is used for *TABS* and *ACCORDION* region states) state of the portlet,
-    # *portletHidden* - defines *NORMAL* state of the portlet,
-    # *portletMaximized* - not implemented.
-
-<h4>Special Portlet CSS Markers</h4>
-
-CSS markers are used by Ajax Portal kernel for providing additional opportunity(ies) to the portlet (possibility to move portlet, to change title, etc.).
-
-The portlet supports the following special portlet CSS markers:
-    # *draggable* - support *Drag&Drop* when the portlet is defined in a region,
-    # *iframe* - deletes padding of portlet content. The marker is used with *IFRAME* content of the portlet,
-    # *titleEditable* - allows to change the portlet title(temporary solution, should be changed).
-
-<h4>Attributes of DIV tag using for portlet parameter definition</h4>
-
-The portlet states are defined by the following CSS markers:
-    # *id* - defines unique identifier of the portlet,
-    # *class* - contains the CSS markers and additional CSS styles for the portlet,
-    # *title* - (the value is empty after portlet decoration)
-    # *url* - defines URL which contains the portlet content (the portlet content will be downloaded by Ajax call after portlet decoration),
-    # *help* - defines the HELP page for the portlet,
-    # *bodyHeight* - defines the fixed height of the portlet content.
-
-<h3>Static HTML</h3>
+===Static HTML===
 
 The picture 1 demonstrates all HTML-code which generated instead of following portlet definistion: 
 {{{
@@ -101,7 +104,7 @@ The picture 1 demonstrates all HTML-code which generated instead of following po
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_example.jpg" alt="HTML code of portlet example"><br/>
                                                              Picture 1. HTML code of portlet example.
 
-<h3>Themes</h3>
+===Themes===
 
 The Ajax Portal support the following themes for the portlet:
     * *Default* theme<br/>
@@ -129,9 +132,9 @@ The Ajax Portal support the following themes for the portlet:
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
                                                              Picture 7. Apple theme.
 
-<h2>Region and Portlets</h2>
+==Region and Portlets==
 
-<h3>Required styles</h3>
+===Required CSS styles===
 
 The following declarations of CSS files are required:
     # region_nodecoration_common.css - defines region and portlets view if the region state is *NODECORATION*,
@@ -148,12 +151,90 @@ The following declarations of CSS files are required:
 <link type="text/css" rel="stylesheet" href="portal/styles/region_tabs_common.css">
 }}}
 
+===Required scripts===
 
+The following JavaScript files are required:
+    # *common.js* - defines common functions
+    # *portlet.js* - defines *Portal* JavaScript object
+    # *region.js* - defines *Region* JavaScript object
+    # *portal.js* - defines *Portlet* JavaScript object
+    # *ajax.js* - defines common functions which supports Ajax calls.
 
-<h3>Required scripts</h3>
+===Example===
 
-TBD
+The following example demonstrates two regions with portlets:
+{{{
+<html>
+<head>
+    <title>Region demo example</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+    
+    <link type="text/css" rel="stylesheet" href="portal/styles/common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_nodecoration_common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_window_common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_standard_common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_accordion_common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_tabs_common.css">
 
-<h3>ajax4all scripts</h3>
+    <link id="portletWindow" type="text/css" rel="stylesheet" href="portal/styles/region_window_default.css">
+    <link id="portletStandard" type="text/css" rel="stylesheet" href="portal/styles/region_standard_default.css">
+    <link id="portletAccordion" type="text/css" rel="stylesheet" href="portal/styles/region_accordion_default.css">
+    <link id="portletTabs" type="text/css" rel="stylesheet" href="portal/styles/region_tabs_default.css">
 
-TBD
+    <script type="text/javascript" language="javascript" src="portal/scripts/common.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/portlet.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/region.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/portal.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/ajax.js"></script>
+
+    <script type="text/javascript" language="javascript" src="portal/scripts/drag.js"></script>
+
+    <script type="text/javascript">
+        function startPortalEvent() {
+            //alert("Hello, Ajax Portal!!!");
+            com.sokolov.portal.Portal._supportDragAndDrop();
+        }
+        com.sokolov.portal.Portal.startOnLoad(startPortalEvent);
+    </script>
+</head>
+<body>
+    <table style="width: 100%;">
+    <tr><td id="left" class="standard dropTarget" title="Window1" 
+            style="width: 50%; vertical-align: top; background-color: #DDD;">
+
+        <div id="polygon1" class="portlet noheader" title="">
+            Portlet1, content (no header)
+        </div>
+        <div id="polygon2" class="portlet titleEditable" title="Portlet2" 
+             help="content/help_poligon2.html">
+            Portlet2, content (titleEditable)
+        </div>
+        <div id="polygon3" class="portlet draggable" title="Portlet3">
+            Portlet3, content (draggable)
+        </div>
+
+        <div id="polygon4" class="portlet titleEditable draggable" title="Portlet4" 
+            url="content/content_poligon4.html">
+            Portlet4, content (set URL of content)
+        </div>
+
+     </td>
+     <td id="right" class="standard dropTarget" title="Window2" 
+          style="width: 50%; vertical-align: top; background-color: #DDD;">
+
+        <div id="polygon5" class="portlet draggable iframe" title="Portlet5: IFrame" 
+            url="content/help_poligon5.html" bodyHeight="100px">
+            Portlet5, content (iframe)
+        </div>
+
+     </td></tr>
+     </table>
+</body>
+<html>
+}}}
+
+screenshot TBD.
+
+==ajax4all scripts==
+
+Read about ajax4all library in [http://code.google.com/p/ajaxportal/wiki/How_works_JavaScript_API How works JavaScript API] page.
