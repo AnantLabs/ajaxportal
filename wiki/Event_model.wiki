@@ -1,11 +1,9 @@
 
+= Event model =
 
-=Event model=
+TBD
 
-
-
-
-= Event =
+== Event ==
 
 The event has the following attributes:
   # *portletTagId* - id of portlet element,
@@ -13,3 +11,11 @@ The event has the following attributes:
   # *name* - event name,
   # *value* (Json String or Object, can be converted from one type to another by kernel of Ajax Portal) - transfer data, 
   # *receiver* (portletTagId or portletUId or null) - point to point or for all.
+
+== Event Queue ==
+
+TBD
+
+=== Event Queue Methods ===
+
+TBD
