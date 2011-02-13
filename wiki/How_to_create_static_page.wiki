@@ -4,7 +4,7 @@ This page describes how to develop a static HTML/XHTML page by *Decoration* modu
 
 There're two ways how to use portlet:
     * Use classic approach - portlet is a window and the portal page defines the layout and positions of the portlets on the portal page.
-    * Use region as container of the portlets. The regions divide the por tal page by zone.  The regions provide layout for the portlets. 
+    * Use region as container of the portlets. The regions divide the portal page by zone.  The regions provide layout for the portlets. 
 
 The main advantage of the region usage is *Drag&Drop* feature: the portlet can be move inside of current region (position of portlet in the current region) or in another region.
 
@@ -94,7 +94,7 @@ You can see the full page of Portlet Demo below (the example uses *BLUE* theme f
 
 ===Static HTML===
 
-The picture 1 demonstrates all HTML-code which generated instead of following portlet definistion: 
+The picture 1 demonstrates all HTML-code which generated instead of following portlet definition: 
 {{{
 <div id="polygon1" class="portlet titleEditable" title="Content area 1" help="content/help_poligon1.html">
 
@@ -106,10 +106,10 @@ The picture 1 demonstrates all HTML-code which generated instead of following po
 
 ===Themes===
 
-The Ajax Portal support the following themes for the portlet:
+The Ajax Portal supports the following themes for the portlet:
     * *Default* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_default.jpg" alt="Default theme"><br/>
-                                                             Picture 1. Defaulf theme.
+                                                             Picture 1. Default theme.
 
     * *Blue* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_blue.jpg" alt="Blue theme"><br/>
