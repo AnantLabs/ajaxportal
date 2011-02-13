@@ -16,6 +16,8 @@ The following example demonstrates a simple definition of the portlet:
 
 </div>
 }}}
+This DIV tag will decorated during Ajax Portal start: the portlet will have header and content areas, icon, title and behavior buttons on the header. The all content in the DIV tag will be moved in the content area of the portlet.
+
 The example defines:
     # id of the portlet ("polygon1"),
     # *NORMAL* state of the portlet ("portlet" is *CSS marker* of the *NORMAL* portlet state),
@@ -60,6 +62,8 @@ You can see the full page of Portlet Demo below (the example uses *BLUE* theme f
 
 <h4>Portlet States and CSS Markers</h4>
 
+The idea of usage CSS Markers is implementation of [http://en.wikipedia.org/wiki/State_pattern *State* GoF pattern]. The state of the portlet is set by *CSS Marker*. The HTML structure of the portlet is the same and is transformed by different CSS class.
+
 The portlet states are defined by the following CSS markers:
     # *portlet* - defines *NORMAL* state of the portlet,
     # *portletNotActive* - defines *MINIMIZED* (the state of classic portal implementation) or *NOT ACTIVE* (the state is used for *TABS* and *ACCORDION* region states) state of the portlet,
@@ -67,6 +71,9 @@ The portlet states are defined by the following CSS markers:
     # *portletMaximized* - not implemented.
 
 <h4>Special Portlet CSS Markers</h4>
+
+CSS markers are used by Ajax Portal kernel for providing additional opportunity(ies) to the portlet (possibility to move portlet, to change title, etc.).
+
 The portlet supports the following special portlet CSS markers:
     # *draggable* - support *Drag&Drop* when the portlet is defined in a region,
     # *iframe* - deletes padding of portlet content. The marker is used with *IFRAME* content of the portlet,
