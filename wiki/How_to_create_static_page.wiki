@@ -48,6 +48,7 @@ The following example demonstrates a simple definition of the portlet:
 
 </div>
 }}}
+
 This DIV tag will decorated during Ajax Portal start: the portlet will have header and content areas, icon, title and behavior buttons on the header. The all content in the DIV tag will be moved in the content area of the portlet.
 
 The example defines:
@@ -93,6 +94,9 @@ You can see the full page of Portlet Demo below (the example uses *BLUE* theme f
 <html>
 }}}
 
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet.jpg">
+                                                             Picture 1. Screenshots of the example
+
 ===Static HTML===
 
 The picture 1 demonstrates all HTML-code which generated instead of following portlet definition: 
@@ -103,35 +107,35 @@ The picture 1 demonstrates all HTML-code which generated instead of following po
 }}}
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_example.jpg" alt="HTML code of portlet example"><br/>
-                                                             Picture 1. HTML code of portlet example.
+                                                             Picture 2. HTML code of portlet example.
 
 ===Themes===
 
 The Ajax Portal supports the following themes for the portlet:
     * *Default* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_default.jpg" alt="Default theme"><br/>
-                                                             Picture 1. Default theme.
+                                                             Picture 3. Default theme.
 
     * *Blue* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_blue.jpg" alt="Blue theme"><br/>
-                                                             Picture 2. Blue theme.
+                                                             Picture 4. Blue theme.
 
     * *Green* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_green.jpg" alt="Green theme"><br/>
-                                                             Picture 3. Green theme.
+                                                             Picture 5. Green theme.
 
     * *Alternative1* theme (there're no portlet icon and title)<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1.jpg" alt="Alternative1 theme"><br/>
-                                                             Picture 4. Alternative1 theme.
+                                                             Picture 6. Alternative1 theme.
     * *Alternative2* theme (<i>Portlet Content</i> follows after the portlet title)<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
-                                                             Picture 5. Alternative2 theme.
+                                                             Picture 7. Alternative2 theme.
     * *Alternative3* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative3.jpg" alt="Alternative3 theme"><br/>
-                                                             Picture 6. Alternative3 theme.
+                                                             Picture 8. Alternative3 theme.
     * *Apple* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
-                                                             Picture 7. Apple theme.
+                                                             Picture 9. Apple theme.
 
 ==Region and Portlets==
 
@@ -234,7 +238,8 @@ The following example demonstrates two regions with portlets:
 <html>
 }}}
 
-screenshot TBD.
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/region.jpg">
+                                                             Picture 10. Screenshots of the example
 
 ==ajax4all scripts==
 
