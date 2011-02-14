@@ -139,6 +139,45 @@ The Ajax Portal supports the following themes for the portlet:
 
 ==Region and Portlets==
 
+===Portlet States and CSS Markers===
+
+The idea of usage CSS Markers is implementation of [http://en.wikipedia.org/wiki/State_pattern State GoF pattern]. The state of the regions is set by *CSS Marker*. The HTML structure of the regions and its portlets is the same and is transformed by different CSS class.
+
+_Ajax portal_ supports five states of <i>Region</i>s. Each region state provides a specific decoration for the <i>Region</i> and an additional decoration for the _Portlet_s in the _Region_.
+
+The portlet states are defined by the following CSS markers:
+    # *nodecoration* view cancels all decorations of the portlets in the region.<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_nodecoration.jpg"><br/>
+                                                             Picture 1. Nodecoration region state.
+    # *window* view represents the current region as window.
+        The window has an icon and a title. 
+        All portlets have no decorations in the region.<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_window.jpg"><br/>
+                                                             Picture 2. Window region state.
+    # *standard* view is classic view of the portlet.
+        Any portlet is decorated as small window with icon, title and behavior buttons.
+        Set of buttons depends on the *Portlet View* (the buttons change the portlet state).<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_standard.jpg"><br/>
+                                                             Picture 3. Standard region state.
+    # *accordion* view is decorated portlets in the region as multiple panes (one pane for one portlet).
+        Each pane has the same header as classic portlet view except for behavior buttons (see Standard state) and content. 
+        All headers are displayed vertically as horizontal bars.
+        Only one pane can be selected at the same time.
+        By default the first pane is active.
+        Content of the pane is shown under the pane header.
+        User can activate another pane by clicking on the corresponding header.<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_accordion.jpg"><br/>
+                                                             Picture 4. Accordion region state.
+    # *tabs* view represents portlets in the region as multiple tabs (one tab for one portlet).
+        Each tab has a header and a content.
+        Usually the header has an icon and a title.
+        All headers are displayed horizontally above the content.
+        Only one tab can be selected at the same time.
+        By default the first tab is active.
+        User can activate another tab by clicking on the corresponding header.<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_tabs.jpg"><br/>
+                                                             Picture 5. Tabs region state.
+
 ===Required CSS styles===
 
 The following declarations of CSS files are required:
@@ -240,6 +279,9 @@ The following example demonstrates two regions with portlets:
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/region.jpg">
                                                              Picture 10. Screenshots of the example
+
+
+
 
 ==ajax4all scripts==
 
