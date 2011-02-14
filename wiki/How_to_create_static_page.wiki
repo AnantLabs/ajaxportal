@@ -26,6 +26,7 @@ The portlet states are defined by the following CSS markers:
 CSS markers are used by Ajax Portal kernel for providing additional opportunity(ies) to the portlet (possibility to move portlet, to change title, etc.).
 
 The portlet supports the following special portlet CSS markers:
+    # *noheader* - hides portlet header,
     # *draggable* - support *Drag&Drop* when the portlet is defined in a region,
     # *iframe* - deletes padding of portlet content. The marker is used with *IFRAME* content of the portlet,
     # *titleEditable* - allows to change the portlet title(temporary solution, should be changed).
@@ -137,7 +138,7 @@ The Ajax Portal supports the following themes for the portlet:
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
                                                              Picture 9. Apple theme.
 
-==Region and Portlets==
+==Regions and Portlets==
 
 ===Portlet States and CSS Markers===
 
