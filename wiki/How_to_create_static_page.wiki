@@ -115,28 +115,28 @@ The picture 1 demonstrates all HTML-code which generated instead of following po
 
 The Ajax Portal supports the following themes for the portlet:
     * *default* theme<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_default.jpg" alt="Default theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_default.jpg" alt="Default portlet theme"><br/>
                                                              Picture 3. Default portlet theme.
 
     * *blue* theme<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_blue.jpg" alt="Blue theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_blue.jpg" alt="Blue portlet theme"><br/>
                                                              Picture 4. Blue portlet theme.
 
     * *green* theme<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_green.jpg" alt="Green theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_green.jpg" alt="Green portlet theme"><br/>
                                                              Picture 5. Green portlet theme.
 
     * *alternative1* theme (there're no portlet icon and title)<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1.jpg" alt="Alternative1 theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1.jpg" alt="Alternative1 portlet theme"><br/>
                                                              Picture 6. Alternative1 portlet theme.
     * *alternative2* theme (<i>Portlet Content</i> follows after the portlet title)<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative2.jpg" alt="Alternative2 portlet theme"><br/>
                                                              Picture 7. Alternative2 portlet theme.
     * *alternative3* theme<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative3.jpg" alt="Alternative3 theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative3.jpg" alt="Alternative3 portlet theme"><br/>
                                                              Picture 8. Alternative3 portlet theme.
     * *apple* theme<br/>
-      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_apple.jpg" alt="Apple portlet theme"><br/>
                                                              Picture 9. Apple theme.
 
 ==2. Regions and Portlets==
@@ -289,7 +289,7 @@ The Ajax Portal supports the following themes for the region:
     * *blue* theme (see left *middle* of the picture below),
     * *silver* theme (see *right* column of the picture below).
 
-<img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/region_3themes.jpg" alt="Region themes"><br/>
                                                              Picture 16. *default*, *blue* and *silver* region themes.
 
 
