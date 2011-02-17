@@ -1,5 +1,5 @@
 #labels Featured
-<h1>How to create static page</h1>
+=How to create static page=
 
 This page describes how to develop a static HTML/XHTML page by *Decoration* module of Ajax Portal.
 
@@ -9,9 +9,9 @@ There're two ways how to use portlet:
 
 The main advantage of the region usage is *Drag&Drop* feature: the portlet can be move inside of current region (position of portlet in the current region) or in another region.
 
-==Portlets on the page==
+==1. Portlets on the page==
 
-===Portlet States and CSS Markers===
+===1.1. Portlet States and CSS Markers===
 
 The idea of usage CSS Markers is implementation of [http://en.wikipedia.org/wiki/State_pattern State GoF pattern]. The state of the portlet is set by *CSS Marker*. The HTML structure of the portlet is the same and is transformed by different CSS class.
 
@@ -21,7 +21,7 @@ The portlet states are defined by the following CSS markers:
     # *portletHidden* - defines *NORMAL* state of the portlet,
     # *portletMaximized* - not implemented.
 
-===Special Portlet CSS Markers===
+===1.2. Special Portlet CSS Markers===
 
 CSS markers are used by Ajax Portal kernel for providing additional opportunity(ies) to the portlet (possibility to move portlet, to change title, etc.).
 
@@ -32,7 +32,7 @@ The portlet supports the following special portlet CSS markers:
     # *titleEditable* - allows to change the portlet title(temporary solution, should be changed),
     # *noBehaviourButton* - disables the change of portlet state.
 
-===Attributes of DIV tag using for portlet parameter definition===
+===1.3. Attributes of DIV tag using for portlet parameter definition===
 
 The portlet states are defined by the following CSS markers:
     # *id* - defines unique identifier of the portlet,
@@ -42,7 +42,7 @@ The portlet states are defined by the following CSS markers:
     # *help* - defines the HELP page for the portlet,
     # *bodyHeight* - defines the fixed height of the portlet content.
 
-===Example===
+===1.4. Example===
 
 The following example demonstrates a simple definition of the portlet:
 {{{
@@ -99,7 +99,7 @@ You can see the full page of Portlet Demo below (the example uses *BLUE* theme f
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet.jpg">
                                                              Picture 1. Screenshots of the example
 
-===Static HTML===
+===1.5. Static HTML===
 
 The picture 1 demonstrates all HTML-code which generated instead of following portlet definition: 
 {{{
@@ -111,7 +111,7 @@ The picture 1 demonstrates all HTML-code which generated instead of following po
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_example.jpg" alt="HTML code of portlet example"><br/>
                                                              Picture 2. HTML code of portlet example.
 
-===Themes===
+===1.6. Themes===
 
 The Ajax Portal supports the following themes for the portlet:
     * *Default* theme<br/>
@@ -139,9 +139,9 @@ The Ajax Portal supports the following themes for the portlet:
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
                                                              Picture 9. Apple theme.
 
-==Regions and Portlets==
+==2. Regions and Portlets==
 
-===Portlet States and CSS Markers===
+===2.1. Portlet States and CSS Markers===
 
 The idea of usage CSS Markers is implementation of [http://en.wikipedia.org/wiki/State_pattern State GoF pattern]. The state of the regions is set by *CSS Marker*. The HTML structure of the regions and its portlets is the same and is transformed by different CSS class.
 
@@ -180,7 +180,7 @@ The portlet states are defined by the following CSS markers:
         <img src="http://sokolovbook.narod.ru/en/content/images/container_tabs.jpg"><br/>
                                                              Picture 5. Tabs region state.
 
-===Required CSS styles===
+===2.2. Required CSS styles===
 
 The following declarations of CSS files are required:
     # region_nodecoration_common.css - defines region and portlets view if the region state is *NODECORATION*,
@@ -197,7 +197,7 @@ The following declarations of CSS files are required:
 <link type="text/css" rel="stylesheet" href="portal/styles/region_tabs_common.css">
 }}}
 
-===Required scripts===
+===2.3. Required scripts===
 
 The following JavaScript files are required:
     # *common.js* - defines common functions
@@ -206,7 +206,7 @@ The following JavaScript files are required:
     # *portal.js* - defines *Portlet* JavaScript object
     # *ajax.js* - defines common functions which supports Ajax calls.
 
-===Example===
+===2.4. Example===
 
 The following example demonstrates two regions with portlets:
 {{{
@@ -285,6 +285,6 @@ The following example demonstrates two regions with portlets:
 
 
 
-==ajax4all scripts==
+==3. ajax4all scripts==
 
 Read about ajax4all library in [http://code.google.com/p/ajaxportal/wiki/How_works_JavaScript_API How works JavaScript API] page.
