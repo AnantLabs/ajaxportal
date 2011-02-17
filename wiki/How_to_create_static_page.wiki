@@ -290,7 +290,7 @@ The Ajax Portal supports the following themes for the region:
     * *silver* theme (see *right* column of the picture below).
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/region_3themes.jpg" alt="Region themes"><br/>
-                                                             Picture 16. *default*, *blue* and *silver* region themes.
+                                                             Picture 16. *default*, *blue* and *silver* region themes for *window*, *standard*, *accordion* and *tabs* region states.
 
 
 ==3. ajax4all scripts==
