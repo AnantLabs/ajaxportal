@@ -29,7 +29,8 @@ The portlet supports the following special portlet CSS markers:
     # *noheader* - hides portlet header,
     # *draggable* - support *Drag&Drop* when the portlet is defined in a region,
     # *iframe* - deletes padding of portlet content. The marker is used with *IFRAME* content of the portlet,
-    # *titleEditable* - allows to change the portlet title(temporary solution, should be changed).
+    # *titleEditable* - allows to change the portlet title(temporary solution, should be changed),
+    # *noBehaviourButton* - disables the change of portlet state.
 
 ===Attributes of DIV tag using for portlet parameter definition===
 
