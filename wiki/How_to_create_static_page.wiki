@@ -111,31 +111,31 @@ The picture 1 demonstrates all HTML-code which generated instead of following po
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_example.jpg" alt="HTML code of portlet example"><br/>
                                                              Picture 2. HTML code of portlet example.
 
-===1.6. Themes===
+===1.6. Portlet Themes===
 
 The Ajax Portal supports the following themes for the portlet:
-    * *Default* theme<br/>
+    * *default* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_default.jpg" alt="Default theme"><br/>
-                                                             Picture 3. Default theme.
+                                                             Picture 3. Default portlet theme.
 
-    * *Blue* theme<br/>
+    * *blue* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_blue.jpg" alt="Blue theme"><br/>
-                                                             Picture 4. Blue theme.
+                                                             Picture 4. Blue portlet theme.
 
-    * *Green* theme<br/>
+    * *green* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_green.jpg" alt="Green theme"><br/>
-                                                             Picture 5. Green theme.
+                                                             Picture 5. Green portlet theme.
 
-    * *Alternative1* theme (there're no portlet icon and title)<br/>
+    * *alternative1* theme (there're no portlet icon and title)<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1.jpg" alt="Alternative1 theme"><br/>
-                                                             Picture 6. Alternative1 theme.
-    * *Alternative2* theme (<i>Portlet Content</i> follows after the portlet title)<br/>
+                                                             Picture 6. Alternative1 portlet theme.
+    * *alternative2* theme (<i>Portlet Content</i> follows after the portlet title)<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
-                                                             Picture 7. Alternative2 theme.
-    * *Alternative3* theme<br/>
+                                                             Picture 7. Alternative2 portlet theme.
+    * *alternative3* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative3.jpg" alt="Alternative3 theme"><br/>
-                                                             Picture 8. Alternative3 theme.
-    * *Apple* theme<br/>
+                                                             Picture 8. Alternative3 portlet theme.
+    * *apple* theme<br/>
       <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
                                                              Picture 9. Apple theme.
 
@@ -150,17 +150,17 @@ _Ajax portal_ supports five states of <i>Region</i>s. Each region state provides
 The portlet states are defined by the following CSS markers:
     # *nodecoration* view cancels all decorations of the portlets in the region.<br/>
         <img src="http://sokolovbook.narod.ru/en/content/images/container_nodecoration.jpg"><br/>
-                                                             Picture 1. Nodecoration region state.
+                                                             Picture 10. Nodecoration region state.
     # *window* view represents the current region as window.
         The window has an icon and a title. 
         All portlets have no decorations in the region.<br/>
         <img src="http://sokolovbook.narod.ru/en/content/images/container_window.jpg"><br/>
-                                                             Picture 2. Window region state.
+                                                             Picture 11. Window region state.
     # *standard* view is classic view of the portlet.
         Any portlet is decorated as small window with icon, title and behavior buttons.
         Set of buttons depends on the *Portlet View* (the buttons change the portlet state).<br/>
         <img src="http://sokolovbook.narod.ru/en/content/images/container_standard.jpg"><br/>
-                                                             Picture 3. Standard region state.
+                                                             Picture 12. Standard region state.
     # *accordion* view is decorated portlets in the region as multiple panes (one pane for one portlet).
         Each pane has the same header as classic portlet view except for behavior buttons (see Standard state) and content. 
         All headers are displayed vertically as horizontal bars.
@@ -169,7 +169,7 @@ The portlet states are defined by the following CSS markers:
         Content of the pane is shown under the pane header.
         User can activate another pane by clicking on the corresponding header.<br/>
         <img src="http://sokolovbook.narod.ru/en/content/images/container_accordion.jpg"><br/>
-                                                             Picture 4. Accordion region state.
+                                                             Picture 13. Accordion region state.
     # *tabs* view represents portlets in the region as multiple tabs (one tab for one portlet).
         Each tab has a header and a content.
         Usually the header has an icon and a title.
@@ -178,7 +178,7 @@ The portlet states are defined by the following CSS markers:
         By default the first tab is active.
         User can activate another tab by clicking on the corresponding header.<br/>
         <img src="http://sokolovbook.narod.ru/en/content/images/container_tabs.jpg"><br/>
-                                                             Picture 5. Tabs region state.
+                                                             Picture 14. Tabs region state.
 
 ===2.2. Required CSS styles===
 
@@ -280,9 +280,17 @@ The following example demonstrates two regions with portlets:
 }}}
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/region.jpg">
-                                                             Picture 10. Screenshots of the example
+                                                             Picture 15. Screenshots of the example
 
+===2.5. Region Themes===
 
+The Ajax Portal supports the following themes for the region:
+    * *default* theme (see *left* column of the picture below),
+    * *blue* theme (see left *middle* of the picture below),
+    * *silver* theme (see *right* column of the picture below).
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
+                                                             Picture 16. *default*, *blue* and *silver* region themes.
 
 
 ==3. ajax4all scripts==
