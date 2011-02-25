@@ -1,6 +1,6 @@
 = Наш блог: Основные события в жизни технологии Ajax Portal =
 
-<img src="http://ajaxportal.googlecode.com/svn/trunk/images/english.jpg"> *ENGLISH Version:* [http://code.google.com/p/ajaxportal/wiki/blog_en]
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/english.gif"> *ENGLISH Version:* [http://code.google.com/p/ajaxportal/wiki/blog_en]
 
 *_Для возможности получать новости о Ajax Portal проекте, Вам необходимо добавить себя в новостную группу [http://groups.google.com/group/ajaxportal]. Вы сможете получать ежемесячный отчет о наших достижениях, версиях и новых возможностях нашего продукта._*
 
