@@ -1,6 +1,8 @@
 #labels Featured
 =Our Blog: The Main Events in the Life of Ajax Portal Project=
 
+*RUSSIAN Version:* [http://code.google.com/p/ajaxportal/wiki/blog_ru]
+
 *_If you want to receive news about Ajax Portal you have to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._*
 
 *The end of May 2009* - One of the trip in Munich, Germany. I had too much free time in the evenings. I started development of *Decoration module* of Ajax Portal. I generated a concept of region and its 5 states (1.no decoration, 2.window, 3.standard (portlet as window), 4.accordion, and 5.tabs). I had the clear understanding that portlet content is loaded by Ajax calls.
