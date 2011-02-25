@@ -44,6 +44,6 @@
 
 *5 Jan. 2011* - Ajax Portal 1.0.2 (Alpha #3) was released. Support of IFRAME was implemented. The static client part of Ajax Portal was stabilized.
 
-*16 Feb 2011* - We made decision to take part in Minsk Startup Weekend #6 (30 Apr. - 1 May 2011).
+*16 Feb 2011* - We made the decision to take part in Minsk Startup Weekend #6 (30 Apr. - 1 May 2011).
 
 *_If you want to receive news about Ajax Portal you have to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._*
