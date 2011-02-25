@@ -1,7 +1,8 @@
 #labels Featured
 =Our Blog: The Main Events in the Life of Ajax Portal Project=
 
-*RUSSIAN Version:* [http://code.google.com/p/ajaxportal/wiki/blog_ru]
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/russian.gif"> *RUSSIAN Version:* [http://code.google.com/p/ajaxportal/wiki/blog_ru]
 
 *_If you want to receive news about Ajax Portal you have to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._*
 
