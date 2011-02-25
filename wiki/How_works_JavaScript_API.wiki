@@ -1,7 +1,9 @@
 #labels Featured
-<h1>How works JavaScript API in Ajax Portal</h1>
+=How works JavaScript API in Ajax Portal=
 
 *Portal page* defines the layout and positions of each portlet on the portal page. Positions of each portlet may be changed by personalization settings when the page is loaded completely.
+
+== 1. Transformation of Portlets and Regions==
 
 *Portlet* is defined by <B>DIV</b> tag. Portlet should by marked by CSS markers (*portlet*, *portletNotActive*, *portletMaximized* and *portletHidden*), which define portlet state.
 
@@ -27,7 +29,7 @@ The next picture represents the view of the start page of the MicroServlet demo 
                                                              Picture 2. MicroServlet demo example 
 
 
-<h3>Transformation of the links</h3>
+== 2. Transformation of the links==
 
 Web application has simple link:
 
@@ -45,7 +47,7 @@ The function getCharset() gets the charset which 1) definded by form (see accept
 
 The function getTarget gets id of div HTML tag (content of portlet) with "portletContent" value in class attribute.
 
-<h3>Transformation of the form submit to Ajax Submit</h3>
+== 3. Transformation of the form submit to Ajax Submit==
 
 Ajax Submit is Ajax pattern. The idea is to polling form control and sending the data on the server by Ajax Call. The right way is to change prototype of all HTML form on portal page by the following script (see ajax4all_submit.js <b>Ajax4All</b> library):
 
@@ -113,7 +115,7 @@ For IE browser we have issue with Submit button, because it doesn't call <b>subm
         }
 }}}
 
-<h3>Transformation of the script and style links</h3>
+== 4. Transformation of the script and style links==
 
 All links of scripts and style will be moved from source of portlets in the header of the portal page. The link URLs will be transform in absolute URLs. The sources of the scripts and styles will be moved in header of the portal page.
 
