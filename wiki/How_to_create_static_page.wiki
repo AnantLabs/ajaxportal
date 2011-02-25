@@ -44,7 +44,7 @@ The portlet states are defined by the following CSS markers:
 
 ===1.4. Example===
 
-The following example demonstrates a simple definition of the portlet:
+The following example demonstrates a simple definition of the portlet, which will be decorated by JavaScript (static method *startOnLoad* of *Portal* object):
 {{{
 <div id="polygon1" class="portlet" title="Test">
 
