@@ -46,4 +46,6 @@
 
 *16 Feb 2011* - We made the decision to take part in Minsk Startup Weekend #6 (30 Apr. - 1 May 2011).
 
+*1 Mar  2011* - We buy two domains: *ajaxportal.org* and *ajaxportal.ru*.
+
 *_If you want to receive news about Ajax Portal you have to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._*
