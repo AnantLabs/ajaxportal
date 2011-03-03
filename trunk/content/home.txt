@@ -1,0 +1,364 @@
+=Ajax Portal=
+
+*We propose the new engine (_Ajax Portal technology_) for Enterprise Portals. Ajax Portal technology is based on Web 2.0 features and is oriented on B2B/B2C/B2E solutions.* 
+
+*Enterprise Ajax Portal* is software product which is based on *Ajax Portal* technology. *Enterprise Ajax Portal* saves the time when you work with information from Internet/Intranet. Now you should not to visit several sites to check of your e-Mail box, number of your flight miles in your account, the alerts about sales in your favorite shop or the last news in the world. Your may see them in one portal page (or several portal pages if it's necessary). Just add address of your site/data in Internet/Intranet and don't spend time for navigation in future. Of course, you have possibility to customize the portal page for your needs.
+
+_*Enterprise Ajax Portal is your choice for Business and Life. This is solution for all people who has computer and uses it every day.*_
+
+== Introduction ==
+
+Too many people don't understand difference between *Enterprise Portal* ([http://en.wikipedia.org/wiki/Enterprise_portal#Enterprise_Portal_Vendors see the term on wikipedia]) and *Web Portal* ([http://en.wikipedia.org/wiki/Web_portal see the term on wikipedia]). It's not a problem. Only software developer is able to understand it. You as end customer have to know only that this approach saves *time of site development* and *as result money* for site/portal owners, IT companies and software developers. 
+
+                               <img src="http://ajaxportal.googlecode.com/svn/trunk/images/product_segments.jpg">
+                                                             Picture 1. Product segments
+
+*Enterprise Ajax Portal* provides rich interactive interface, modern features like Drag&Drop, Ajax content update and absolutely new portal features like region states, browser page approach, universal layout and portlet orchestration.
+
+Who told you that you need any software development in Enterprise Portal? You can, but you should not. *Enterprise Ajax Portal* can be use by:
+    * *the end customers* for integration of existing applications (without any changes of the applications and any software development),
+    * *the software developers* for implementation of new Web products and services.
+*Please, show this site to your IT manager or software developer in your company.*
+
+_You may to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._
+
+== 1.1. Ajax Portal For Software Developers==
+
+We extend existing enterprise solutions which are based on standard *JSR-168* and *JSR-286*. We don't use any bridges like *JSR-301* and *JSR-329* based. We use AJAX technology totally. It gives us a possibility to build easy and high performance portal solution which called *Enterprise Ajax Portal*. We evolve classic Enterprise Portal approach to *Web 2.0 solution* (Intranet 2.0). 
+
+The *first main advantage* of our approach is *usage of standard Web applications* without changes as Portlets (Widgets). It saves your money for software development or even excludes this necessity. The *second advantage* is AJAX usage. Any portlet changes are doing *without reloading of portal page* (loading content, any actions in the portlet, etc.). It saves Internet traffic from/to portal server in several times. 
+
+We support enterprise development by JSP and JSF tag libraries.
+
+Client side part of our product is written on JavaScript. It gives possibility to use it with Java, .NET, PHP, Perl, etc. solutions.
+
+We are going to propose a new JSR for Java community about Portal and Portlets of the new generation. 
+
+*Just read about our product below and try to use it in your life.*
+
+_You may to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._
+
+== 1.2. What's New?==
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/news.gif"> New version of *Decoration module* of Enterprise Ajax Portal was released (see [http://ajaxportal.googlecode.com/files/ajaxportal_decoration_static-1.0.3.zip]).
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/news.gif"> We buy two domains: *ajaxportal.org* and *ajaxportal.ru*.
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/news.gif"> Our project will take part in *Minsk Startup Weekend #6* (30 Apr.- 1 May 2011).
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/news.gif"> We create a new page [http://code.google.com/p/ajaxportal/wiki/How_to_create_static_page?ts=1297675755&updated=How_to_create_static_page How to create static page] about *Ajax Portal 1.0.3 (Alpha4)* 
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/news.gif"> *Ajax Portal 1.0.2 (Alpha3)* was released at *5-th January 2011*. See download page [http://ajaxportal.googlecode.com/files/AjaxPortal_demo_tomcat_webapps_alpha3_1.0.2.zip AjaxPortal_demo_tomcat_webapps_alpha3_1.0.2.zip].
+
+Instruction for archive:
+    # extract the archive to tomcat webapps directory,
+    # open http://SERVER_NAME:PORT/demo_ajax4all/ in the browser.
+
+== 1.3. It Works Since ==
+
+No reqiuirements except the browser on your computer:
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/ie.jpg"> *MS Internet Explorer 6*, 
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/firefox.jpg"> *Mozilla Firefox 3.0*, 
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/opera.jpg"> *Opera 9*, 
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/empty.gif">
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/safari.jpg"> *Safari 3.0*
+
+
+== 1.4. What is Ajax Portal?==
+I propose a new enterprise portal architecture (Ajax Portal) which is based on Ajax calls exclusively. It simplifies portlet creation and even allows to forget about portlets as portal server side components. Instead, I propose to use any static or dynamic HTML/XHTML resource as a portlet. It gives the possibility to use standard Web applications based on JSF, Tapestry, Struts 1/2, Webwork frameworks, and even non Java-based technologies, such as ASP, ASP.NET, Perl, PHP, etc. as portlets (content sources for portlets on the portal page).
+
+Unlike portlet bridge (JSR 301 or JSR 329), client side of Ajax Portal requests the HTML/XHTML resource (portlet) for both context and data.
+
+Ajax portal uses subtechnology ajax4all (implementation of *Ajax Submit* pattern) for supporting the applications based on Lite Ajax pattern (the application uses standard controls of HTML form).
+
+For resolving security issues (e.g. browser security and firewall rules) and/or opening secure channel, all Ajax requests can be sent through HTTP Repeater which retranslates request to the portlet server and response from the portlet server.
+
+For possibility to use existing Web applications as portlets and for excluding the need to modify these applications, Ajax Portal has a special Content Aggregator component. This component allows to get the body of HTML/XHTML resource (content of the BODY tag) or content of any element of HTML/XHTML resource by value of id attribute for Content Injection in the portal page. Content Aggregator also extracts links and source of JavaScript and CSS and injects them in the portal page by a special method (specified by portal implementation).
+
+All portlets of Ajax portal are set in portlet regions on the portal page. Each portlet has the RegionByDefault parameter, which specifies the region where the portlet will be added during portlet installation in the portal page. Ajax Portal allows to *Drag and Drop* portlets within the region and from one region into another. Region usage gives an additional possibility for portlet decoration (view of the portlet depends on states of both the region and the portlet). 
+
+*The most great event in history of our project:* Standard approach for Enterprise Portal was dead *26 April 2010* when Ajax Portal example with *ajax4all* library was started. Ajax Submit pattern was implemented completely.
+
+== 1.5. Main features==
+*Implemented features:*
+    * Portlet content (HTML, XHTML, CSS, scripts, etc.) can be loaded by Ajax Calls directly from portlet server.
+    * Portlet loading/working/updating is doing without reload of portal page.
+    * Posibility to use standard Web application without changes as portlets.
+    * Ajax Portal proposes Portlet API based on MicroServlet MVC framework for classic portlet development. Portlet API generally follows JSR 286.
+    * Drag & Drop support.
+*Technical features:*
+    * Transformation of standard Web application to Ajax based application
+    * Multyplatform development (support of Java, .NET and PHP platforms)
+*Features in progress:*
+    * Localization (Internationalization) for English, Russian, German (already supported).
+    * Common wizards and dialogs
+    * Security module
+    * Personalization module
+== 1.6. Why Ajax Portal?==
+Update of portlet content is executed by Ajax Call without reloading of the Portal Page. Usage of this approach saves Internet traffic between portal server and portlets.
+
+Portal Page defines the layout (position of each portlet on portal page), but the layout can be changed by JavaScript library (clien side API).
+
+Ajax Portal is Platform-independent and programming languages-independent (client side is implemented as JavaScript library (API), but server side can be based on Java, .NET, Perl, PHP, etc.).
+
+Only Personalization Service and HttpProxy (HttpRepeater) components are required for Ajax Portal functionality. Both server side components have to implement interfaces described by Ajax Portal specification. Other services and components for server side are optional.
+
+CMS is out of scope of Ajax Portal specification. Developer can use any CMS, databases and any other sources for content management.
+
+Ajax Portal adds additional component Region and a new decoration for portlets.
+
+Ajax Portal JavaScript library (API) provides possibility to create, modify and delete any portlets and regions on client side (in the browser). 
+== 1.7. FAQ==
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/readit.gif"/><a href="http://code.google.com/p/ajaxportal/wiki/FAQ">See FAQ wiki page</a>
+
+== 1.8. Overview of Ajax Portal Technology==
+Ajax Portal is technology for developing Web Portal which supports content aggregation from different instances (content of any HTML/XHTML resources in Internet). It's possible to use standard Web application as portlets. The server technology doesn't matter (Java , .NET, ASP, PHP, Perl, etc.).
+
+                               <img src="http://ajaxportal.googlecode.com/svn/trunk/images/ap2.jpg">
+                                                             Picture 1. Demo version screenshot of Enterprise Ajax Portal ver.1.0.1
+
+                               <img src="http://ajaxportal.googlecode.com/svn/trunk/images/screenshot1_small.jpg">
+                                                             Picture 2. Mashup demo page for Minsk Startup Weekend №6 (30 Apr - 1 May of 2011 screenshot), Enterprise Ajax Portal ver.1.0.4
+
+
+== 1.9. Basic Terminology==
+Ajax Portal proposes a little bit different terminology in comparison with JSR 286:
+    * *Portal* is a Web application providing the content aggregation from different sources, personalization (implemented by PersonalizationService), security (e.g. Single Sign On for relative Portlets) and the presentation layer of Information System.
+    * *Ajax Portal* provides content aggregation of Portlets and any static (any HTML/XHTML page) or dynamic (any Java based, .NET, ASP, Perl, PHP, etc. application) resources from Internet.
+    * *Portal Page* represents a complete HTML/XHTML document and aggregates several portlet regions and Portlets.
+                               <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portal_page.gif">
+                                                             Picture 2. Basic Portal Page components (Content Areas, Portlets and Portlet Regions)
+    * *Content* is a set of components in HTML/XHTML document (e.g. text, images, links, etc.).
+    * *Content Area* _(instead of Portlet Content in JSR 286)_ is any rectangular bar with Content in HTML/XHTML document.
+    * *Portlet* _(instead of Portlet Window in JSR 286)_ provides decoration for the Content Area and additional behaviors (minimize, maximize, open in a new window, etc.). Usually any portlet has content and header with an icon, a title, some markers (e.g. draggable icon marker) and behavior buttons.
+    * *Portlet Region* is a rectangular bar with _Portlet_s. _Portlet Region_ provides decoration for the region and an additional decoration for the portlets in the region. _Portlet Region_ also provides a special behavior for the portlets (e.g. portlet minimizing and maximizing, _Portlet_ <a href="http://en.wikipedia.org/wiki/Drag-and-drop" target="_blank">Drag and Drop</a> between regions and inside of the region).<br>_Portlet_s can be situated outside of _Region_s.
+    * *Portlet Application* _(instead of Portlet Container in JSR 286)_ is a server side component supporting request processing and dynamic content generating. Portlet Applications are used as pluggable user interface components that provide a presentation layer of Information System. Ajax Portal provides Java based default implementation of Portlet Application (see Portlet implementation module of Ajax Portal). Portal and Portlet Applications can be built together as one Web application.
+
+== 1.10. Architecture==
+
+We extend existing enterprise solutions which are based on standard *JSR-168* and *JSR-286*. We don't use any bridges like *JSR-301* and *JSR-329* based. We use AJAX technology totally. It gives us a possibility to build easy and high performance portal solution which called *Enterprise Ajax Portal*. We evolve classic Enterprise Portal approach to *Web 2.0 solution* (Intranet 2.0). 
+
+Architecturally *Ajax Portal* consists of two main parts:
+    * *Server side* - portal server.
+    * *Client side* - portal JavaScript application.
+
+Server side of Ajax Portal includes the following main components (see picture below):
+    # *Portlet connector* - portlet container of JSR168/JSR286 portlets.
+    # *Content aggregator* - supports work with standard Web applications.
+    # *Portal Web application* - provides implementation of main services (e.g. *Personalization Service*, etc.).
+    # *HTTP Proxy* - provides possibility to load content (by Ajax calls) from resources outside of portal domain.
+
+Client side of Ajax Portal includes the following main components (see picture below):
+    # *Portal Page* - provides minimal set of CSS and JavaScript.
+    # *JavaScript UI Library* - provides the main UI components of the portal: *PortletPage*, *Region* and *Portlet*. The library supports all interactive effects as Drag&Drop, themes for regions/portlets (especially for accordion and tabs functionality).
+    # *JavaScript Portal API* - supports Ajax Call to the portal and portlets.
+    # *Content aggregator* - supports *Content Aggregation* pattern by *ajax4all* JavaScript library.
+
+                               <img src="http://ajaxportal.googlecode.com/svn/trunk/images/ajaxportal_server_architecture.jpg" alt="Ajax Portal architecture"/>
+                                                                                                                    Picture 3. Ajax Portal architecture
+
+Client (browser) connects to _Ajax Portal Server_ using HTTP. _Ajax Portal Server_ is a _Web Application_. The Portal builds a portal page (HTML/XHTML page and required images, CSS files and scripts). The portal page defines:
+    # layout of the portal page, 
+    # navigation mechanism,
+    # possibility to change portal settings.
+The portal page may contain the content of the portlets or content of portlets can be loaded by client side of portal directly from portlet server or through the HTTPProxy component. 
+
+Content of each portlet can be loaded by the following ways:
+    # directly loaded from portlet application (portlet server),
+    # loaded form portlet server thought HttpProxy component,
+    # portal server injects content of portlets in the portal page during its rendering.
+
+The difference of principle is *Portlet Phases* (see picture below). The classic approach uses 3 phases of relations between portal and portlets: action (apply of changes in current portlet, event sending and render of content. For Ajax Portal the render phase is required only. Each activity between portal-portlet and portlet-portlet is supported by Ajax call. By Ajax call portlet: 
+    # sends parameters and receives a new portlet content, 
+    # sends application data to the portlet and receive the result code (e.g. success or not),
+    # sends application data to another portlet (portlet intercommunication).
+The picture demonstrates parameter sending and receiving of the new portlet content. Important things: the portal page is not reloaded. The portal sends only a portlet content.
+
+                               <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_phases.gif" alt="Portlet phases in Ajax Portal"/>
+                                                                                                                    Picture 4. Portlet phases in Ajax Portal
+
+Everybody knows about security issue with Ajax calls outside of current domain, but *Web Applications Working Group* with *W3C* created [http://www.w3.org/TR/cors/ Cross-Origin Resource Sharing]. It allows access to resources outside of current domain by Ajax.
+
+Ajax Portal provides HTTP Proxy component which helps to connect outside of current domain without *Cross-Origin Resource Sharing* (it's actual for old browsers). In addition HTTP Proxy component helps to support *SSO*. It's not possible to store password and any security certificates in JavaScript code (all Portlets are part of portal page and can access to all properties and methods). As result, all security certificated, SSO tickets are added during the proxy of Ajax calls by HTTP Proxy component.
+
+                               <img src="http://ajaxportal.googlecode.com/svn/trunk/images/components_and_technologies.jpg">
+                                                                                                                    Picture 5. Component and technology pool
+
+== 1.11. How Does It Works?==
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/readit.gif"/><a href="http://code.google.com/p/ajaxportal/wiki/How_works_JavaScript_API">How works JavaScript API</a>
+
+Portlet Core: *TBD*
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/readit.gif"/><a href="http://code.google.com/p/ajaxportal/wiki/Portlet_API">Portlet API</a>
+
+== 2. Special Appeal #1: Region States==
+_Ajax portal_ supports five states of <i>Region</i>s. Each region state provides a specific decoration for the <i>Region</i> and an additional decoration for the _Portlet_s in the _Region_.
+    * *nodecoration* view cancels all decorations of the portlets in the region.<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_nodecoration.jpg"><br/>
+                                                             Picture 1. Nodecoration region state.
+    * *window* view represents the current region as window.
+        The window has an icon and a title. 
+        All portlets have no decorations in the region.<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_window.jpg"><br/>
+                                                             Picture 2. Window region state.
+    * *standard* view is classic view of the portlet.
+        Any portlet is decorated as small window with icon, title and behavior buttons.
+        Set of buttons depends on the *Portlet View* (the buttons change the portlet state).<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_standard.jpg"><br/>
+                                                             Picture 3. Standard region state.
+    * *accordion* view is decorated portlets in the region as multiple panes (one pane for one portlet).
+        Each pane has the same header as classic portlet view except for behavior buttons (see Standard state) and content. 
+        All headers are displayed vertically as horizontal bars.
+        Only one pane can be selected at the same time.
+        By default the first pane is active.
+        Content of the pane is shown under the pane header.
+        User can activate another pane by clicking on the corresponding header.<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_accordion.jpg"><br/>
+                                                             Picture 4. Accordion region state.
+    * *tabs* view represents portlets in the region as multiple tabs (one tab for one portlet).
+        Each tab has a header and a content.
+        Usually the header has an icon and a title.
+        All headers are displayed horizontally above the content.
+        Only one tab can be selected at the same time.
+        By default the first tab is active.
+        User can activate another tab by clicking on the corresponding header.<br/>
+        <img src="http://sokolovbook.narod.ru/en/content/images/container_tabs.jpg"><br/>
+                                                             Picture 5. Tabs region state.
+== 3. Special Appeal #2: Exotic Portlet Themes==
+_Ajax Portal_ supports the following exotic themes for portlets in base package (see below). The themes are supported only for _Portlet_s outside of any _Region_.
+    * *Alternative1* theme (there're no portlet icon and title)<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative1.jpg" alt="Alternative1 theme"><br/>
+                                                             Picture 1. Alternative1 theme.
+    * *Alternative2* theme (_Portlet Content_ follows after the portlet title)<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative2.jpg" alt="Alternative2 theme"><br/>
+                                                             Picture 2. Alternative2 theme.
+    * *Alternative3* theme<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_alternative3.jpg" alt="Alternative3 theme"><br/>
+                                                             Picture 3. Alternative3 theme.
+    * *Apple* theme<br/>
+      <img src="http://ajaxportal.googlecode.com/svn/trunk/images/portlet_theme_apple.jpg" alt="Apple theme"><br/>
+                                                             Picture 4. Apple theme.
+== 4. How to write portlet for Ajax Portal==
+=== 4.1. Use existing Web application===
+Ajax Portal provides posibility to use standard Web application as portlets without changes. 
+
+It's possible by the following ways:
+    * by *IFRAME* HTML tags - starts Web application (Portlet) in a small subwindow on the main page,
+    * by *ajax4all* JavaScript library - *ajax4all* library implements *Content Aggregation* pattern. The main idea is injection of Web application content in the portal page by DOM model methods of the browser. During injection all CSS styles, scripts and its links are added in the portal page too.
+=== 4.2. Portlet API===
+*Ajax Portal team proposes Portlet API which is based on* [http://sokolovbook.narod.ru/en/microservlet.html MicroServlet MVC framework]. 
+
+Portlet API of Ajax Portal helps to develop Web application which can work as portlet (has portlet descriptor, implement portlet lifecycle, etc.). It means any portlet, which was developed by Portlet API of Ajax Portal, can be used as standard Web application.
+
+Current Portlet API implementation has some difference with JSR 286, but we try to follow JSR 286 in generally. We will propose a new JSR for Java community which will specify  portlets and portals of new generation.
+
+*Portal Core* TBD
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/readit.gif"/>[http://code.google.com/p/ajaxportal/wiki/Portlet_API Portlet API: Lifecycle]
+
+<img src="http://ajaxportal.googlecode.com/svn/trunk/images/readit.gif"/>[http://code.google.com/p/ajaxportal/wiki/Portlet_API Why do we use MicroServlet framework as base of Portlet API?]
+
+Portlet API uses the following annotation which come from MicroServlet API:
+    * RenderForm - annotation defines class, scope, name for request form bean,
+    * RenderJsp - annotation defines render JSP.
+Portlet API creates the own implementation of RenderMode annotation. The annotation marks method which should be executed for portlet *render mode*.
+
+See demo of Portlet API:
+{{{
+public class HelloWorldDispatchPortlet extends AbstractDispatchPortletServlet {
+
+    protected DemoFormExample getRequestForm(RenderRequest request) {
+        return (DemoFormExample) RequestFormUtil
+                .getRequestForm(((RenderRequestImpl)request)
+                        .getHttpServletRequest());
+    }
+
+    @RenderMode   // by default mode = PortletMode.VIEW
+    @RenderForm (name = "DemoFormExample",
+                 clazz = com.sokolov.microservlet.example.DemoFormExample.class,
+                 scope = Scope.SESSION)
+    @RenderJsp (page = "/page/demo.jsp")
+    public void doView(RenderRequest renderRequest,
+                       RenderResponse renderResponse)
+            throws PortletException, IOException {
+        DemoFormExample formExample = getRequestForm(renderRequest);
+        formExample.setParam1("Test");
+    }
+
+    @RenderMode (mode = PortletMode.EDIT)
+    public void doEdit(RenderRequest renderRequest,
+                       RenderResponse renderResponse)
+            throws PortletException, IOException {
+        PrintWriter out = renderResponse.getWriter();
+        out.println("EDIT mode.");
+    }
+
+    @RenderMode (mode = PortletMode.HELP)
+    public void doHelp(RenderRequest request,
+                       RenderResponse response)
+            throws PortletException, IOException {
+        PrintWriter out = response.getWriter();
+        out.println("HELP mode.");
+    }
+
+    @RenderMode (mode = PortletMode.CUSTOM,
+                 name = "HalfPage")
+    @RenderForm (name = "DemoFormExample",
+                 clazz = com.sokolov.microservlet.example.DemoFormExample.class)
+    public void doHalfPage(RenderRequest renderRequest,
+                           RenderResponse renderResponse)
+            throws PortletException, IOException {
+        PrintWriter out = renderResponse.getWriter();
+        out.println("HalfPage mode.");
+
+        DemoFormExample formExample = getRequestForm(renderRequest);
+        out.println("Param1 = " + formExample.getParam1());
+    }
+}
+}}}
+
+== 5. We propose a new JSR for Java community==
+The reasons for creation of the new JSR:
+    # JSR168 and JSR286 don't specify Portal Server
+    # JSR168 and JSR286 don't support Ajax. JSR301 and JSR329 are hot fixed drawbacks of JSR168 and JSR286.
+    # Region approach is standard de facto, but it's not specified by JSR168 and JSR286.
+    # *PortletMode* should be *enum* (Java type).
+    # *WindowState* transforms to *PortletState*, because Ajax Portal supports *Tabs* and *Accordion* region states. *PortletState* should be *enum* (Java type).
+    # add new *RegionState* enum, which supports the following enum values: *NODECORATION*, *WINDOW*, *STANDARD*, *ACCORDION*, *TABS*.
+    # *TBD*
+
+== 6. Who Am I?==
+I'm a lead software engineer with 18 years of development experience. My specialty is database and web development for business applications. Last 6 years I've been concentrated on the development under Java platform, though I had good experience C, C++, C#, VB (VBScript), Perl and Flash (action script and animation) development. I had system architect role on my two last projects. I had deep experience in architecture documentation development. 
+
+I started my portal experience from WebLogic Portal 8.0 in 2005. 
+
+I've already published 4 books:
+||<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_css3_bolgaria_book.jpg"> <b>[http://www.asenevtsi.com/index.php?p=book&book=46 CSS3 в примери + CD.]</b> 336 pages, 2009, Asenevtsi (Bulgaria).||<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_css3_book.jpg"> <b>[http://www.williamspublishing.com/Books/978-5-8459-1337-1.html CSS 3 в примерах.]</b>352 pages, 2007, Williams (Russia).||<img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_html_and_css_book.jpg"> <b>[http://www.williamspublishing.com/Books/978-5-8459-1192-6.html HTML и CSS в примерах, типовых решениях и задачах.]</b> 416 pages, 2007, Williams (Russia).|| <img src="http://ajaxportal.googlecode.com/svn/trunk/images/my_javascript_book.jpg"> <b>[http://www.williamspublishing.com/Books/5-8459-1029-3.html JavaScript в примерах, типовых решениях и задачах.]</b> 592 pages, 2006, Williams (Russia).||
+
+You can ask me Why didn't I publish a new book in 2010? The reason is Ajax Portal...
+
+I joined the following ideas and proposals in Ajax Portal: 
+    # my experience in maintenance company intranet in MDTVision (an IBM company) about 5 years,  
+    # my proposal of intranet console for MDTVision, EPAM and Exadel, 
+    # small library for remake of my JavaScript book, 
+    # experience of enterprise portal development, 
+    # ALL components (region states in Ajax Portal), which implement *State* pattern. 
+
+== 7. Helpful links==
+
+*Our team:* [http://code.google.com/p/ajaxportal/people/list]
+
+*Home site:* [http://sokolovbook.narod.ru/en/ajaxportal.html]
+
+*Google group:* [http://groups.google.com/group/ajaxportal]    
+
+*Project blog:* <img src="http://ajaxportal.googlecode.com/svn/trunk/images/english.gif"> [http://code.google.com/p/ajaxportal/wiki/blog_en English version] and <img src="http://ajaxportal.googlecode.com/svn/trunk/images/russian.gif"> [http://code.google.com/p/ajaxportal/wiki/blog_ru Russian version  (Русская версия)]
+
+*About me:* [http://code.google.com/p/ajaxportal/wiki/about_me]
+
+*Our code on SourceForge:* [http://sourceforge.net/projects/ajaxportal/]
+
+
+==P.S. You can see details about the project on <a href="http://sokolovbook.narod.ru/en/ajaxportal.html">the Ajax Portal home page</a>==
+
+Sergei Sokolov, <img src="http://ajaxportal.googlecode.com/svn/trunk/images/letter.gif"> [mailto:s-sokolov@tut.by s-sokolov@tut.by]
