@@ -6,46 +6,48 @@
 
 *_If you want to receive news about Ajax Portal you have to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._*
 
-*The end of May 2009* - One of the trip in Munich, Germany. I had too much free time in the evenings. I started development of *Decoration module* of Ajax Portal. I generated a concept of region and its 5 states (1.no decoration, 2.window, 3.standard (portlet as window), 4.accordion, and 5.tabs). I had the clear understanding that portlet content is loaded by Ajax calls.
+*The end of May, 2009* - One of the trip in Munich, Germany. I had too much free time in the evenings. I started development of *Decoration module* of Ajax Portal. I generated a concept of region and its 5 states (1.no decoration, 2.window, 3.standard (portlet as window), 4.accordion, and 5.tabs). I had the clear understanding that portlet content is loaded by Ajax calls.
 
-*Sep. of 2009* - The prototype where the portlet content is loaded by Ajax calls was created (this concept is used by static version of Ajax Portal on [http://sokolovbook.narod.ru/en/ajaxportal.html NAROD.RU]).
+*September, 2009* - The prototype where the portlet content is loaded by Ajax calls was created (this concept is used by static version of Ajax Portal on [http://sokolovbook.narod.ru/en/ajaxportal.html NAROD.RU]).
 
-*The start of Feb. 2010* - The page about Ajax Portal was created on free hosting provider [http://sokolovbook.narod.ru/en/ajaxportal.html NAROD.RU].
+*The start of February, 2010* - The page about Ajax Portal was created on free hosting provider [http://sokolovbook.narod.ru/en/ajaxportal.html NAROD.RU].
 
-*19 Feb. 2010* - Account on SourceForge is created. The project *ajaxportal* on SourceForge was already in used, but there weren't any changes about 3 years.
+*February 19, 2010* - Account on SourceForge is created. The project *ajaxportal* on SourceForge was already in used, but there weren't any changes about 3 years.
 
-*24 March 2010* - The assumption mechanism for *ajaxportal* account on SourceForge, because it was not used any changes about 3 years.
+*March 24, 2010* - The assumption mechanism for *ajaxportal* account on SourceForge, because it was not used any changes about 3 years.
 
-*26 April 2010* - We had the complete implementation of Ajax Submit and Content Aggregation patterns. We had the base for the new software product.
+*April 26, 2010* - We had the complete implementation of Ajax Submit and Content Aggregation patterns. We had the base for the new software product.
 
-*25 May 2010* - We were the owner of the *ajaxportal* account on SourceForge.
+*May 25, 2010* - We were the owner of the *ajaxportal* account on SourceForge.
 
-*26 May 2010* - We were the owner of the *ajaxportal* account on Code.GOOGLE (the same situation with unused account).
+*May 26, 2010* - We were the owner of the *ajaxportal* account on Code.GOOGLE (the same situation with unused account).
 
-*June 2010* - We had the concept of the three main modules (*Decoration*, *Personalization* and *HttpProxy/HttpRepeater*) of Ajax Portal, which are the base of the first version.
+*June, 2010* - We had the concept of the three main modules (*Decoration*, *Personalization* and *HttpProxy/HttpRepeater*) of Ajax Portal, which are the base of the first version.
 
-*28 July 2010* - The beta of Ajax Portal 1.0.0 transformed to *the version 1.0.1 (Alpha #1)*. The reason is too many conceptual changes. It's not version 1.1, because the main features of the version 1.1 is not implemented.
+*July 28, 2010* - The beta of Ajax Portal 1.0.0 transformed to *the version 1.0.1 (Alpha #1)*. The reason is too many conceptual changes. It's not version 1.1, because the main features of the version 1.1 is not implemented.
 
-*27 Aug 2010* - We had a new developer from Indonesia.
+*August 27, 2010* - We had a new developer from Indonesia.
 
-*17-19 Sep. 2010* - We participated in HackDay #7 in Moscow. The dictionaries for Ajax Portal security profile was implemented by *SoftLocalization* subproject.
+*September 17..19, 2010* - We participated in HackDay #7 in Moscow. The dictionaries for Ajax Portal security profile was implemented by *SoftLocalization* subproject.
 
-*The end of Sep. 2010* - We had two main terms: *Ajax Portal* (technology name) and *Enterprise Ajax Portal* (product name).
+*The end of September, 2010* - We had two main terms: *Ajax Portal* (technology name) and *Enterprise Ajax Portal* (product name).
 
-*The start of Oct. 2010* - We added *Security* module as a new component of Ajax Portal.
+*The start of October, 2010* - We added *Security* module as a new component of Ajax Portal.
 
-*22 Oct. 2010* - We registered for Web-Ready 2010 in St. Petersburg.
+*October 22, 2010* - We registered for Web-Ready 2010 in St. Petersburg.
 
-*23-24 Oct. 2010* - We participated in HackDay #9 in St. Petersburg. We had two projects: 1) *StartUpSecurity* (profile of the user which is based on JSF 1.2) 2) *Ajax Portal*.
+*October 23..24, 2010* - We participated in HackDay #9 in St. Petersburg. We had two projects: 1) *StartUpSecurity* (profile of the user which is based on JSF 1.2) 2) *Ajax Portal*.
 
-*15 Nov. 2010* - We fixed the main issue in Ajax Portal with Internet Explorer. We found workaround. See *Alpha #2 of Enterprise Ajax Portal*.
+*November 15, 2010* - We fixed the main issue in Ajax Portal with Internet Explorer. We found workaround. See *Alpha #2 of Enterprise Ajax Portal*.
 
-*29 Dec. 2010* - Ajax Portal was announced on start-up school in Minsk. One business angel was interested in our project. The goal of the contact is not an investment, but it's the product selling to Belarusian enterprises and banks.
+*December 29, 2010* - Ajax Portal was announced on start-up school in Minsk. One business angel was interested in our project. The goal of the contact is not an investment, but it's the product selling to Belarusian enterprises and banks.
 
-*5 Jan. 2011* - Ajax Portal 1.0.2 (Alpha #3) was released. Support of IFRAME was implemented. The static client part of Ajax Portal was stabilized.
+*January 5, 2011* - Ajax Portal 1.0.2 (Alpha #3) was released. Support of IFRAME was implemented. The static client part of Ajax Portal was stabilized.
 
-*16 Feb. 2011* - We made the decision to take part in Minsk Startup Weekend #6 (30 Apr. - 1 May 2011).
+*February 16, 2011* - We made the decision to take part in Minsk Startup Weekend #6 (30 Apr. - 1 May 2011).
 
-*1 Mar.  2011* - We buy two domains: *ajaxportal.org* and *ajaxportal.ru*.
+*February 28,  2011* - We buy two domains: *ajaxportal.org* and *ajaxportal.ru*.
+
+*March 4, 2011* - The first sale of Ajax Portal takes place.
 
 *_If you want to receive news about Ajax Portal you have to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._*
