@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Region demo example</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+    
+    <link type="text/css" rel="stylesheet" href="portal/styles/common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_nodecoration_common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_window_common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_standard_common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_accordion_common.css">
+    <link type="text/css" rel="stylesheet" href="portal/styles/region_tabs_common.css">
+
+    <link id="portletWindow" type="text/css" rel="stylesheet" href="portal/styles/region_window_default.css">
+    <link id="portletStandard" type="text/css" rel="stylesheet" href="portal/styles/region_standard_default.css">
+    <link id="portletAccordion" type="text/css" rel="stylesheet" href="portal/styles/region_accordion_default.css">
+    <link id="portletTabs" type="text/css" rel="stylesheet" href="portal/styles/region_tabs_default.css">
+
+    <script type="text/javascript" language="javascript" src="portal/scripts/common.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/portlet.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/region.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/portal.js"></script>
+    <script type="text/javascript" language="javascript" src="portal/scripts/ajax.js"></script>
+
+    <script type="text/javascript" language="javascript" src="portal/scripts/drag.js"></script>
+
+    <script type="text/javascript">
+        function startPortalEvent() {
+            //alert("Hello, Ajax Portal!!!");
+            com.sokolov.portal.Portal._supportDragAndDrop();
+        }
+        window.portal = new com.sokolov.portal.Portal();
+        com.sokolov.portal.Portal.startOnLoad(window.portal, startPortalEvent);
+    </script>
+</head>
+<body>
+    <table style="width: 100%;">
+    <tr><td id="left" class="standard dropTarget" title="Window1" 
+            style="width: 50%; vertical-align: top; background-color: #DDD;">
+
+        <div id="polygon1" class="portlet noheader" title="">
+            Portlet1, content (no header)
+        </div>
+        <div id="polygon2" class="portlet editable" title="Portlet2" 
+             help="content/help_poligon2.html">
+            Portlet2, content (editable)
+        </div>
+        <div id="polygon3" class="portlet draggable" title="Portlet3">
+            Portlet3, content (draggable)
+        </div>
+
+        <div id="polygon4" class="portlet editable draggable" title="Portlet4" 
+            url="http://sokolovbook.narod.ru/ajaxportal_mobile/content/help_poligon4.html">
+            Portlet4, content (set URL of content)
+        </div>
+
+     </td>
+     <td id="right" class="standard dropTarget" title="Window2" 
+          style="width: 50%; vertical-align: top; background-color: #DDD;">
+
+        <div id="polygon5" class="portlet draggable iframe" title="Portlet5: IFrame" 
+            url="content/help_poligon5.html" bodyHeight="100px">
+            Portlet5, content (iframe)
+        </div>
+
+     </td></tr>
+     </table>
+</body>
+<html>

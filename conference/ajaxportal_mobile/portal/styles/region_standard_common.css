@@ -1,0 +1,138 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
+/*******************************************************************/
+
+.portletHeader .transfer {
+    display: none;
+    float: left;
+}
+
+.portletHeader,
+.portletTitle,
+.regionHeader,
+.regionTitle {
+    white-space:nowrap;
+    overflow: hidden;
+}
+
+.standard .tabNavigation {
+    display: none;
+}
+
+.standard div.regionHeader {
+    display: none; 
+}
+
+.standard .portletHidden {
+    display: none;
+}
+
+.standard .portlet,
+.standard .portletNotActive {
+    margin: 4px;
+    padding: 0;
+}
+
+.standard .portlet div.portletHeader .portletIcon,
+.standard .portletNotActive div.portletHeader .portletIcon {
+    font-size: 18px; 
+    width: 18px;
+    height: 18px;
+    margin: 1px;
+    margin: "0 1px 0 1px";
+    padding: 0;
+    float: left;
+
+    border: 0;
+
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+}
+
+.standard .portlet div.portletHeader,
+.standard .portletNotActive div.portletHeader {
+    margin: 0;
+    padding: 0;
+
+    height: 20px;
+    height: "18px";
+
+    cursor: default;
+    white-space: nowrap;
+
+    background-position: left top;
+    background-repeat: repeat;
+
+}
+
+.standard .portlet div.portletContent,
+.standard .portletNotActive div.portletContent {
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+    clear: both;
+}
+
+/* active **********************************************************/
+
+/* not active ******************************************************/
+
+.standard .portletNotActive div.portletContent {
+    display: none;
+}
+
+/*******************************************************************/
+
+.standard .dragIcon,
+.standard .toolButton {
+    display: none;
+}
+
+.standard .draggable .portletHeader a {
+    border: 0;
+}
+
+/**************************************************************/
+
+.helpButton {
+    display: none;
+}
+
+.helpView .portletHeader a .helpButton  {
+    display: inline;
+}
+
+
+.standard .portlet div.portletHeader .changeStateButton,
+.standard .portletNotActive div.portletHeader .changeStateButton,
+.standard .portlet .portletHeader a .helpButton,
+.standard .portletNotActive .portletHeader a .helpButton,
+.standard .draggable .portletHeader a .dragIcon,
+.standard .editable .portletHeader a .toolButton {
+    font-size: 10px; 
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid transparent;
+    border: "0";
+    margin: 2px 0px 2px 2px;
+    padding: 0;
+
+    float: right;
+
+    background-color: transparent;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+
+/*    display: inline;*/
+}
+
+
+.standard .draggable .portletHeader a .dragIcon,
+.standard .editable .portletHeader a .toolButton {
+    display: inline;
+}

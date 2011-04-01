@@ -1,0 +1,99 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0 (28 Jan 2010)                                      */
+/*******************************************************************/
+
+.tabs {
+    padding: 4px;
+}
+
+.tabs .tabNavigation {
+    display: block;
+    font-size: 1px;
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: -1px;
+
+    position:relative;
+    z-index: 1000000;
+}
+
+.tabs div.containerHeader {
+    display: none; 
+}
+
+.tabs .tabNavigation span {
+    font-size: 19px;
+    height: 19px;
+    height: "21px";
+}
+
+.tabs .portletHidden {
+    display: none;
+}
+
+.tabs .portlet,
+.tabs .portletNotActive {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    position:relative;
+}
+
+.tabs .portlet div.portletHeader,
+.tabs .portletNotActive div.portletHeader {
+    display: none;
+}
+
+.tabs .portlet div.portletHeader .changeStateButton,
+.tabs .portletNotActive div.portletHeader .changeStateButton {
+    display: none;
+}
+
+.tabs .portlet div.portletContent,
+.tabs .portletNotActive div.portletContent {
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+}
+
+
+/* active **********************************************************/
+
+/* not active ******************************************************/
+
+.tabs .portletNotActive {
+    display: none;
+}
+
+/* tab navigation ************************************************************/
+
+.tabs .tabNavigation .tabItemActive,
+.tabs .tabNavigation .tabItem {
+    height: 18px;
+    margin: 0 3px 0 0;
+    margin-bottom: -1px;
+    padding: 0 5px 0 0;
+
+    font-size: 16px;
+
+    cursor: default;
+    white-space: nowrap;
+}
+
+.tabs .tabNavigation .tabItem .tabItemIcon,
+.tabs .tabNavigation .tabItemActive .tabItemIcon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+

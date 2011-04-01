@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>General</title>
+        <link type="text/css" rel="stylesheet" href="styles/common.css">
+        <link type="text/css" rel="stylesheet" href="styles/header.css">
+        <link type="text/css" rel="stylesheet" href="styles/menu.css">
+        <link id="commonPage" type="text/css" rel="stylesheet" href="styles/common_blue.css">
+
+        <script type='text/javascript' language='javascript' src='scripts/common.js'></script>
+
+        <script type="text/javascript">
+
+            function socnetOnLoad () {
+                if (window.portal && (!window.socnet)) {
+                    window.socnet = true;
+
+                    // photos
+                    var portletId = "portlet" + generateId();
+                    var portlet = new com.sokolov.portal.Portlet(portletId, "Photos", DEFAULT_CONTAIER, null, DEFAULT_ICON);
+                    portlet.init();
+                    portlet.setDraggable(true); 
+                    portlet.setZeroPadding(true); 
+                    ajaxCall("../socnet/photos.html", 'post', getCharset(), '', portlet.getContentId());
+                    //ajaxCall("http://sokolovbook.narod.ru/socnet/photos.html", 'post', getCharset(), '', portlet.getContentId());
+                    refreshRegion(DEFAULT_CONTAIER);
+
+                    // messages
+                    portletId = "portlet" + generateId();
+                    portlet = new com.sokolov.portal.Portlet(portletId, "Messages", DEFAULT_CONTAIER, null, DEFAULT_ICON);
+                    portlet.init();
+                    portlet.setDraggable(true); 
+                    portlet.setZeroPadding(true); 
+                    ajaxCall("../socnet/messages.html", 'post', getCharset(), '', portlet.getContentId());
+                    //ajaxCall("http://sokolovbook.narod.ru/socnet/messages.html", 'post', getCharset(), '', portlet.getContentId());
+                    refreshRegion(DEFAULT_CONTAIER);
+
+                    $("socnetIndex").style.display = "none";
+                }
+            }  
+            setTimeout("socnetOnLoad()", 100); // Opera hot fix (instead of onload)
+        </script>
+
+    </head>
+    <body onload="socnetOnLoad();">
+
+    <table width="100%" border="0">
+         <tr>
+             <td id="blue" colspan="2" style="border:0; margin:0;">
+                 <div class="socnetHeader">
+                     <div><img src="images/logo.gif">&nbsp;Social Network</div>
+                 </div>
+                 <div id="socnetIndex" class="blueLine">
+                     <div class="whiteLine">
+                         <div class="menu">
+                             <span class="menuItem"><a href="index.html">General</a></span><!--
+                             --><span class="menuItem"><a href="photos.html">Photos</a></span><!--
+                             --><span class="menuItem"><a href="messages.html">Messages</a></span><!--
+                             --><span class="menuItem">&nbsp</span>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="size">&nbsp</div>
+             </td>
+         </tr>
+         <tr>
+             <td style="border:0; margin:0; padding: 4px;">
+                 &nbsp;&nbsp;<img src="photos/1.jpg" width="72" height="96">&nbsp;&nbsp;
+             </td>
+             <td align="left" style="border:0; margin:0; padding: 4px;">
+                 <big><b>Sergei Sokolov</b></big><br>
+                 <i>Software developer</i><br>
+                 Ajax Portal project<br>
+                 <a href="http://code.google.com/p/ajaxportal/">http://code.google.com/p/ajaxportal/</a><br>
+                 <a href="http://sokolovbook.narod.ru/en/">http://sokolovbook.narod.ru/en/</a>
+             </td>
+         </tr>
+     </table>
+     <hr> 
+     <div style='clear:both; text-align:center;'>&copy;Copyright <a href='mailto:s-sokolov@tut.by'>Sergei Sokolov</a>, 2011</div>
+    </body>
+</html>
