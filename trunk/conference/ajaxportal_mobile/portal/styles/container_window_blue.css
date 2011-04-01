@@ -1,0 +1,31 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0 (28 Jan 2010)                                      */
+/*******************************************************************/
+
+.window {
+    border: 1px solid #508FFF;
+    background-color: white;
+}
+
+.window div.containerHeader .containerIcon {
+    background-image: url(../images/icon_window.gif);
+}
+
+.window div.containerHeader {
+    color: white;
+    /*font-weight: bold;*/
+    background-color: #508FFF;
+    background-image: url(../images/background_lines.gif);
+}
+
+/* active **********************************************************/
+
+.window .portlet div.portletHeader {
+    color: black;
+    font-weight: bold;
+}
+
+/* not active ******************************************************/
+

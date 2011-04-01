@@ -1,0 +1,49 @@
+/** header ****************************/
+
+#yellow .socnetHeader {
+    border-bottom: 2px solid white;
+    background-color: #F07C1B;
+    color: white;
+}
+
+#yellow .socnetHeader div span.link a {
+    color: white;
+}
+
+/**  menu ****************************/
+
+#yellow .menu,
+#yellow .menuItem,
+#yellow .menuItem a {
+    color: #EEEEEE;
+    background-color:#FF841D;
+    background-image: url(../images/yellow_menu15r.gif);
+}
+
+#yellow .menuItem a:hover {
+    color: #FFFFFF;
+    background-color: silver;
+}
+
+#yellow .blueLine {
+    border-top: 2px solid #FF841D;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 2px solid #FF841D;
+}
+
+#yellow .whiteLine {
+    border-top: 2px solid white;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 2px solid white;
+}
+
+
+.disiable a {
+    color: silver;
+}
+
+.disiable a:hover {
+    color: gray;
+}

@@ -1,0 +1,136 @@
+/**  header ****************************/
+
+.header {
+    border: 1px solid #94C8F2;
+    background-color: #D0E7F9;
+    background-image: url(../images/newBGSilver.gif);
+    color: #0F74BC;
+}
+
+.header div span.link a {
+    color: #0F74BC;
+}
+
+.header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 125px;
+    text-align: right;
+}
+
+.header div {
+    margin-top: 30px;
+    margin-right: 20px;
+    text-align: right;
+    background-image: url(../images/logo.gif);
+    background-position: 35px 0px;
+    background-repeat: no-repeat;
+}
+
+.header div div.title {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.header div span.link {
+    font-size: 14px;
+}
+
+/**  menu ****************************/
+
+.menu,
+.menuItem,
+.menuItem a {
+    color: #0F74BC; 
+    background-color: #D0E7F9;
+    background-image: url(../portal/images/header_background_blue.gif);
+}
+
+.menuItem a:hover {
+    color: #FFFFFF;
+    background-color: #CCCCCC;
+}
+
+.blueLine {
+    border-top: 2px solid #D0E7F9;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 2px solid #D0E7F9;
+}
+
+.whiteLine {
+    border-top: 2px solid white;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 2px solid white;
+}
+
+.disiable a {
+    color: silver;
+}
+
+.disiable a:hover {
+    color: gray;
+}
+
+/***************************************************************/
+
+    .main {
+        width:100%; 
+        border-collapse:collapse; 
+        padding: 0; 
+        margin: 0;
+    }
+
+    .main th,
+    .main td {
+        border: 3px solid white; 
+    }
+    .main th {
+        background-color: silver;
+    }
+
+    td {
+        vertical-align: top;
+    }
+
+    td.standard, td.accordion, td.tabs {
+        padding: 0; 
+        height: 100%;
+    }
+
+    td.standard {
+        margin: 2px; 
+    }
+
+    td.standard, td.accordion {
+        background-color: #EEEEEE;
+    }
+
+/***************************************************************/
+
+    .portletContent * table, 
+    .portletContent * table * th, 
+    .portletContent * table * td {
+        border-color: transparent; 
+        border-width: 0px;
+    }
+
+
+
+    .layout,
+    .layout * th,
+    .layout * td {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .caption {
+        width: 110px;
+    }
+
+    .editbox {
+        width: 250px;
+    }

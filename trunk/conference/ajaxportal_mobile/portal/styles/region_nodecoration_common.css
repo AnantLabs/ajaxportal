@@ -1,0 +1,68 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
+/*******************************************************************/
+
+.portletHeader .transfer {
+    display: none;
+}
+
+.nodecoration .tabNavigation {
+    display: none;
+}
+
+.nodecoration div.regionHeader {
+    display: none;
+}
+
+.nodecoration {
+    margin: 7px 7px 0 7px;
+    padding: 0;
+    border: 0;
+}
+
+.nodecoration .portletHidden {
+    display: none;
+}
+
+.nodecoration .portlet,
+.nodecoration .portletNotActive {
+    margin: 0 0 7px 0;
+    padding: 0;
+    border: none;
+}
+
+.nodecoration .portlet div.portletHeader .portletIcon,
+.nodecoration .portletNotActive div.portletHeader .portletIcon {
+    display: none;
+}
+
+
+.nodecoration .portlet div.portletHeader,
+.nodecoration .portletNotActive div.portletHeader {
+    display: none;
+}
+
+
+.nodecoration .portlet div.portletHeader .changeStateButton,
+.nodecoration .portletNotActive div.portletHeader .changeStateButton {
+    display: none;
+}
+
+.nodecoration .portlet div.portletContent,
+.nodecoration .portletNotActive div.portletContent {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+/* active **********************************************************/
+
+
+/* not active ******************************************************/
+
+.nodecoration .portletNotActive div.portletContent {
+    display: none;
+}

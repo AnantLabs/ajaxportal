@@ -1,0 +1,92 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
+/*******************************************************************/
+
+.portletHeader .transfer {
+    display: none;
+}
+
+.accordion .tabNavigation {
+    display: none;
+}
+
+.accordion div.regionHeader {
+    display: none;
+}
+
+.accordion {
+    padding: 4px;
+}
+
+.accordion .portletHidden {
+    display: none;
+}
+
+.accordion .portlet,
+.accordion .portletNotActive {
+    margin: 0 0 1px 0;
+    padding: 0;
+}
+
+
+.accordion .portlet div.portletHeader .portletIcon,
+.accordion .portletNotActive div.portletHeader .portletIcon {
+    font-size: 18px; 
+    width: 18px;
+    height: 18px;
+    margin: 1px;
+    padding: 0;
+    float: left;
+
+    border: 0;
+
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+.accordion .portlet div.portletHeader,
+.accordion .portletNotActive div.portletHeader {
+    margin: 0;
+    padding: 0;
+    /*font-weight: bold;*/
+    cursor: default;
+
+    height: 20px;
+    height: "18px";
+
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+
+.accordion .portlet div.portletHeader .changeStateButton,
+.accordion .portletNotActive div.portletHeader .changeStateButton {
+    display: none;
+}
+
+.accordion .portlet div.portletContent,
+.accordion .portletNotActive div.portletContent {
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+    clear: both;
+}
+
+
+/* active **********************************************************/
+
+
+/* not active ******************************************************/
+
+.accordion .portletNotActive div.portletContent {
+    display: none;
+}
+
+
+/*******************************************************************/
+
+.dragIcon,
+.toolButton {
+    display: none;
+}

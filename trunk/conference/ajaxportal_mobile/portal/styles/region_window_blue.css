@@ -1,0 +1,64 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
+/*******************************************************************/
+
+.window {
+    border: 1px solid #508FFF;
+    background-color: white;
+}
+
+.window div.regionHeader .regionIcon {
+    background-image: url(../images/icon_window.gif);
+}
+
+.window div.regionHeader {
+    color: white;
+    /*font-weight: bold;*/
+    background-color: #508FFF;
+    background-image: url(../images/background_lines.gif);
+}
+
+/* active **********************************************************/
+
+.window .portlet div.portletHeader {
+    color: black;
+    font-weight: bold;
+}
+
+/* not active ******************************************************/
+
+/*******************************************************************/
+
+.window .portlet .portletHeader a .helpButton,
+.window .portletNotActive .portletHeader a .helpButton,
+.window .editable .portletHeader a .toolButton {
+    background-color: transparent;
+
+    border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+
+.window .portlet .portletHeader a:hover .helpButton,
+.window .portletNotActive .portletHeader a:hover .helpButton,
+.window .editable .portletHeader a:hover .toolButton {
+    background-color: silver;
+
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.window .editable .portletHeader a .toolButton {
+    background-image: url(../images/tool_gray.gif);
+}
+
+.window .portlet .portletHeader a .helpButton,
+.window .portletNotActive .portletHeader a .helpButton {
+    background-image: url(../images/question_gray.gif);
+}

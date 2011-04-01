@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Messages</title>
+        <link type="text/css" rel="stylesheet" href="styles/common.css">
+        <link type="text/css" rel="stylesheet" href="styles/header.css">
+        <link type="text/css" rel="stylesheet" href="styles/menu.css">
+        <link id="commonPage" type="text/css" rel="stylesheet" href="styles/common_yellow.css">
+
+        <script type='text/javascript' language='javascript' src='scripts/common.js'></script>
+
+        <script type="text/javascript">
+            function socnetMessageOnLoad () {
+                if (window.portal) {
+                    $("socnetMessages").style.display = "none";
+                }
+            }  
+            setTimeout("socnetMessageOnLoad()",100); // Opera hot fix (instead of onload)
+        </script>
+    </head>
+    <body onload="">
+
+    <table width="100%" border="0">
+         <tr>
+             <td id="yellow" style="border:0; margin:0;">
+                 <div class="socnetHeader">
+                     <div><img src="images/logo.gif">&nbsp;Social Network</div>
+                 </div>
+                 <div id="socnetMessages" class="blueLine">
+                     <div class="whiteLine">
+                         <div class="menu">
+                             <span class="menuItem"><a href="index.html">General</a></span><!--
+                             --><span class="menuItem"><a href="photos.html">Photos</a></span><!--
+                             --><span class="menuItem"><a href="messages.html">Messages</a></span><!--
+                             --><span class="menuItem">&nbsp</span>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="size">&nbsp</div>
+             </td>
+         </tr>
+         <tr>
+             <td style="border:0; margin:0; padding: 4px;">
+                 <div><b>Dick Green</b><small>, 21.06.2011 10:30</small><br><small style="margin-left: 15px; display: block;">Hello. How are you?<br>Yesterday I and my wife was in NY.</small></div><br>
+                 <div><b>Sergei Sokolov</b><small>, 21.06.2011 10:32</small><br><small style="margin-left: 15px; display: block;">Cool!!!</small></div><br>
+                 <div><b>Dick Green</b><small>, 21.06.2011 10:34</small><br><small style="margin-left: 15px; display: block;">I don't forget about your promise ;-)))<br> Come to me after lunch...</small></div><br>
+                 <form>
+                     <textarea rows="3" cols="25"></textarea><br>
+                     <input type="button" value="Send">
+                 <form>
+             </td>
+         </tr>
+     </table>
+     <hr> 
+     <div style='clear:both; text-align:center;'>&copy;Copyright <a href='mailto:s-sokolov@tut.by'>Sergei Sokolov</a>, 2011</div>
+    </body>
+</html>

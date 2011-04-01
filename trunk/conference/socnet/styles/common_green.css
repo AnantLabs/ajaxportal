@@ -1,0 +1,49 @@
+/** header ****************************/
+
+#green .socnetHeader {
+    border-bottom: 2px solid white;
+    background-color: #6BB712;
+    color: white;
+}
+
+#green .socnetHeader div span.link a {
+    color: white;
+}
+
+/**  menu ****************************/
+
+#green .menu,
+#green .menuItem,
+#green .menuItem a {
+    color: #EEEEEE;
+    background-color:#72C313;
+    background-image: url(../images/green_menu15r.gif);
+}
+
+#green .menuItem a:hover {
+    color: #FFFFFF;
+    background-color: silver;
+}
+
+#green .blueLine {
+    border-top: 2px solid #72C313;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 2px solid #72C313;
+}
+
+#green .whiteLine {
+    border-top: 2px solid white;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 2px solid white;
+}
+
+
+.disiable a {
+    color: silver;
+}
+
+.disiable a:hover {
+    color: gray;
+}

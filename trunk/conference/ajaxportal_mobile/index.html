@@ -1,0 +1,281 @@
+<html>
+<head id="head">
+    <!--meta http-equiv="Content-Type" content="text/html;charset=UTF-8"-->
+    <meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
+
+<!------------------------------------------------------------------------------------------>
+    <script type="text/javascript" language="javascript" src="scripts/cookie.js"></script>
+
+    <script type="text/javascript" language="javascript" src="ajax4all/ajax4all_core.js"></script>
+    <script type="text/javascript" language="javascript" src="ajax4all/ajax4all_aggregation.js"></script>
+    <script type="text/javascript" language="javascript" src="ajax4all/ajax4all_submit.js"></script>
+<!------------------------------------------------------------------------------------------>
+<link type="text/css" rel="stylesheet" href="styles/common.css">
+
+<link type="text/css" rel="stylesheet" href="portal/styles/common.css">
+<link type="text/css" rel="stylesheet" href="portal/styles/portlet_default.css">
+
+<link type="text/css" rel="stylesheet" href="portal/styles/region_nodecoration_common.css">
+<link type="text/css" rel="stylesheet" href="portal/styles/region_window_common.css">
+<link type="text/css" rel="stylesheet" href="portal/styles/region_standard_common.css">
+<link type="text/css" rel="stylesheet" href="portal/styles/region_accordion_common.css">
+<link type="text/css" rel="stylesheet" href="portal/styles/region_tabs_common.css">
+
+<link id="portletWindow" type="text/css" rel="stylesheet" href="portal/styles/region_window_default.css">
+<link id="portletStandard" type="text/css" rel="stylesheet" href="portal/styles/region_standard_default.css">
+<link id="portletAccordion" type="text/css" rel="stylesheet" href="portal/styles/region_accordion_default.css">
+<link id="portletTabs" type="text/css" rel="stylesheet" href="portal/styles/region_tabs_default.css">
+
+<script type="text/javascript" language="javascript" src="portal/scripts/common.js"></script>
+<script type="text/javascript" language="javascript" src="portal/scripts/portlet.js"></script>
+<script type="text/javascript" language="javascript" src="portal/scripts/region.js"></script>
+<script type="text/javascript" language="javascript" src="portal/scripts/portal.js"></script>
+
+<script type="text/javascript" language="javascript" src="portal/scripts/options.js"></script>
+<script type="text/javascript" language="javascript" src="portal/scripts/edit.js"></script>
+
+<script type="text/javascript" language="javascript" src="portal/scripts/drag.js"></script>
+<script type="text/javascript" language="javascript" src="portal/scripts/ajax.js"></script>
+<!------------------------------------------------------------------------------------------>
+
+<script type="text/javascript">
+
+    /********************************************************************************************************/
+
+    var DEFAULT_CONTAIER = "right";
+    var DEFAULT_ICON = "images/icon_tool.gif";
+
+    var SOCNET_DEMO_PATH = "../socnet/index.html";
+    //var SOCNET_DEMO_PATH = "http://sokolovbook.narod.ru/socnet/index.html";
+
+    function createSocNetPortlet() {
+        var portletId = "portlet" + generateId();
+        var portlet = new com.sokolov.portal.Portlet(portletId, "ajax4all library", DEFAULT_CONTAIER, null, DEFAULT_ICON);
+        portlet.init();
+        portlet.setDraggable(true); 
+        portlet.setZeroPadding(true); 
+
+        //portlet.setIcon("images/icon_tool.gif");
+        //portlet.setTitle("test");
+        //portlet.setState(com.sokolov.portal.Portlet.STATE_NORMAL);
+
+        ajaxCall(SOCNET_DEMO_PATH, 'post', getCharset(), '', portlet.getContentId());
+        refreshRegion(DEFAULT_CONTAIER);
+    }
+/*
+    var SOCNET_DEMO_PATH2 = "http://sokolovbook.narod.ru/socnet/index.html";
+
+    function createSocNetPortlet2() {
+        var portletId = "portlet" + generateId();
+        var portlet = new com.sokolov.portal.Portlet(portletId, "ajax4all library", DEFAULT_CONTAIER, null, DEFAULT_ICON);
+        portlet.init();
+        portlet.setDraggable(true); 
+        portlet.setZeroPadding(true); 
+
+        //portlet.setIcon("images/icon_tool.gif");
+        //portlet.setTitle("test");
+        //portlet.setState(com.sokolov.portal.Portlet.STATE_NORMAL);
+
+        ajaxCall(SOCNET_DEMO_PATH2, 'post', getCharset(), '', portlet.getContentId());
+        refreshRegion(DEFAULT_CONTAIER);
+    }
+*/
+
+</script>
+
+
+<script type="text/javascript">
+
+    function startPortalEvent() {
+        //alert("Hello, Ajax Portal!!!");
+        com.sokolov.portal.Portal._supportDragAndDrop();
+
+        definedAsDraggable($("tut_by_dialog"));
+
+        //loadPersonalization();
+
+        window.portal.refresh();
+
+        setIFrameSize();
+        setTitleWidth();
+
+        window.portal.onWindowResize = function () {
+            setIFrameSize();
+            setTitleWidth();
+        }
+
+        createSocNetPortlet();
+        //createSocNetPortlet2();
+    }
+
+    window.portal = new com.sokolov.portal.Portal();
+    com.sokolov.portal.Portal.startOnLoad(window.portal, startPortalEvent);
+
+</script>
+
+
+<script type="text/javascript">
+
+    function setIFrameSize() {
+        if (!isIE) {
+            return false;
+        }
+        var arr = [];
+        for (var i = 0; i < portal.portletRegions.length; i++) {
+            var regionId = portal.portletRegions[i].id
+            var portletRegion = portal.getPortletRegionById(regionId);
+            if (portletRegion) {
+                //portletRegion.refresh();
+                var portlets = portletRegion.portlets;
+                for (var j = 0; j < portlets.length; j++) {
+                    var iframe = $(portlets[j].id + com.sokolov.portal.Portlet.ID_FRAME);
+                    if (iframe) {
+                        arr[arr.length] = portlets[j].id;
+                        //iframe.style.width = 0;
+                    }
+                }
+            }
+        }
+
+        for (var j = 0; j < arr.length; j++) {
+            var content = $(arr[j] + com.sokolov.portal.Portlet.ID_CONTENT);
+            var iframe = $(arr[j] + com.sokolov.portal.Portlet.ID_FRAME);
+            if (iframe) {
+                iframe.style.width = 0;
+            }
+        }
+
+        for (var j = 0; j < arr.length; j++) {
+            var content = $(arr[j] + com.sokolov.portal.Portlet.ID_CONTENT);
+            var iframe = $(arr[j] + com.sokolov.portal.Portlet.ID_FRAME);
+            if (iframe) {
+                iframe.style.width = content.offsetWidth;
+            }
+        }
+
+    }
+
+    function setTitleWidth() {
+        if (!isIE) {
+            //return false;
+        }
+        var arr = [];
+        for (var i = 0; i < portal.portletRegions.length; i++) {
+            var regionId = portal.portletRegions[i].id
+            var portletRegion = portal.getPortletRegionById(regionId);
+            if (portletRegion) {
+                //portletRegion.refresh();
+                var portlets = portletRegion.portlets;
+                for (var j = 0; j < portlets.length; j++) {
+                    var header = $(portlets[j].id + com.sokolov.portal.Portlet.ID_HEADER);
+                    var title = $(portlets[j].id + com.sokolov.portal.Portlet.ID_TITLE);
+                    //var transfer = $(portlets[j].id + com.sokolov.portal.Portlet.ID_TRANSFER);
+
+                    //if (parseInt(title.offsetWidth) > parseInt(header.offsetWidth) - 90) {
+//alert(portlets[j].id + " " + header.offsetWidth + " " + title.offsetWidth)
+                        title.style.width = 0;
+                        title.style.width = parseInt(header.offsetWidth) - 95 + "px";
+                        //transfer.style.display = "";
+                   // } else {
+                        //transfer.style.display = "none";
+                   // } 
+                }
+            }
+        }
+
+    }
+/*
+    if (!isIE) {
+      if (document.body.addEventListener) { 
+         document.body.addEventListener('resize', setIFrameSize, false); 
+      } else if(document.body.onresize) { 
+        document.body.onresize= setIFrameSize; 
+    } else if (body.attachEvent) { 
+//        body.attachEvent('onresize', setIFrameSize); 
+//    }
+    }
+*/
+
+</script>
+
+
+
+
+
+</head>
+
+<body onresize="setTitleWidth();setIFrameSize();" onunload="/*onUnload();*/">
+
+    <div id="wizard" style="position: absolute; display: none;"></div>
+
+<table class="main">
+<tr><td colspan="2">
+<!-- ================================================================================ -->
+    <div class="header">
+        <div>
+            <div class="title">Ajax Portal Demo</div>
+            <span class="link">
+                <a href='http://code.google.com/p/ajaxportal/'>http://code.google.com/p/ajaxportal/</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                <a href='http://sokolovbook.narod.ru/en/'>http://sokolovbook.narod.ru/en/</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+            </span>
+            <br/>
+        </div>
+    </div>
+<!-- ================================================================================ -->
+</td></tr>
+<tr><td colspan="2">
+<!-- ================================================================================ -->
+    <div style="text-align:right">
+        <b>Locale:</b> <img src="images/english.gif" alt="English"> en
+        &nbsp;&nbsp;
+
+        <img src="images/icon_options.gif" alt="Options" style="margin-bottom: -3px; cursor: pointer;" onclick="showOptionsDialog();">
+        &nbsp;&nbsp;
+    </div>
+<!-- ================================================================================ -->
+</td></tr>
+<tr>
+<td id="left" class="standard dropTarget" title="Window1" style="width: 50%;">
+
+<div id="polygon1" class="portlet editable iframe" title="IFrame" url="../socnet/index.html">
+</div>
+
+
+<div id="polygon1" class="portlet editable iframe" title="IFrame" url="../socnet/index.html">
+</div>
+
+<div id="description1" class="portlet editable" title="Описание">
+
+<b>Описание приложения Social Network</b><br>
+Приложение Social Network состоит из трех страниц: главной (синяя), фотографии (зеленая) и сообщения (оранжевая). Переходы между страницами осуществляются при помощи кнопок меню.
+Это статическая демоверсия (правильнее было бы сказать - HTML-прототип мобильного приложения некой социальной сети). 
+Интерфейс сделан с расчетом отображения приложения на относительно маленьком экране с небольшим разрешением.
+В качестве аналога можно рассматривать приложение <a target="_blank" href="http://m.odnoklassniki.ru">http://m.odnoklassniki.ru</a>. 
+<br><br>
+
+P.S. Вы можете загрузить Social Network приложение в отдельном окне <a target="_blank" href="http://sokolovbook.narod.ru/en/socnet/index.html">http://sokolovbook.narod.ru/en/socnet/index.html</a></b>
+<br><br>
+
+<b>Зачем эта демоверсия?</b><br>
+Это демоверсия Ajax Portal показывает два способа превращения приложения Social Network в портлет:<br>
+1) В левой колонке помимо этого описания размещено приложение Social Network, которое загружено в IFrame (является абсолютно независимым субокном браузера в главной Интернет странице).
+В использовании IFrame нет ничего нового и это стандартный прием.<br>
+2) В правой колонке загружено это же приложение в режиме использования портала, т.е. в главной странице (синей) существует код проверяющий доступно ли API портала. Оно сможет быть доступно, только если загруженное приложение станет частью портальной страницы. 
+Это осуществляется использованием библиотеки <b>ajax4all</b>.
+Если API портала найдено и загружается главная (синяя) страница приложения, то происходит загрузка двух других страниц (зеленой и оранжевой) в отдельных портлетах. 
+Навигационные кнопки при этом скрываются.
+Далее будет доступна персонализация приложения Social Network средствами портала (позиция портлета, заголовок портлета, состояние скрыт/свернут/нормальное). Это концептуальное демо и в нем персонализация еще не реализована. Это будет сделано позже.
+<br><br>
+Мобильное приложение Social Network может само определять наличие Ajax Portal и разворачивать свои составные части для максимального использования поверхности окна браузера, 
+т.е. разработчики имеют возможность разрабатывать одно приложение пригодное как для обычных компьютеров так и для мобильных устройств без серьезных изменений. 
+Есть еще одна возможность - саморазворачивающиеся порталы, но это совсем другая история.
+</div>
+
+</td><td id="right" class="standard dropTarget" title="Window2" style="width: 50%;">
+
+</td></tr></table>
+<div style='clear:both; text-align:center;'>&copy;Copyright <a href='mailto:s-sokolov@tut.by'>Sergei Sokolov</a>, Belarus, Minsk, 2005-2010</div>
+
+
+</body>
+<html>

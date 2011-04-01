@@ -1,0 +1,17 @@
+.socnetHeader {
+    margin: 0;
+    padding: 5px 10px 0 15px;
+    height: 50px;
+}
+
+.socnetHeader div {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.socnetHeader div img {
+    width: 70px;
+    height: 30px;
+    margin-bottom: -5px;
+}

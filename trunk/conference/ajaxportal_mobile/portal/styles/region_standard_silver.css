@@ -1,0 +1,83 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
+/*******************************************************************/
+
+.standard .portlet,
+.standard .portletNotActive {
+    border: 1px solid silver;
+}
+
+.standard .portlet div.portletHeader .portletIcon,
+.standard .portletNotActive div.portletHeader .portletIcon {
+    background-image: url(../images/icon_window.gif);
+}
+
+.standard .portlet div.portletHeader,
+.standard .portletNotActive div.portletHeader {
+    color: black;
+    /*font-weight: bold;*/
+    background-color: #DDDDDD;
+
+    background-repeat: repeat-x;
+    background-position: 2px center;
+    background-image: none;
+}
+
+.standard .portlet div.portletHeader .changeStateButton,
+.standard .portletNotActive div.portletHeader .changeStateButton {
+    background-color: silver;
+
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.standard .portlet div.portletContent,
+.standard .portletNotActive div.portletContent {
+    background-color: #F3F3F3;
+}
+
+/* active **********************************************************/
+
+.standard .portlet div.portletHeader .changeStateButton {
+    background-image: url(../images/minimazed_gray.gif);
+}
+
+/* not active ******************************************************/
+
+.standard .portletNotActive div.portletHeader .changeStateButton {
+    background-image: url(../images/normal_gray.gif);
+}
+
+/*******************************************************************/
+
+.standard .draggable .portletHeader a .dragIcon {
+    background-image: url(../images/drag_gray.gif);
+}
+
+/*******************************************************************/
+
+.standard .portlet .portletHeader a .helpButton,
+.standard .portletNotActive .portletHeader a .helpButton,
+.standard .editable .portletHeader a:hover .toolButton {
+    background-color: silver;
+
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    background-image: url(../images/tool_gray.gif);
+}
+
+.standard .editable .portletHeader a .toolButton {
+    background-image: url(../images/tool_gray.gif);
+}
+
+.standard .portlet .portletHeader a .helpButton,
+.standard .portletNotActive .portletHeader a .helpButton {
+    background-image: url(../images/question_gray.gif);
+}
