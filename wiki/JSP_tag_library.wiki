@@ -17,7 +17,7 @@ Of course, you are able to use this library in JSP only. The JSP tag library can
 *The Java class:* com.sokolov.portal.tag.SupportTag
 
 
-|| Property || Required || Value(s) || Description ||
+|| *Property* || *Required* || *Value(s)* || *Description* ||
 || theme || no  || - || Defines the name of the theme ||
 
 *Example:*
@@ -44,20 +44,29 @@ Of course, you are able to use this library in JSP only. The JSP tag library can
 
 *The Java class:* com.sokolov.portal.tag.RegionDiv
 
-|| Property || Required || Value(s) || Description ||
+|| *Property* || *Required* || *Value(s)* || *Description* ||
 || id || yes||  || Identificator of the region. ||
 || state || no  || {nodecoration or window or standard or accordion or tabs} ||  ||
 || dropTarget ||  ||  || the flag, if value is true than the region supports Drag & Drop. *Always true.* ||
-|| styleClass ||  ||  ||  ||
-|| style ||  ||  ||  ||
-|| title ||  ||  ||  ||
-|| icon ||  ||  ||  ||
-|| minWidth ||  ||  ||  ||
+|| styleClass ||  ||  || Analog of *class* HTML tag property.  ||
+|| style ||  ||  || Analog of *style* HTML tag property. ||
+|| title ||  ||  || Defines the title of the region when the state is *window*. ||
+|| icon ||  ||  || Defines the icon uri when the state is *window*. ||
+|| minWidth ||  ||  || Minimal width of the region ||
 
 
 *Example:*
 {{{
-
+     <table width="100%" border="0">
+         <tr>
+             <portalLayout:tableCellContainer id="left" state="standard" title="Left region" icon="" dropTarget="true" styleClass="cbase" style="width: 600px;" minWidth="400px">
+                 ...
+             </portalLayout:tableCellContainer>
+             <portalLayout:tableCellContainer id="right" state="standard" title="Right region" icon="" dropTarget="true" styleClass="cbase" style="width: 350px;" minWidth="250px">
+                 ...
+             </portalLayout:tableCellContainer>
+         </tr>
+     </table>
 }}}
 
 *HTML equivalent:*
