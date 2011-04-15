@@ -5,18 +5,84 @@ Tag library helps to define:
   # structure of the portal page (positions of the regions and their properties),
   # portlets.
 
-Of course, you are able to use this library in JSP only. The JSP tag library 
+Of course, you are able to use this library in JSP only. The JSP tag library can be used with Struts 1/2, WebWork 1/2 and JSF (JSP rendering) frameworks.
+
+*JAR:* ajaxportal_decoration_jsp-1.0.1.jar
+*Tag descriptor:* portal.tld
+*Required JARs:* jstl.jar, standard.jar (ussually servlet-api.jar and jsp-api.jar are stored in common *lib* directory of the server).
+
 
 == Required CSS Files and JavaScript Files ==
 
+*The Java class:* com.sokolov.portal.tag.SupportTag
 
 
+|| Property || Required || Value(s) || Description ||
+|| theme || no  || - || Defines the name of the theme ||
 
+*Example:*
+{{{
+<html>
+    <head>
+        ...
+        <title>...</title>
+        <portal:support theme="blue"/>
+        ...
+    </head>
+    <body>
+        ...
+    </body>
+</html>
+}}}
+
+*HTML equivalent:*
+{{{
+
+}}} 
 
 == Structure of the Portal Page ==
 
+*The Java class:* com.sokolov.portal.tag.RegionDiv
+
+|| Property || Required || Value(s) || Description ||
+|| id || yes||  || Identificator of the region. ||
+|| state || no  || {nodecoration or window or standard or accordion or tabs} ||  ||
+|| dropTarget ||  ||  || the flag, if value is true than the region supports Drag & Drop. *Always true.* ||
+|| styleClass ||  ||  ||  ||
+|| style ||  ||  ||  ||
+|| title ||  ||  ||  ||
+|| icon ||  ||  ||  ||
+|| minWidth ||  ||  ||  ||
 
 
+*Example:*
+{{{
 
+}}}
+
+*HTML equivalent:*
+{{{
+
+}}} 
 
 == Portlets ==
+
+
+*The Java class:* com.sokolov.portal.tag.SupportTag
+
+|| Property || Required || Value(s) || Description ||
+||  ||  ||  ||  ||
+||  ||  ||  ||  ||
+||  ||  ||  ||  ||
+||  ||  ||  ||  ||
+
+
+*Example:*
+{{{
+
+}}}
+
+*HTML equivalent:*
+{{{
+
+}}} 
