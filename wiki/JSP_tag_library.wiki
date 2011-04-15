@@ -8,7 +8,9 @@ Tag library helps to define:
 Of course, you are able to use this library in JSP only. The JSP tag library can be used with Struts 1/2, WebWork 1/2 and JSF (JSP rendering) frameworks.
 
 *JAR:* ajaxportal_decoration_jsp-1.0.1.jar
+
 *Tag descriptor:* portal.tld
+
 *Required JARs:* jstl.jar, standard.jar (ussually servlet-api.jar and jsp-api.jar are stored in common *lib* directory of the server).
 
 
@@ -76,15 +78,15 @@ Of course, you are able to use this library in JSP only. The JSP tag library can
 || *Property* || *Required* || *Value(s)* || *Description* ||
 || id || yes ||  || Identificator of the portlet. ||
 || state || no || {nodecoration or window or standard or accordion or tabs} || Defines the state of the portlet. ||
-|| url ||  ||  ||  ||
-|| helpUrl ||  ||  ||  ||
+|| url || no ||  || Defines url of the portlet content which will be load and put in the portlet. ||
+|| helpUrl || no ||  || Defines url of HELP page. ||
 || styleClass || no ||  || Analog of *class* HTML tag property.  ||
 || style || no ||  || Analog of *style* HTML tag property. ||
-|| title ||  ||  || Defines portlet title. ||
-|| icon ||  ||  || Defines portlet icon uri. ||
-|| height ||  ||  || Defines fixed height of the portlet. By default the height of the portlet is not limited. ||
-|| editable ||  ||  || The flag, if value is true than the portlet parameters can be changed by Edit dialog (*edit* button is vissible in the portlet header). ||
-|| draggable ||  ||  || The flag, if value is true than the portlet supports *Drag & Drop*. ||
+|| title || no ||  || Defines portlet title. ||
+|| icon || no ||  || Defines portlet icon uri. ||
+|| height || no ||  || Defines fixed height of the portlet. By default the height of the portlet is not limited. ||
+|| editable || no ||  || The flag, if value is true than the portlet parameters can be changed by Edit dialog (*edit* button is vissible in the portlet header). ||
+|| draggable || no ||  || The flag, if value is true than the portlet supports *Drag & Drop*. ||
 
 *Example 1:*
 {{{
