@@ -18,7 +18,7 @@ Of course, you are able to use this library in JSP only. The JSP tag library can
 
 
 || *Property* || *Required* || *Value(s)* || *Description* ||
-|| theme || no  || - || Defines the name of the theme ||
+|| theme || no  || {default or blue or silver} || Defines the name of the theme ||
 
 *Example:*
 {{{
