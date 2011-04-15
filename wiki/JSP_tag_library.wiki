@@ -88,7 +88,7 @@ Of course, you are able to use this library in JSP only. The JSP tag library can
 || editable || no ||  || The flag, if value is true than the portlet parameters can be changed by Edit dialog (*edit* button is vissible in the portlet header). ||
 || draggable || no ||  || The flag, if value is true than the portlet supports *Drag & Drop*. ||
 
-*Example 1:*
+*Example 1 (portlets without region):*
 {{{
     <portal:portlet id="test1" title="Test Portlet 1">
     </portal:portlet>
@@ -97,7 +97,7 @@ Of course, you are able to use this library in JSP only. The JSP tag library can
 }}}
 
 
-*Example 2:*
+*Example 2 (portlets in region):*
 {{{
     <portalLayout:tableCellContainer id="left" state="standard" title="Left region" icon="" dropTarget="true" styleClass="cbase" style="width: 600px;" minWidth="400px">
                  
