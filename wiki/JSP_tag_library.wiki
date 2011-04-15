@@ -1,13 +1,22 @@
-#summary One-sentence summary of this page.
+= JSP tag library =
 
-= Introduction =
+Tag library helps to define: 
+  # required CSS files and JavaScript files,
+  # structure of the portal page (positions of the regions and their properties),
+  # portlets.
 
-Add your content here.
+Of course, you are able to use this library in JSP only. The JSP tag library 
+
+== Required CSS Files and JavaScript Files ==
 
 
-= Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+
+
+== Structure of the Portal Page ==
+
+
+
+
+
+== Portlets ==
