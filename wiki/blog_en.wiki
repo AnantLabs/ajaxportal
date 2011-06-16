@@ -50,4 +50,6 @@
 
 *March 4, 2011* - The first sale of Ajax Portal takes place.
 
+*June 16, 2011* - Ajax Portal ASP.NET 1.0.3 controls project has been added.
+
 *_If you want to receive news about Ajax Portal you have to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._*
