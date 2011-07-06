@@ -44,8 +44,6 @@
 
 *January 5, 2011* - Ajax Portal 1.0.2 (Alpha #3) was released. Support of IFRAME was implemented. The static client part of Ajax Portal was stabilized.
 
-*February 16, 2011* - We made the decision to take part in Minsk Startup Weekend #6 (30 Apr. - 1 May 2011).
-
 *February 28,  2011* - We buy two domains: *ajaxportal.org* and *ajaxportal.ru*.
 
 *June 16, 2011* - Ajax Portal ASP.NET 1.0.3 controls project has been added.
