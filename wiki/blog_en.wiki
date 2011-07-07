@@ -48,6 +48,8 @@
 
 *March 17, 2011* - We have an agreement about investment consulting with Business Accelerator (Minsk, Belarus).
 
+*April 18, 2011* - We activate the bug tracking for version 1.0.4 of Ajax Portal. [http://code.google.com/p/ajaxportal/issues/list See details...].
+
 *April 25, 2011* - We release <b>Decoration module (JSP tag library)</b> ver. 1.0.3 (Alpha4) for Ajax Portal. See [http://code.google.com/p/ajaxportal/downloads/list download list].
 
 *May 20, 2011* - We activate our first domain. See [http://ajaxportal.org].
