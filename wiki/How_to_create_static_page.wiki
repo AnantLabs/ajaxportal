@@ -37,12 +37,12 @@ The portlet supports the following special portlet CSS markers:
 The portlet states are defined by the following CSS markers:
     # *id* - defines unique identifier of the portlet,
     # *class* - contains the CSS markers and additional CSS styles for the portlet,
-    # *title* - (the value is empty after portlet decoration)
+    # *title* - portlet header title (the value is empty after portlet decoration),
     # *url* - defines URL which contains the portlet content (the portlet content will be downloaded by Ajax call after portlet decoration),
     # *help* - defines the HELP page for the portlet,
     # *bodyHeight* - defines the fixed height of the portlet content.
 
-===1.4. Example===
+===1.4. Examples===
 
 The following example demonstrates a simple definition of the portlet, which will be decorated by JavaScript (static method *startOnLoad* of *Portal* object):
 {{{
@@ -59,8 +59,8 @@ The example defines:
     # the portlet title ("Test").
 
 The following JavaScript files are required:
-    # *common.js* - defines common functions
-    # *portlet.js* - defines *Portlet* JavaScript object
+    # *common.js* - defines common functions,
+    # *portlet.js* - defines *Portlet* JavaScript object,
     # *ajax.js* - defines common functions which supports Ajax calls.
 
 The *portal.js* (defines *Portal* JavaScript object) and *region.js* (defines *Region* JavaScript object) scripts are optional. *Portal* object has very helpful static method *startOnLoad*, which helps to fined and decorate portlets on the portal page.
@@ -141,7 +141,7 @@ The Ajax Portal supports the following themes for the portlet:
 
 ==2. Regions and Portlets==
 
-===2.1. Portlet States and CSS Markers===
+===2.1. Region States and CSS Markers===
 
 The idea of usage CSS Markers is implementation of [http://en.wikipedia.org/wiki/State_pattern State GoF pattern]. The state of the regions is set by *CSS Marker*. The HTML structure of the regions and its portlets is the same and is transformed by different CSS class.
 
@@ -189,6 +189,7 @@ The following declarations of CSS files are required:
     # region_accordion_common.css - defines region and portlets view if the region state is *ACCORDION*,
     # region_tabs_common.css - defines region and portlets view if the region state is *TABS*.
 
+Example:
 {{{
 <link type="text/css" rel="stylesheet" href="portal/styles/region_nodecoration_common.css">
 <link type="text/css" rel="stylesheet" href="portal/styles/region_window_common.css">
@@ -201,9 +202,9 @@ The following declarations of CSS files are required:
 
 The following JavaScript files are required:
     # *common.js* - defines common functions
-    # *portlet.js* - defines *Portal* JavaScript object
+    # *portlet.js* - defines *Portlet* JavaScript object
     # *region.js* - defines *Region* JavaScript object
-    # *portal.js* - defines *Portlet* JavaScript object
+    # *portal.js* - defines *Portal* JavaScript object
     # *ajax.js* - defines common functions which supports Ajax calls.
 
 ===2.4. Example===
@@ -264,8 +265,8 @@ The following example demonstrates two regions with portlets:
             Portlet4, content (set URL of content)
         </div>
 
-     </td>
-     <td id="right" class="standard dropTarget" title="Window2" 
+    </td>
+    <td id="right" class="standard dropTarget" title="Window2" 
           style="width: 50%; vertical-align: top; background-color: #DDD;">
 
         <div id="polygon5" class="portlet draggable iframe" title="Portlet5: IFrame" 
@@ -276,7 +277,7 @@ The following example demonstrates two regions with portlets:
      </td></tr>
      </table>
 </body>
-<html>
+</html>
 }}}
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/region.jpg">
