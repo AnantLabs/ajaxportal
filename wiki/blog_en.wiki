@@ -46,6 +46,8 @@
 
 *February 28,  2011* - We buy two domains: *ajaxportal.org* and *ajaxportal.ru*.
 
+*March 2, 2011* - New version of Enterprise Ajax Portal *Decoration module* released (see [http://ajaxportal.googlecode.com/files/ajaxportal_decoration_static-1.0.3.zip ajaxportal_decoration_static-1.0.3.zip]).
+
 *March 17, 2011* - We have an agreement about investment consulting with Business Accelerator (Minsk, Belarus).
 
 *April 12, 2011* - We release ajax4all library ver. 1.0.3 ([http://ajaxportal.googlecode.com/files/ajax4all-1.0.3_beta.zip download]). The library has *beta* status. There're no critical issues. We know about 2 specific issues in Opera 10/11.
