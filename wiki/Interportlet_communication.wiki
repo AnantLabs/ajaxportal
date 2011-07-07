@@ -1,0 +1,12 @@
+= Interportlet communication =
+
+Ajax Portal supports the following ways for Interportlet communication:
+  # Direct usage of JavaScript API of the portlets (Web applications)
+  # Usage of Ajax Portal Queue for Interportlet communication Messages (Events).
+
+
+== Direct usage of JavaScript API of the portlets (Web applications) ==
+
+
+
+== Usage of Ajax Portal Queue for Interportlet communication Messages (Events) ==
