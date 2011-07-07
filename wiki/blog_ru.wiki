@@ -42,8 +42,6 @@
 
 *5 января 2011* - Выпущена версия Ajax Portal 1.0.2 (Alpha #3). Осуществлена поддержка *IFRAME*. Стабилизирована статическая клиентская часть портала.
 
-*16 февраля 2011* - Принято решение об участие проекта в Minsk Startup Weekend #6 (30 апреля - 1 мая 2011).
-
 *28 февраля 2011* - Мы купили два домена: *ajaxportal.org* and *ajaxportal.ru*.
 
 *2 марта 2011* - Выпущена новая версия Decoration модуля (смотрите [http://ajaxportal.googlecode.com/files/ajaxportal_decoration_static-1.0.3.zip ajaxportal_decoration_static-1.0.3.zip]).
