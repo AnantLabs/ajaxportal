@@ -48,6 +48,8 @@
 
 *March 17, 2011* - We have an agreement about investment consulting with Business Accelerator (Minsk, Belarus).
 
+*May 20, 2011* - We activate our first domain. See [http://ajaxportal.org].
+
 *June 16, 2011* - Ajax Portal ASP.NET 1.0.3 controls project has been added. Now <b>Ajax Portal</b> is cross-platform solution.
 
 *_If you want to receive news about Ajax Portal you have to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._*
