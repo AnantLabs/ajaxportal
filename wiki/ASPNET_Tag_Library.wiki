@@ -16,9 +16,9 @@ Of course, you are able to use this library in asp.net applications only. The as
 
 *Example:*
 {{{
-          <portal:Register runat="server">
-          ...
-          </portal:Register>
+<portal:Register runat="server">
+        ...
+</portal:Register>
 }}}
 
 == Region component ==
@@ -31,9 +31,9 @@ Of course, you are able to use this library in asp.net applications only. The as
 
 *Example:*
 {{{
-          <portal:Region runat="server">
-          ...
-          </portal:Region>
+<portal:Region runat="server">
+        ...
+</portal:Region>
 }}}
 
 == Portlet component ==
