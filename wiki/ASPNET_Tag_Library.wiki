@@ -10,7 +10,7 @@ Of course, you are able to use this library in asp.net applications only. The as
 *DLL:* AjaxPortal_NetControls.dll
 
 
-== Structure of the Portal Page ==
+== Register component ==
 
 *Register* component defines all required JavaScript and CSS files for Region and Portlet component.
 
@@ -20,6 +20,8 @@ Of course, you are able to use this library in asp.net applications only. The as
           ...
           </portal:Register>
 }}}
+
+== Region component ==
 
 *Region* component is a placeholder for portlets.
 
@@ -33,6 +35,8 @@ Of course, you are able to use this library in asp.net applications only. The as
           ...
           </portal:Region>
 }}}
+
+== Portlet component ==
 
 *Portlet* coponent is a placeholder for the content.
 || *Property* || *Required* || *Value(s)* || *Description* ||
