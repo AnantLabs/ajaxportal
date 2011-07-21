@@ -22,8 +22,7 @@ Registration necessary JavaScript and CSS components.
           </portal:Register>
 }}}
 
-*Region*
-Placeholder for polygons.
+*Region* component is a placeholder for portlets.
 
 || *Property* || *Required* || *Value(s)* || *Description* ||
 || id || no ||  || Identificator of the region. ||
@@ -36,8 +35,7 @@ Placeholder for polygons.
           </portal:Region>
 }}}
 
-*Portlet*
-Placeholder for content.
+*Portlet* coponent is a placeholder for the content.
 || *Property* || *Required* || *Value(s)* || *Description* ||
 || id || no ||  || Identificator of the portlet. ||
 || IsDraggable || no || yes/no || The flag, if value is true than the polygon supports Drag & Drop. ||
