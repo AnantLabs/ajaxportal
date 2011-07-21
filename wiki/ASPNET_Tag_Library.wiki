@@ -36,7 +36,7 @@ Placeholder for polygons.
           </portal:Region>
 }}}
 
-*Polygon*
+*Portlet*
 Placeholder for content.
 || *Property* || *Required* || *Value(s)* || *Description* ||
 || id || no ||  || Identificator of the portlet. ||
