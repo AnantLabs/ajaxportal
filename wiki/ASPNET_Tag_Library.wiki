@@ -12,8 +12,7 @@ Of course, you are able to use this library in asp.net applications only. The as
 
 == Structure of the Portal Page ==
 
-*Register*
-Registration necessary JavaScript and CSS components.
+*Register* component defines all required JavaScript and CSS files for Region and Portlet component.
 
 *Example:*
 {{{
