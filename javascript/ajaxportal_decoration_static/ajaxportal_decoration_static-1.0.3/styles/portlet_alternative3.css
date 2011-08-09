@@ -1,0 +1,81 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.3 Alpha4 (2 Mar 2011)                              */
+/*******************************************************************/
+
+.portletHidden {
+    display: none;
+}
+
+.portlet {
+    margin: 4px 4px 20px 4px;
+    padding: 0;
+    border: 1px solid gray;
+}
+
+.portletNotActive {
+    display: none;
+}
+
+.portlet div.portletHeader .portletIcon,
+.portletNotActive div.portletHeader .portletIcon {
+    font-size: 18px; 
+    width: 18px;
+    height: 18px;
+    margin: 1px;
+    padding: 0;
+    float: left;
+
+    border: 0;
+
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-image: url(../images/icon_window.gif);
+}
+
+.portlet div.portletHeader,
+.portletNotActive div.portletHeader {
+    margin: -13px 0 0 15px;
+    padding: 0 10px 0 5px;
+    background-color: #DDDDDD;
+    border: 1px solid gray;
+    display: inline; 
+    float: left;
+}
+
+.portlet div.portletHeader .changeStateButton,
+.portletNotActive div.portletHeader .changeStateButton {
+    display: none;
+}
+
+.portlet div.portletContent,
+.portletNotActive div.portletContent {
+    clear: both;
+    margin: 6px 0 0 0;
+    padding: 4px 10px 4px 10px;
+    background-color: white;
+}
+
+/* button **********************************************************/
+
+a .helpButton,
+a .dragIcon  {
+    display: none;
+}
+
+/* active **********************************************************/
+
+.portlet div.portletHeader .changeStateButton {
+    background-image: url(../images/minimazed_gray.gif);
+}
+
+/* not active ******************************************************/
+
+.portletNotActive div.portletHeader .changeStateButton {
+    background-image: url(../images/normal_gray.gif);
+}
+
+.portletNotActive div.portletContent {
+}
+

@@ -1,0 +1,115 @@
+<!--///////////////////////////////////////////////////////////////////-->
+<!--// AJAX Portal                                                   //-->
+<!--// Copyright Sergei Sokolov, Belarus, Minsk, 2005..2011          //-->
+<!--// Version 1.0.3 Alpha4 (2 Mar 2011)                             //-->
+<!--///////////////////////////////////////////////////////////////////-->
+
+<html>
+<head>
+
+<link type="text/css" rel="stylesheet" href="styles/region_nodecoration_common.css">
+<link type="text/css" rel="stylesheet" href="styles/region_window_common.css">
+<link type="text/css" rel="stylesheet" href="styles/region_standard_common.css">
+<link type="text/css" rel="stylesheet" href="styles/region_accordion_common.css">
+<link type="text/css" rel="stylesheet" href="styles/region_tabs_common.css">
+
+<link id="portletWindow" type="text/css" rel="stylesheet" href="styles/region_window_default.css">
+<link id="portletStandard" type="text/css" rel="stylesheet" href="styles/region_standard_default.css">
+<link id="portletAccordion" type="text/css" rel="stylesheet" href="styles/region_accordion_default.css">
+<link id="portletTabs" type="text/css" rel="stylesheet" href="styles/region_tabs_default.css">
+
+<script type="text/javascript" language="javascript" src="scripts/common.js"></script>
+<script type="text/javascript" language="javascript" src="scripts/portlet.js"></script>
+<script type="text/javascript" language="javascript" src="scripts/region.js"></script>
+
+<script type="text/javascript" language="javascript" src="scripts/edit.js"></script>
+
+<style type="text/css">
+    td {
+        vertical-align: top;
+    }
+</style>
+
+<script type="text/javascript">
+
+var region = null;
+
+function load() {
+    region = new com.sokolov.portal.Region("pc1", ["polygon1", "polygon2", "polygon3", null], "Region", "images/icon_search.gif");
+    region.init();
+    region.setState(com.sokolov.portal.Region.STATE_STANDARD);
+    region.portlets[0].setIcon("images/icon_search.gif");
+    region.portlets[2].setIcon("images/icon_tool.gif");
+}
+
+function setTheme(theme) {
+    portletWindow.href = "styles/region_window_" + theme + ".css";
+    portletStandard.href = "styles/region_standard_" + theme + ".css";
+    portletAccordion.href = "styles/region_accordion_" + theme + ".css";
+    portletTabs.href = "styles/region_tabs_" + theme + ".css";
+}
+
+function setState(state) {
+    if (region) {
+        region.setState(state);
+    }
+}
+
+</script>
+</head>
+
+<body onload="load();">
+
+<form name="frm">
+    <b>State:</b>
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_NODECORATION);">&nbsp;no decoration
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_WINDOW);">&nbsp;window
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_STANDARD);" checked="checked">&nbsp;standard
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_ACCORDION);">&nbsp;accordion
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_TABS);">&nbsp;tabs
+    <br>
+
+    <b>Theme:</b>
+    <input type="radio" name="theme" onclick="setTheme('default');" checked="checked">&nbsp;default
+    <input type="radio" name="theme" onclick="setTheme('blue');">&nbsp;blue
+    <input type="radio" name="theme" onclick="setTheme('silver');">&nbsp;silver
+    <br>
+
+
+    <input type="button" value="Hide first content area" onclick="region.portlets[0].hide();region.refresh();">
+</form>
+
+<!--
+<table style="width:100%;border:0; padding: 0; margin: 0;">
+<tr style="border:0; padding: 0; margin: 0;"><td id="pc1" style="padding:0; margin:0;">
+-->
+
+<div id="pc1" title="Window" class="tabs" style="padding:0; margin:0;"><!--
+
+--><div id="polygon1" class="portlet" title="Content area 1">
+Text
+<b>bold</b>
+<i>italic</i>
+</div><!--
+
+--><div id="polygon2" class="portlet" title="Content area 2">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div><!--
+
+--><div id="polygon3" class="portlet" title="Content area 3">
+<ul>
+<li>Item A</li>
+<li>Item B</li>
+<li>Item C</li>
+</ul>
+</div><!--
+
+--></div>
+
+<!--
+</td></tr></table>
+-->
+</body>
+</html>
+
+
