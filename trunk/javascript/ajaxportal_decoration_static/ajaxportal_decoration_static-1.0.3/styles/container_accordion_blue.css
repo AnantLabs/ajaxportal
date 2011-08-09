@@ -1,0 +1,67 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.3 Alpha4 (2 Mar 2011)                              */
+/*******************************************************************/
+
+.accordion .portlet,
+.accordion .portletNotActive {
+    border: 1px solid #508FFF;
+}
+
+.accordion .portlet div.portletHeader .portletIcon,
+.accordion .portletNotActive div.portletHeader .portletIcon {
+    background-image: url(../images/icon_window.gif);
+}
+
+.accordion .portlet div.portletHeader,
+.accordion .portletNotActive div.portletHeader {
+    color: white;
+    /*font-weight: bold;*/
+    background-color: #508FFF; 
+
+    background-image: url(../images/background_lines.gif);
+}
+
+.accordion .portlet div.portletContent,
+.accordion .portletNotActive div.portletContent {
+    background-color: white;
+}
+
+/*******************************************************************/
+
+.accordion .draggable .portletHeader a .dragIcon {
+    background-image: url(../images/drag_white.gif);
+}
+
+/*******************************************************************/
+
+.accordion .portlet .portletHeader a .helpButton,
+.accordion .portletNotActive .portletHeader a .helpButton,
+.accordion .titleEditable .portletHeader a:hover .toolButton {
+    background-color: silver;
+
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.accordion .titleEditable .portletHeader a .toolButton {
+    background-image: url(../images/tool_white.gif);
+}
+
+.accordion .titleEditable .portletHeader a:hover .toolButton {
+    background-image: url(../images/tool_gray.gif);
+}
+
+.accordion .portlet .portletHeader a .helpButton,
+.accordion .portletNotActive .portletHeader a .helpButton {
+    background-image: url(../images/question_white.gif);
+}
+
+.accordion .portlet .portletHeader a .helpButton,
+.accordion .portletNotActive .portletHeader a .helpButton {
+    background-image: url(../images/question_gray.gif);
+}
+

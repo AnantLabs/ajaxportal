@@ -1,0 +1,162 @@
+<!--///////////////////////////////////////////////////////////////////-->
+<!--// AJAX Portal                                                   //-->
+<!--// Copyright Sergei Sokolov, Belarus, Minsk, 2005..2011          //-->
+<!--// Version 1.0.3 Alpha4 (2 Mar 2011)                             //-->
+<!--///////////////////////////////////////////////////////////////////-->
+
+
+<html>
+<head>
+
+<link type="text/css" rel="stylesheet" href="styles/portlet_blue.css">
+
+<link type="text/css" rel="stylesheet" href="styles/region_nodecoration_common.css">
+<link type="text/css" rel="stylesheet" href="styles/region_window_common.css">
+<link type="text/css" rel="stylesheet" href="styles/region_standard_common.css">
+<link type="text/css" rel="stylesheet" href="styles/region_accordion_common.css">
+<link type="text/css" rel="stylesheet" href="styles/region_tabs_common.css">
+
+<link id="portletWindow" type="text/css" rel="stylesheet" href="styles/region_window_default.css">
+<link id="portletStandard" type="text/css" rel="stylesheet" href="styles/region_standard_default.css">
+<link id="portletAccordion" type="text/css" rel="stylesheet" href="styles/region_accordion_default.css">
+<link id="portletTabs" type="text/css" rel="stylesheet" href="styles/region_tabs_default.css">
+
+<script type="text/javascript" language="javascript" src="scripts/common.js"></script>
+<script type="text/javascript" language="javascript" src="scripts/portlet.js"></script>
+<script type="text/javascript" language="javascript" src="scripts/region.js"></script>
+<script type="text/javascript" language="javascript" src="scripts/portal.js"></script>
+
+<script type="text/javascript" language="javascript" src="scripts/drag.js"></script>
+<script type="text/javascript" language="javascript" src="scripts/ajax.js"></script>
+
+<script type="text/javascript" language="javascript" src="scripts/options.js"></script>
+<script type="text/javascript" language="javascript" src="scripts/edit.js"></script>
+
+<style type="text/css">
+    td {
+        vertical-align: top;
+    }
+
+    .dragButton, .toolButton {
+        display: none;
+    }
+</style>
+
+<script type="text/javascript">
+
+    function setTheme(theme) {
+        portletWindow.href = "styles/region_window_" + theme + ".css";
+        portletStandard.href = "styles/region_standard_" + theme + ".css";
+        portletAccordion.href = "styles/region_accordion_" + theme + ".css";
+        portletTabs.href = "styles/region_tabs_" + theme + ".css";
+    }
+
+    function setState(state) {
+        var region = window.portal.portletRegions[0];
+        if (region) {
+            region.setState(state);
+        }
+    }
+
+    /******************************************************/
+
+    function hideFistPortlet() {
+        if (window.portal.portletRegions.length >0 
+            && window.portal.portletRegions[0].portlets.length > 0) {
+
+            window.portal.portletRegions[0].portlets[0].hide();
+            window.portal.portletRegions[0].refresh(); 
+        }
+    }
+
+    function minimazeAllHiddenPortlets() {
+        if (window.portal.portletRegions.length > 0) { 
+            for (var i = 0; i < window.portal.portletRegions[0].portlets.length; i++) { 
+                var state = window.portal.portletRegions[0].portlets[i].getState();
+                if (state == com.sokolov.portal.Portlet.STATE_HIDDEN) {
+                    window.portal.portletRegions[0].portlets[i].minimaze(); 
+                }  
+            } 
+            window.portal.portletRegions[0].refresh();
+        }
+    }
+
+    /******************************************************/
+
+    function startPortalEvent() {
+        alert("Hello, Ajax Portal!!!");
+        com.sokolov.portal.Portal._supportDragAndDrop();
+
+        injectHttpContent("ajax_test.html", 
+                          "polygon4Content");
+    }
+    com.sokolov.portal.Portal.startOnLoad(startPortalEvent);
+
+</script>
+</head>
+
+<body>
+
+<form name="frm">
+    <b>State:</b>
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_NODECORATION);">&nbsp;no decoration
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_WINDOW);">&nbsp;window
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_STANDARD);" checked="checked">&nbsp;standard
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_ACCORDION);">&nbsp;accordion
+    <input type="radio" name="state" onclick="setState(com.sokolov.portal.Region.STATE_TABS);">&nbsp;tabs
+    <br>
+
+    <b>Theme:</b>
+    <input type="radio" name="theme" onclick="setTheme('default');" checked="checked">&nbsp;default
+    <input type="radio" name="theme" onclick="setTheme('blue');">&nbsp;blue
+    <input type="radio" name="theme" onclick="setTheme('silver');">&nbsp;silver
+    <br><br>
+
+    <input type="button" value="Hide first content area" onclick="hideFistPortlet();">
+    <input type="button" value="Minimaze hidden portles" onclick="minimazeAllHiddenPortlets();">
+</form>
+
+<!--
+<table style="width:100%;border:0; padding: 0; margin: 0;">
+<tr style="border:0; padding: 0; margin: 0;"><td id="pc1" style="padding:0; margin:0;">
+-->
+
+<div id="pc1" class="standard" title="Window" style="padding:0; margin:0;"><!--
+
+--><div id="polygon1" class="portlet titleEditable" title="Content area 1" help="./content/help_poligon1.html">
+Text
+<b>bold</b>
+<i>italic</i>
+</div><!--
+
+--><div id="polygon2" class="portlet titleEditable" title="Content area 2" url="ajax_test.html">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div><!--
+
+--><div id="polygon3" class="portlet" title="Content area 3" help="content/help_poligon3.html">
+<ul>
+<li>Item A</li>
+<li>Item B</li>
+<li>Item C</li>
+</ul>
+</div><!--
+
+--></div>
+
+<!--
+</td></tr></table>
+-->
+
+<div id="polygon4" class="portlet" title="Content area 4">
+<ul>
+<li>Item A</li>
+<li>Item B</li>
+<li>Item C</li>
+</ul>
+</div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,101 @@
+<!--///////////////////////////////////////////////////////////////////-->
+<!--// AJAX Portal                                                   //-->
+<!--// Copyright Sergei Sokolov, Belarus, Minsk, 2005..2011          //-->
+<!--// Version 1.0.3 Alpha4 (2 Mar 2011)                             //-->
+<!--///////////////////////////////////////////////////////////////////-->
+
+<html>
+<head>
+
+<link id="portalCss" type="text/css" rel="stylesheet" href="styles/portlet_default.css"> 
+
+<script type="text/javascript" language="javascript" src="scripts/common.js"></script>
+<script type="text/javascript" language="javascript" src="scripts/portlet.js"></script>
+
+<script type="text/javascript" language="javascript" src="scripts/edit.js"></script>
+
+<style type="text/css">
+    td {
+        vertical-align: top;
+    }
+</style>
+
+<script type="text/javascript">
+    function load() {
+        var portlet1 = new com.sokolov.portal.Portlet("polygon1");
+        portlet1.init();
+
+        var portlet2 = new com.sokolov.portal.Portlet("polygon2", "Title");
+        portlet2.init();
+        portlet2.setIcon("images/icon_search.gif");
+
+        var portlet3 = new com.sokolov.portal.Portlet("polygon3");
+        portlet3.init();
+        portlet3.setIcon("images/icon_tool.gif");
+
+        var portlet4 = new com.sokolov.portal.Portlet("polygon4");
+        portlet4.init();
+        portlet4.setTitle("Title");
+        portlet4.setIcon("images/icon_tool.gif");
+
+    }
+
+    function setTheme(theme) {
+        portalCss.href = "styles/portlet_" + theme + ".css";
+    }
+</script>
+
+</head>
+<body onload="load();">
+
+<form name="frm">
+    <b>Themes:</b>
+    <input type="radio" name="choose" onclick="setTheme('default');" checked>default
+    <input type="radio" name="choose" onclick="setTheme('blue');">blue
+    <input type="radio" name="choose" onclick="setTheme('green');">green
+    <input type="radio" name="choose" onclick="setTheme('alternative1');">alternative1
+    <input type="radio" name="choose" onclick="setTheme('alternative2');">alternative2
+    <input type="radio" name="choose" onclick="setTheme('alternative3');">alternative3
+</form>
+
+<div id="pc1" style="padding:0; margin:0;"><!--
+
+--><div id="polygon1" class="portlet" title="Content area 1">
+Text
+<b>bold</b>
+<i>italic</i>
+</div><!--
+
+--><div id="polygon2" class="portlet" title="Content area 2">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div><!--
+
+--><div id="polygon3" class="portlet" title="Content area 3">
+<ul>
+<li>Item A</li>
+<li>Item B</li>
+<li>Item C</li>
+</ul>
+</div><!--
+
+--><div id="polygon4" class="portlet">
+<ul>
+<table style="border-collapse:collapse; width: 200px;">
+<tr><td style="border: 1px solid silver;">First</td></tr>
+<tr><td style="border: 1px solid silver;">Second</td></tr>
+<tr><td style="border: 1px solid silver;">Third</td></tr>
+<table>
+</ul>
+</div><!--
+
+--></div>
+
+<!--
+</td><td id="pc2"><!--
+
+
+--></td></tr></table>
+</body>
+</html>
+
+

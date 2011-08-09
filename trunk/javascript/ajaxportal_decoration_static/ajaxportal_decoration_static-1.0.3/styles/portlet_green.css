@@ -1,0 +1,129 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.3 Alpha4 (2 Mar 2011)                              */
+/*******************************************************************/
+
+.portletHidden {
+    display: none;
+}
+
+.portlet,
+.portletNotActive {
+    margin: 4px;
+    padding: 0;
+    border: 1px solid #72C313;
+}
+
+.portlet div.portletHeader .portletIcon,
+.portletNotActive div.portletHeader .portletIcon {
+    font-size: 18px; 
+    width: 18px;
+    height: 18px;
+    margin: 1px;
+    padding: 0;
+    float: left;
+
+    border: 0;
+
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-image: url(../images/icon_window.gif);
+}
+
+.portlet div.portletHeader,
+.portletNotActive div.portletHeader {
+    margin: 0;
+    padding: 0;
+    color: white;
+    /*font-weight: bold;*/
+    background-color: #62B313;
+    background-repeat: repeat-x;
+    background-position: 2px center;
+    /*background-image: url(../images/header_background.gif);*/
+
+    cursor: default;
+    white-space: nowrap;
+}
+
+.portlet div.portletHeader .changeStateButton,
+.portletNotActive div.portletHeader .changeStateButton {
+    background-color: silver;
+    font-size: 8px; 
+    width: 15px;
+    height: 14px;
+    margin: 2px;
+    padding: 0;
+    float: right;
+
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.portlet div.portletContent,
+.portletNotActive div.portletContent {
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+    background-color: white;
+}
+
+/* active **********************************************************/
+
+.portlet div.portletHeader .changeStateButton {
+    background-image: url(../images/minimazed_gray.gif);
+}
+
+/* not active ******************************************************/
+
+.portletNotActive div.portletHeader .changeStateButton {
+    background-image: url(../images/normal_gray.gif);
+}
+
+.portletNotActive div.portletContent {
+    display: none;
+}
+
+/* buttons ******************************************************/
+
+.helpButton {
+    display: none;
+}
+
+.helpView .portletHeader a .helpButton  {
+    display: inline;
+}
+
+.portlet .portletHeader a .helpButton,
+.portletNotActive .portletHeader a .helpButton,
+.draggable .portletHeader a .dragIcon,
+.titleEditable .portletHeader a .toolButton {
+    font-size: 10px; 
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid transparent;
+    border: "0";
+    margin: 2px 0px 2px 2px;
+    padding: 0;
+
+    float: right;
+
+    background-color: transparent;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+
+/*    display: inline;*/
+}
+
+.draggable .portletHeader a .dragIcon,
+.titleEditable .portletHeader a .toolButton {
+    display: inline;
+}
