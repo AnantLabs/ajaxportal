@@ -2,7 +2,13 @@
 
 Ajax Portal supports the following ways for Interportlet communication:
   # Direct usage of JavaScript API of the portlets (Web applications)
-  # Usage of Ajax Portal Queue for Interportlet communication Messages (Events).
+  # Usage of Ajax Portal API (Communication Messages (Events)).
+
+
+
+== Communication Messages ==
+
+_Communication Messages_ are sent by portlets on clent side using Portlet API. All _Communication Messages_ are stored in Queue. The Queue is implemented on server and client sides. The same message can be stored in both Queues.
 
 
 == Direct usage of JavaScript API of the portlets (Web applications) ==
