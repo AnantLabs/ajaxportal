@@ -68,6 +68,7 @@ function showPortlet() {
 
             var portlet = portal.getPortletById(id);
             if (portlet) {
+                $("pId").value = portlet.getId();
                 $("pTitle").value = portlet.getTitle();
                 setSelectedItem("portletState", portlet.getState());
                 $("portletMove").checked = portlet.isDraggable();
@@ -115,6 +116,7 @@ function savePortlet() {
 
 
 function cleanPortlet() {
+    $("pId").value = "";
     $("pTitle").value = "";
     setSelectedItem("portletState", 0);
     $("portletMove").checked = false;
@@ -143,6 +145,7 @@ function newPortlet() {
 
                 portletRegion.refresh();
 
+                $("pId").value = portlet.getId();
                 $("pTitle").value = portlet.getTitle();
                 setSelectedItem("portletState", com.sokolov.portal.Portlet.STATE_NORMAL);
                 $("portletMove").checked = false;
@@ -253,28 +256,19 @@ function showOptionsDialog() {
     var div = document.createElement("DIV");
     div.id = "portletWizard";
     document.body.insertBefore(div, document.body.firstChild)
-    obj = $("portletWizard");
 
-    if (navigator.appName == 'Microsoft Internet Explorer') {
-        obj.style.display = "block";
-        obj.style.zIndex = 2000000000;
-        obj.style.position = "absolute";
-        obj.style.top = "110px";
-        obj.style.left = "150px";
-        obj.style.background = "#DDDDDD";
-        obj.style.border = "1px silver solid";
-    } else {
-        obj.setAttribute("style", "z-index: 2000000000; position: fixed; display: block; top: 110px; left: 150px; background: white; border: 1px silver solid;");
-    }
+    var html = 
+    //"<table class='main'>"+
+    //"<tr><td>"+
+    //"<div id='main' class='standard' title='' style='width: 100%;'>"+
 
-    var html = "<form name='frm' style='margin:0;padding:0;'>"+
-    "<table class='main'>"+
-    "<tr><td>"+
-    "<div id='main' class='standard' title='' style='width: 100%;'>"+
+    "<form name='frm' style='margin:0;padding:0;'>"+
 
     /***********************************************************************************************************/
 
-    "<div id='region' class='portlet noBehaviourButton' title='Regions'>"+
+    //"<div id='region' class='portlet noBehaviourButton' title='Configuration'>"+
+
+    "<fieldset><legend>Regions</legend>"+
 
     "<table class='layout'>"+
 
@@ -310,23 +304,31 @@ function showOptionsDialog() {
 
     "</table>"+
 
-    "</div>"+
+    "</fieldset>"+
+
+    //"</div>"+
 
     /***********************************************************************************************************/
 
-    "<div id='portlet' class='portlet noBehaviourButton' title='Portlets'>"+
+    //"<div id='portlet' class='portlet noBehaviourButton' title='Portlets'>"+
+
+    "<fieldset><legend>Portlets</legend>"+
 
     "<table class='layout'>"+
 
 
     // portlet list
-    "<tr><td rowspan='8'><select id='portlets' name='portlets' size='12' onchange='showPortlet(this)' style='width: 300px;'>"+
+    "<tr><td rowspan='9'><select id='portlets' name='portlets' size='12' onchange='showPortlet(this)' style='width: 300px;'>"+
     "</select>&nbsp;&nbsp;&nbsp;<br>"+
     "<input id='portletNew' name='portletNew' type='button' value='New' onclick='newPortlet()'></td>"+
 
 
+    // portlet id
+    "<td class='caption' style='width: 120px;'>Id:</td><td colspan='2'><input id='pId' name='pId' class='editbox' value='' disabled='disabled'></td></tr>"+
+
+
     // portlet title
-    "<td class='caption' style='width: 120px;'>Title:</td><td><input id='pTitle' name='pTitle' class='editbox' value=''></td></tr>"+
+    "<tr><td class='caption' style='width: 120px;'>Title:</td><td><input id='pTitle' name='pTitle' class='editbox' value=''></td></tr>"+
 
     // portlet state
     "<tr><td>State:</td><td><select id='portletState' name='portletState' style='width: 150px;'>"+
@@ -351,36 +353,53 @@ function showOptionsDialog() {
 
     "</table>"+
 
-    "</div>"+
+    "</fieldset>"+
+
+    
 
 
     /***********************************************************************************************************/
 
-    "</div></td></tr>"+
+    "</td></tr>"+
 
-    "<tr><td align='right'><input type='button' value='Close' onclick='closeOptionsDialog();'></td></tr>"+
+    "<div align='right'><input type='button' value='Close' onclick='closeOptionsDialog();'></div>"+
     //var obj=$(\"wizard\"); obj.innerHTML=\"\"; obj.style.display=\"none\";
 
     "</table>"+
 
     "</form>";
 
+    //"</div>";
 
-
+    obj = $("portletWizard");
+    obj.className='portlet dialog noBehaviourButton';
+    obj.title='Configuration';
     obj.innerHTML = html;
 
-    var portlet1 = $("region");
-    com.sokolov.portal.Portlet.decorateContentArea(portlet1.id, portlet1.title, portlet1.iconUri);
-    var portlet2 = $("portlet");
+    if (isIE) {
+        //obj.setAttribute("style", "position: absolute; margin: 0; z-index: 2000000000; display: block; top: 110px; left: 150px; background: white; border: 1px silver solid;");
+        obj.style.display = "block";
+        obj.style.zIndex = 2000000000;
+        obj.style.position = "absolute";
+        obj.style.top = "110px";
+        obj.style.left = "150px";
+        obj.style.background = "#DDDDDD";
+        obj.style.border = "1px silver solid";
+        obj.style.width = "650px";
+    } else {
+        obj.setAttribute("style", "position: fixed; margin: 0; z-index: 2000000000; display: block; top: 110px; left: 150px; background: white; border: 1px silver solid;");
+    }
+
+    var portlet2 = $("portletWizard");
     com.sokolov.portal.Portlet.decorateContentArea(portlet2.id, portlet2.title, portlet2.iconUri);
+
+    definedAsDraggable($("portletWizard"));
 
     var regions = $("regions"); 
     if (regions.options.length > 0) {
         regions.options[0].selected = true;
     } 
     showRegion(obj);
-
-
 }
 
 function closeOptionsDialog() {

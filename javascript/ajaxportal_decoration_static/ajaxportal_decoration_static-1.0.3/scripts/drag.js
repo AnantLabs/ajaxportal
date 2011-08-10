@@ -5,7 +5,7 @@
 ///////////////////////////////////////////////////////////////////
 
 /** 
- * @fileoverview This file is to be used in AJAX Portal. 
+ * @fileoverview This file is to be used in AJAX Portal and supports Drag&Drop operation for the portlets. 
  *
  * @author Sergei Sokolov s-sokolov@tut.by
  * @version 1.0.3
@@ -18,6 +18,8 @@ document.onmousemove = _mouseMove;
 document.onmouseup   = _mouseUp;
 
 var dragObject  = null;
+var dragObjectState  = null;
+
 var portletShadow = null;
 
 var mouseOffset = null;
@@ -297,6 +299,8 @@ function _mouseUp(ev) {
             portletShadow.parentNode.insertBefore(dragObject, portletShadow);
 
             var idSO = dragObject.parentNode.id; 
+
+
             refreshRegion(idSO);
 
             if (!isIE) {
@@ -338,8 +342,13 @@ function _mouseUp(ev) {
             iframe.style.width = header.offsetWidth;
         }
 
-	 
-        dragObject   = null; 
+        dragObject = null; 
+
+        if (window.portal.onWindowResize) {
+            try {
+                window.portal.onWindowResize();
+            } catch (e) { }
+        }
 
     }
 }

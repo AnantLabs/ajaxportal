@@ -15,7 +15,7 @@
 <link type="text/css" rel="stylesheet" href="styles/region_accordion_common.css">
 <link type="text/css" rel="stylesheet" href="styles/region_tabs_common.css">
 
-<link id="portletBuster" type="text/css" rel="stylesheet" href="styles/buster_default.css">
+<link id="portletBuster" type="text/css" rel="stylesheet" href="styles/portlet_default.css">
 
 <link id="portletWindow" type="text/css" rel="stylesheet" href="styles/region_window_default.css">
 <link id="portletStandard" type="text/css" rel="stylesheet" href="styles/region_standard_default.css">
@@ -76,7 +76,7 @@
         portletAccordion.href = "styles/region_accordion_" + theme + ".css";
         portletTabs.href = "styles/region_tabs_" + theme + ".css";
 
-        portletBuster.href = "styles/buster_" + theme + ".css";
+        portletBuster.href = "styles/portlet_" + theme + ".css";
     }
 
     function setState(state) {
@@ -117,10 +117,9 @@
 
         injectHttpContent("ajax_test.html", 
                           "polygon6Content");
-
-//         $('p3Irame').contentWindow.document.body.style.backgroundColor='blue';
     }
-    com.sokolov.portal.Portal.startOnLoad(startPortalEvent);
+    window.portal = new com.sokolov.portal.Portal();
+    com.sokolov.portal.Portal.startOnLoad(window.portal, startPortalEvent);
 
 </script>
 </head>
@@ -158,7 +157,7 @@
 <div id="pc1" class="standard" title="Window" style="">
 --><!--
 
---><div id="polygon1" class="portlet titleEditable" title="Content area 1" help="content/help_poligon1.html">
+--><div id="polygon1" class="portlet editable" title="Content area 1" help="content/help_poligon1.html">
 Text
 <b>bold</b>
 <i>italic</i>
@@ -197,7 +196,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </ul>
 </div>
 
-<div id="polygon5" class="portlet titleEditable" title="Content area 5">
+<div id="polygon5" class="portlet editable" title="Content area 5">
 <ul>
 <li>Item A</li>
 <li>Item B</li>
@@ -205,7 +204,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </ul>
 </div>
 
-<div id="polygon6" class="portlet titleEditable draggable " title="Content area 6" help="content/help_poligon6.html">
+<div id="polygon6" class="portlet editable draggable " title="Content area 6" help="content/help_poligon6.html">
 <ul>
 <li>Item A</li>
 <li>Item B</li>

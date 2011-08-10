@@ -412,9 +412,9 @@ com.sokolov.portal.Region.prototype.standard = function() {
     com.sokolov.portal.Region._setStateCssClass(this.id, com.sokolov.portal.Region.CSS_CLASS_STANDARD);
 
     for (var i = 0; i < this.portlets.length; i++) {
-        if (!has($(this.portlets[i].getId()).className, com.sokolov.portal.Portlet.CSS_CLASS_PORTLET_HIDDEN)) {
-            com.sokolov.portal.Portlet._setStateCssClass(this.portlets[i].getId(), com.sokolov.portal.Portlet.CSS_CLASS_PORTLET); // TODO: open question
-        }
+        //if (!has($(this.portlets[i].getId()).className, com.sokolov.portal.Portlet.CSS_CLASS_PORTLET_HIDDEN)) {                   // TODO: it's wrong behaviour
+        //    com.sokolov.portal.Portlet._setStateCssClass(this.portlets[i].getId(), com.sokolov.portal.Portlet.CSS_CLASS_PORTLET); 
+        //}
         $(this.portlets[i].getId() + com.sokolov.portal.Portlet.ID_HEADER).onclick = new Function();
         $(this.portlets[i].getId() + com.sokolov.portal.Portlet.ID_HEADER).ondblclick = new Function("com.sokolov.portal.Region._setPortletState('" + this.portlets[i].getId() + "');"); 
     }

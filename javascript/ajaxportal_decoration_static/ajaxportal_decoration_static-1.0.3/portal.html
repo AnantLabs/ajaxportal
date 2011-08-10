@@ -90,7 +90,8 @@
         injectHttpContent("ajax_test.html", 
                           "polygon4Content");
     }
-    com.sokolov.portal.Portal.startOnLoad(startPortalEvent);
+    window.portal = new com.sokolov.portal.Portal();
+    com.sokolov.portal.Portal.startOnLoad(window.portal, startPortalEvent);
 
 </script>
 </head>
@@ -123,13 +124,13 @@
 
 <div id="pc1" class="standard" title="Window" style="padding:0; margin:0;"><!--
 
---><div id="polygon1" class="portlet titleEditable" title="Content area 1" help="./content/help_poligon1.html">
+--><div id="polygon1" class="portlet editable" title="Content area 1" help="./content/help_poligon1.html">
 Text
 <b>bold</b>
 <i>italic</i>
 </div><!--
 
---><div id="polygon2" class="portlet titleEditable" title="Content area 2" url="ajax_test.html">
+--><div id="polygon2" class="portlet editable" title="Content area 2" url="ajax_test.html">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </div><!--
 
