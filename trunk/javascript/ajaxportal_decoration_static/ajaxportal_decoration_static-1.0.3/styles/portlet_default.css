@@ -1,7 +1,7 @@
 /*******************************************************************/
 /* AJAX Portal: LiveView version                                   */
 /* @author Sergei Sokolov                                          */
-/* @version 1.0.3 Alpha4 (2 Mar 2011)                              */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
 /*******************************************************************/
 
 .portletHidden {
@@ -100,7 +100,7 @@
 .portlet .portletHeader a .helpButton,
 .portletNotActive .portletHeader a .helpButton,
 .draggable .portletHeader a .dragIcon,
-.titleEditable .portletHeader a .toolButton {
+.editable .portletHeader a .toolButton {
     font-size: 10px; 
     width: 15px;
     height: 15px;
@@ -123,7 +123,7 @@
 }
 
 .draggable .portletHeader a .dragIcon,
-.titleEditable .portletHeader a .toolButton {
+.editable .portletHeader a .toolButton {
     display: inline;
 }
 
@@ -137,7 +137,7 @@
 
 .portlet .portletHeader a .helpButton,
 .portletNotActive .portletHeader a .helpButton,
-.titleEditable .portletHeader a:hover .toolButton {
+.editable .portletHeader a:hover .toolButton {
     background-color: #D6E3F2;
 
     border-left: 1px solid #AED3F7;
@@ -146,11 +146,21 @@
     border-bottom: 1px solid #6699CC;
 }
 
-.titleEditable .portletHeader a .toolButton {
+.editable .portletHeader a .toolButton {
     background-image: url(../images/tool_blue.gif);
 }
 
 .portlet .portletHeader a .helpButton,
 .portletNotActive .portletHeader a .helpButton {
     background-image: url(../images/question_blue.gif);
+}
+
+/*******************************************************************/
+
+fieldset {
+    border: 1px solid #94C8F2;
+}
+
+.portletHeader .transfer {
+    display: none;
 }

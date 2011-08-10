@@ -1,8 +1,13 @@
 /*******************************************************************/
 /* AJAX Portal: LiveView version                                   */
 /* @author Sergei Sokolov                                          */
-/* @version 1.0.3 Alpha4 (2 Mar 2011)                              */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
 /*******************************************************************/
+
+.portletHeader .transfer {
+    display: none;
+    float: left;
+}
 
 .portletHeader,
 .portletTitle,
@@ -30,12 +35,18 @@
     padding: 0;
 }
 
+.portletTitle {
+    margin: 0;
+    padding: 0;
+}
+
 .standard .portlet div.portletHeader .portletIcon,
 .standard .portletNotActive div.portletHeader .portletIcon {
     font-size: 18px; 
     width: 18px;
     height: 18px;
     margin: 1px;
+    margin: "0 1px 0 1px";
     padding: 0;
     float: left;
 
@@ -59,19 +70,6 @@
     background-position: left top;
     background-repeat: repeat;
 
-}
-
-.standard .portlet div.portletHeader .changeStateButton,
-.standard .portletNotActive div.portletHeader .changeStateButton {
-    font-size: 10px; 
-    width: 15px;
-    height: 15px;
-    margin: 2px;
-    padding: 0;
-    float: right;
-
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .standard .portlet div.portletContent,
@@ -110,10 +108,13 @@
     display: inline;
 }
 
+
+.standard .portlet div.portletHeader .changeStateButton,
+.standard .portletNotActive div.portletHeader .changeStateButton,
 .standard .portlet .portletHeader a .helpButton,
 .standard .portletNotActive .portletHeader a .helpButton,
 .standard .draggable .portletHeader a .dragIcon,
-.standard .titleEditable .portletHeader a .toolButton {
+.standard .editable .portletHeader a .toolButton {
     font-size: 10px; 
     width: 15px;
     height: 15px;
@@ -137,6 +138,6 @@
 
 
 .standard .draggable .portletHeader a .dragIcon,
-.standard .titleEditable .portletHeader a .toolButton {
+.standard .editable .portletHeader a .toolButton {
     display: inline;
 }

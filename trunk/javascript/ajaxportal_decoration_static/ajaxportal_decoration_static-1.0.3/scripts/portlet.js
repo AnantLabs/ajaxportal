@@ -114,7 +114,7 @@ com.sokolov.portal.Portlet.prototype.isDraggable = function () {
 /**
  * Set the portlet draggable or not.
  *
- * @returns {boolean} true or false
+ * @param flag true if the portlet is draggable
  */
 com.sokolov.portal.Portlet.prototype.setDraggable = function (flag) {
     var portletObj = $(this.getId());
@@ -127,6 +127,26 @@ com.sokolov.portal.Portlet.prototype.setDraggable = function (flag) {
         if (has(portletObj.className, com.sokolov.portal.Portlet.CSS_CLASS_DRAG_PORTLET)) {
             definedAsUndraggable(portletObj);
             portletObj.className = remove(portletObj.className, com.sokolov.portal.Portlet.CSS_CLASS_DRAG_PORTLET);
+        }
+    }
+}
+
+/**
+ * Delete the portlet padding.
+ *
+ * @param flag true if the portlet is without padding
+ */
+com.sokolov.portal.Portlet.prototype.setZeroPadding = function (flag) {
+    var portletObj = $(this.getId());
+    if (flag) {
+        if (!has(portletObj.className, com.sokolov.portal.Portlet.CSS_CLASS_ZERO_PADDING)) {
+            definedAsDraggable(portletObj);
+            portletObj.className += " " + com.sokolov.portal.Portlet.CSS_CLASS_ZERO_PADDING;
+        }
+    } else {
+        if (has(portletObj.className, com.sokolov.portal.Portlet.CSS_CLASS_ZERO_PADDING)) {
+            definedAsUndraggable(portletObj);
+            portletObj.className = remove(portletObj.className, com.sokolov.portal.Portlet.CSS_CLASS_ZERO_PADDING);
         }
     }
 }
@@ -276,7 +296,10 @@ com.sokolov.portal.Portlet.CSS_CLASS_PORTLET_HIDDEN = "portletHidden";
 com.sokolov.portal.Portlet.CSS_CLASS_HELP_VIEW = "helpView";
 
 /** Holds CSS class for Edit button. */
-com.sokolov.portal.Portlet.CSS_CLASS_EDIT_VIEW = "titleEditable";
+com.sokolov.portal.Portlet.CSS_CLASS_EDIT_VIEW = "editable";
+
+/** Holds CSS class for zero portlet padding. */
+com.sokolov.portal.Portlet.CSS_CLASS_ZERO_PADDING = "zeroPadding";
 
 /** Holds CSS class for noBehaviourButton marker. */
 com.sokolov.portal.Portlet.CSS_CLASS_NO_BEHAVIOUR_BUTTONS = "noBehaviourButton";
@@ -538,7 +561,7 @@ com.sokolov.portal.Portlet.decorateContentArea = function(id, title, iconUri) {
     if (obj) {
         try {
             obj.innerHTML = "<div id='" + id + com.sokolov.portal.Portlet.ID_HEADER + "' class='"+ com.sokolov.portal.Portlet.ID_PORTLET + com.sokolov.portal.Portlet.ID_HEADER + "' ondblclick='com.sokolov.portal.Portlet._changePortletState(\"" + id + "\"); '>" //  onmousedown='deselectAndBlur(this);' onmouseup='deselectAndBlur(this);'
-                                + "<div id='" + id + com.sokolov.portal.Portlet.ID_ICON + "' class='"+ com.sokolov.portal.Portlet.ID_PORTLET + com.sokolov.portal.Portlet.ID_ICON + "' " + ((iconUri)?" style='background-image: url(\"" + iconUri + "\");'":"") +">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>" 
+                                + "<div id='" + id + com.sokolov.portal.Portlet.ID_ICON + "' class='"+ com.sokolov.portal.Portlet.ID_PORTLET + com.sokolov.portal.Portlet.ID_ICON + "' " + ((iconUri)?" style='background-image: url(\"" + iconUri + "\");'":"") +">&nbsp;</div>" 
                                 + com.sokolov.portal.Portlet._minimizeNormalButton(id)
                                 + com.sokolov.portal.Portlet._helpButton(id)
                                 + com.sokolov.portal.Portlet._toolButton(id)

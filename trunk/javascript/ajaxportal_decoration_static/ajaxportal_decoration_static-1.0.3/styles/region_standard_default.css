@@ -1,7 +1,7 @@
 /*******************************************************************/
 /* AJAX Portal: LiveView version                                   */
 /* @author Sergei Sokolov                                          */
-/* @version 1.0.3 Alpha4 (2 Mar 2011)                              */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
 /*******************************************************************/
 
 .standard .portlet,
@@ -21,7 +21,7 @@
     background-color: #BDDCF4;
 
     background-repeat: repeat-x;
-    background-position: 2px center;
+    background-position: 2px top;
     background-image: url(../images/header_background_blue.gif);
 }
 
@@ -62,7 +62,7 @@
 
 .standard .portlet .portletHeader a .helpButton,
 .standard .portletNotActive .portletHeader a .helpButton,
-.standard .titleEditable .portletHeader a:hover .toolButton {
+.standard .editable .portletHeader a:hover .toolButton {
     background-color: #D6E3F2;
 
     border-left: 1px solid #AED3F7;
@@ -71,7 +71,7 @@
     border-bottom: 1px solid #6699CC;
 }
 
-.standard .titleEditable .portletHeader a .toolButton {
+.standard .editable .portletHeader a .toolButton {
     background-image: url(../images/tool_blue.gif);
 }
 

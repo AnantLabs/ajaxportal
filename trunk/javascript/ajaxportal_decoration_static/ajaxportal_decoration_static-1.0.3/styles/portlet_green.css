@@ -1,7 +1,7 @@
 /*******************************************************************/
 /* AJAX Portal: LiveView version                                   */
 /* @author Sergei Sokolov                                          */
-/* @version 1.0.3 Alpha4 (2 Mar 2011)                              */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
 /*******************************************************************/
 
 .portletHidden {
@@ -101,7 +101,7 @@
 .portlet .portletHeader a .helpButton,
 .portletNotActive .portletHeader a .helpButton,
 .draggable .portletHeader a .dragIcon,
-.titleEditable .portletHeader a .toolButton {
+.editable .portletHeader a .toolButton {
     font-size: 10px; 
     width: 15px;
     height: 15px;
@@ -124,6 +124,16 @@
 }
 
 .draggable .portletHeader a .dragIcon,
-.titleEditable .portletHeader a .toolButton {
+.editable .portletHeader a .toolButton {
     display: inline;
+}
+
+/*******************************************************************/
+
+fieldset {
+    border: 1px solid #72C313;
+}
+
+.portletHeader .transfer {
+    display: none;
 }

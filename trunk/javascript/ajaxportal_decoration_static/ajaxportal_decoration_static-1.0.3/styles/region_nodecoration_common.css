@@ -1,8 +1,12 @@
 /*******************************************************************/
 /* AJAX Portal: LiveView version                                   */
 /* @author Sergei Sokolov                                          */
-/* @version 1.0.3 Alpha4 (2 Mar 2011)                              */
+/* @version 1.0.3 Alpha4 (28 Jan 2011)                             */
 /*******************************************************************/
+
+.portletHeader .transfer {
+    display: none;
+}
 
 .nodecoration .tabNavigation {
     display: none;
