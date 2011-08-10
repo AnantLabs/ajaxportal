@@ -22,6 +22,7 @@
     }
 
     function processControlsForAjaxSubmit(form) {
+        if (!form) return;
         if (!form.suportedAjaxSubmit) {
             try {
                 form.submit = function executeSubmit() {
@@ -35,39 +36,41 @@
 
         // change behaviour of submit buttons                       
         var elements = form.elements;
-        for (var i = 0; i < elements.length; i++) {
-            if (elements[i].type == "submit") {
-                //try {
-                if (!isIE) {  
-                //if (navigator.appName != 'Microsoft Internet Explorer') {
-                    elements[i].type = "button";
-                    //elements[i].setAttribute("type", "button") 
-                    elements[i].onclick = function() {
-                        this.form.submit();
-                    }
-                //} catch(e) {
-                } else {
-                    var button = document.createElement("input");
-                    button.setAttribute("type", "button");
-                    if (elements[i].id) {  
-                        button.setAttribute("id", elements[i].id);
-                    } 
-                    if (elements[i].name) { 
-                        button.setAttribute("name", elements[i].name);
-                    }
-                    if (elements[i].style.cssText) { 
-                        button.setAttribute("style", elements[i].style.cssText);
-                    }
-                    if (elements[i].className) {   
-                        button.setAttribute("class", elements[i].className);
-                    }
-                    button.setAttribute("value", elements[i].value);
-                    button.setAttribute("onclick", function () { this.form.submit(); } );
+        if (elements) {
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].type == "submit") {
+                    //try {
+                    if (!isIE) {  
+                        //if (navigator.appName != 'Microsoft Internet Explorer') {
+                        elements[i].type = "button";
+                        //elements[i].setAttribute("type", "button") 
+                        elements[i].onclick = function() {
+                            this.form.submit();
+                        }
+                    //} catch(e) {
+                    } else {
+                        var button = document.createElement("input");
+                        button.setAttribute("type", "button");
+                        if (elements[i].id) {  
+                            button.setAttribute("id", elements[i].id);
+                        } 
+                        if (elements[i].name) { 
+                            button.setAttribute("name", elements[i].name);
+                        }
+                        if (elements[i].style.cssText) { 
+                            button.setAttribute("style", elements[i].style.cssText);
+                        }
+                        if (elements[i].className) {   
+                            button.setAttribute("class", elements[i].className);
+                        }
+                        button.setAttribute("value", elements[i].value);
+                        button.setAttribute("onclick", function () { this.form.submit(); } );
 
-                    var parentNode = elements[i].parentNode;
-                    var oldSubmitButton = elements[i];    
-                    parentNode.insertBefore(button, elements[i]);
-                    parentNode.removeChild(oldSubmitButton);
+                        var parentNode = elements[i].parentNode;
+                        var oldSubmitButton = elements[i];    
+                        parentNode.insertBefore(button, elements[i]);
+                        parentNode.removeChild(oldSubmitButton);
+                    }
                 }
             }
         }
