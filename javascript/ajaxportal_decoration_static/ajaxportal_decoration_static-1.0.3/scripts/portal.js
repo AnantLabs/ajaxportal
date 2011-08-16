@@ -7,7 +7,7 @@
 /** 
  * @fileoverview This file is to be used for Portal creation in AJAX Portal. 
  *
- * @author Sergei Sokolov s-sokolov@tut.by
+ * @author Sergei Sokolov ssokolov@ajaxportal.org
  * @version 1.0.3
  */
 
@@ -29,7 +29,20 @@
  *
  * @returns an instance of the portal
  */
-com.sokolov.portal.Portal = function() {
+com.sokolov.portal.Portal = function(portalId, pageId, customizationServiceUrl, accountId) {
+
+    /** Holds portal id */
+    this.portalId = portalId;
+
+    /** Holds page id */
+    this.pageId = pageId;
+
+    /** Holds customization service url */
+    this.customizationServiceUrl = customizationServiceUrl;
+
+    /** Holds account id */
+    this.accountId = accountId;
+
     /** Holds a array of portlet regions */
     this.portletRegions = [];
 
@@ -39,6 +52,60 @@ com.sokolov.portal.Portal = function() {
     /** Holds default portlet region. It is used if the portlet region for the portlet (created by JavaScript) is not defined. */
     this.defaultPortletRegion = null;
 };
+
+/**
+ * Gets portal id.
+ *
+ * @returns {number} portal id
+ */
+com.sokolov.portal.Portal.prototype.getPortalId = function() {
+    return this.portalId;
+}
+
+/**
+ * Gets page id.
+ *
+ * @returns {number} page id
+ */
+com.sokolov.portal.Portal.prototype.getPageId = function() {
+    return this.pageId;
+}
+
+/**
+ * Gets account id.
+ *
+ * @returns {number} account id
+ */
+com.sokolov.portal.Portal.prototype.getAccountId = function() {
+    return this.accountId;
+}
+
+/**
+ * Sets account id.
+ *
+ * @param {number} account id
+ */
+com.sokolov.portal.Portal.prototype.setAccountId = function(accountId) {
+    this.accountId = accountId;
+}
+
+/**
+ * Gets customization service url.
+ *
+ * @returns {number} customization service url
+ */
+com.sokolov.portal.Portal.prototype.getCustomizationServiceUrl = function() {
+    return this.customizationServiceUrl;
+}
+
+/**
+ * Sets customization service url.
+ *
+ * @param {number} customization service url
+ */
+com.sokolov.portal.Portal.prototype.setCustomizationServiceUrl = function(customizationServiceUrl) {
+    this.customizationServiceUrl = customizationServiceUrl;
+}
 
 
 /**

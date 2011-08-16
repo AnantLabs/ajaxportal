@@ -7,7 +7,7 @@
 /** 
  * @fileoverview This file is a library with Ajax support consts and functions. 
  *
- * @author Sergei Sokolov s-sokolov@tut.by
+ * @author Sergei Sokolov ssokolov@ajaxportal.org
  * @version 1.0.3
  */
 
