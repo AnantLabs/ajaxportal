@@ -26,19 +26,26 @@
                 }
             };
 
+            var urlProxy = "proxy.action"
+
             if ((method) && (method.toUpperCase) && (method.toUpperCase() == "GET")) {
-                request.open("GET", url + "?" + queryString, true);
+                //request.open("GET", url + "?" + queryString, true);
+                request.open("GET", urlProxy + "?" + queryString, true);
+                request.setRequestHeader("AjaxPortalProxyUrl", url);
+                request.setRequestHeader("AjaxPortalProxyIsSupported", "no");     // TODO: check
                 request.send(null);
             } else {
-                request.open("POST", url, true);
-                request.setRequestHeader("Content-length", queryString.length);
+                //request.open("POST", url, true);
+                request.open("POST", urlProxy, true);
+                request.setRequestHeader("AjaxPortalProxyUrl", url);
+                request.setRequestHeader("AjaxPortalProxyIsSupported", "no");     // TODO: check
 
+                request.setRequestHeader("Content-length", queryString.length);
                 if ((charset) && (charset.length) && (charset.length > 0)) {
                     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=" + charset);
                 } else { 
                     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 }  
-
                 request.setRequestHeader("Connection", "close");
                 request.send(queryString);
             }

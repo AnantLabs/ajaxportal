@@ -7,7 +7,7 @@
 /** 
  * @fileoverview This file is a library with common functions. 
  *
- * @author Sergei Sokolov s-sokolov@tut.by
+ * @author Sergei Sokolov ssokolov@ajaxportal.org
  * @version 1.0.3
  */
 
@@ -348,72 +348,75 @@ function generateId() {
 }
 
 
-
-    function setIFrameSize() {
-        if (!isIE) {
-            return false;
-        }
-        var arr = [];
-        for (var i = 0; i < portal.portletRegions.length; i++) {
-            var regionId = portal.portletRegions[i].id
-            var portletRegion = portal.getPortletRegionById(regionId);
-            if (portletRegion) {
-                //portletRegion.refresh();
-                var portlets = portletRegion.portlets;
-                for (var j = 0; j < portlets.length; j++) {
-                    var iframe = $(portlets[j].id + com.sokolov.portal.Portlet.ID_FRAME);
-                    if (iframe) {
-                        arr[arr.length] = portlets[j].id;
-                        //iframe.style.width = 0;
-                    }
+/**
+ * Set full size for IFrames.
+ */
+function setIFrameSize() {
+    if (!isIE) {
+        return false;
+    }
+    var arr = [];
+    for (var i = 0; i < portal.portletRegions.length; i++) {
+        var regionId = portal.portletRegions[i].id
+        var portletRegion = portal.getPortletRegionById(regionId);
+        if (portletRegion) {
+            //portletRegion.refresh();
+            var portlets = portletRegion.portlets;
+            for (var j = 0; j < portlets.length; j++) {
+                var iframe = $(portlets[j].id + com.sokolov.portal.Portlet.ID_FRAME);
+                if (iframe) {
+                    arr[arr.length] = portlets[j].id;
+                    //iframe.style.width = 0;
                 }
             }
         }
-
-        for (var j = 0; j < arr.length; j++) {
-            var content = $(arr[j] + com.sokolov.portal.Portlet.ID_CONTENT);
-            var iframe = $(arr[j] + com.sokolov.portal.Portlet.ID_FRAME);
-            if (iframe) {
-                iframe.style.width = 0;
-            }
-        }
-
-        for (var j = 0; j < arr.length; j++) {
-            var content = $(arr[j] + com.sokolov.portal.Portlet.ID_CONTENT);
-            var iframe = $(arr[j] + com.sokolov.portal.Portlet.ID_FRAME);
-            if (iframe) {
-                iframe.style.width = content.offsetWidth;
-            }
-        }
-
     }
 
-    function setTitleWidth() {
-        if (!isIE) {
-            //return false;
-        }
-        var arr = [];
-        for (var i = 0; i < portal.portletRegions.length; i++) {
-            var regionId = portal.portletRegions[i].id
-            var portletRegion = portal.getPortletRegionById(regionId);
-            if (portletRegion) {
-                //portletRegion.refresh();
-                var portlets = portletRegion.portlets;
-                for (var j = 0; j < portlets.length; j++) {
-                    var header = $(portlets[j].id + com.sokolov.portal.Portlet.ID_HEADER);
-                    var title = $(portlets[j].id + com.sokolov.portal.Portlet.ID_TITLE);
-                    //var transfer = $(portlets[j].id + com.sokolov.portal.Portlet.ID_TRANSFER);
+   for (var j = 0; j < arr.length; j++) {
+       var content = $(arr[j] + com.sokolov.portal.Portlet.ID_CONTENT);
+       var iframe = $(arr[j] + com.sokolov.portal.Portlet.ID_FRAME);
+       if (iframe) {
+           iframe.style.width = 0;
+       }
+   }
 
-                    //if (parseInt(title.offsetWidth) > parseInt(header.offsetWidth) - 90) {
-//alert(portlets[j].id + " " + header.offsetWidth + " " + title.offsetWidth)
-                        title.style.width = 0;
-                        title.style.width = parseInt(header.offsetWidth) - 95 + "px";
-                        //transfer.style.display = "";
-                   // } else {
-                        //transfer.style.display = "none";
-                   // } 
-                }
+   for (var j = 0; j < arr.length; j++) {
+       var content = $(arr[j] + com.sokolov.portal.Portlet.ID_CONTENT);
+       var iframe = $(arr[j] + com.sokolov.portal.Portlet.ID_FRAME);
+       if (iframe) {
+           iframe.style.width = content.offsetWidth;
+       }
+   }
+}
+
+/**
+ * Descrease portlet title if it's necessary.
+ */
+function setTitleWidth() {
+    if (!isIE) {
+        //return false;
+    }
+    var arr = [];
+    for (var i = 0; i < portal.portletRegions.length; i++) {
+        var regionId = portal.portletRegions[i].id
+        var portletRegion = portal.getPortletRegionById(regionId);
+        if (portletRegion) {
+            //portletRegion.refresh();
+            var portlets = portletRegion.portlets;
+            for (var j = 0; j < portlets.length; j++) {
+                var header = $(portlets[j].id + com.sokolov.portal.Portlet.ID_HEADER);
+                var title = $(portlets[j].id + com.sokolov.portal.Portlet.ID_TITLE);
+                //var transfer = $(portlets[j].id + com.sokolov.portal.Portlet.ID_TRANSFER);
+
+                //if (parseInt(title.offsetWidth) > parseInt(header.offsetWidth) - 90) {
+                    //alert(portlets[j].id + " " + header.offsetWidth + " " + title.offsetWidth)
+                    title.style.width = 0;
+                    title.style.width = parseInt(header.offsetWidth) - 95 + "px";
+                    //transfer.style.display = "";
+                // } else {
+                    //transfer.style.display = "none";
+                // } 
             }
         }
-
     }
+}

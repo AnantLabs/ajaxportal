@@ -7,7 +7,7 @@
 /** 
  * @fileoverview This file is a library with common functions. 
  *
- * @author Sergei Sokolov s-sokolov@tut.by
+ * @author Sergei Sokolov ssokolov@ajaxportal.org
  * @version 1.0.3
  */
 
