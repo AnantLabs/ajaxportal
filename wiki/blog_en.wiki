@@ -60,4 +60,11 @@
 
 *June 16, 2011* - Ajax Portal ASP.NET 1.0.3 controls project has been added. Now <b>Ajax Portal</b> is cross-platform solution.
 
+*September 29, 2011* - We take part in Web-Ready 2011. Please, see our project - application #436 [http://www.web-ready.ru/konkurs/podannye_zayavki_2011/the_best_project1/ajax_portal/].
+
+*October 10, 2011* - We take part in IT Jump 2011.
+
+*November 29, 2011* - *Static Version of Ajax Portal* 1.0.4 is released and comes in Beta version. Please see [http://ajaxportal.googlecode.com/files/ajaxportal_decoration_static-1.0.4.zip]. Now we prepare to publish customization module for Ajax Portal and Repository of Portlets. These components are based on the current static version. 
+
+
 *_If you want to receive news about Ajax Portal you have to add yourself in our Google group [http://groups.google.com/group/ajaxportal]. As result you will receive month reports about our achievements, new releases and new available documentation._*
