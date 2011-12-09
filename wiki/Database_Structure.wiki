@@ -4,12 +4,12 @@
 
 == Introduction ==
 
-Ajax Portal suppots the following base services:
+Ajax Portal supports the following base services:
   # Authenticaton 
   # 2 kinds of Authorization (role based and permission based),
   # Multy-service support for one user,
-  # Customization functionality (possibilty to create a new portlet, change the parameter(s) of existing portlet, delete a portlet, to move the portlet in the region or move the portlet in another region),
-  # Repository - a storage of all known portlets, porjaxs, plugins, wigjets and mobile Web applications. The repository supports an hierarchy for the portlets. The portlets can be associated with portal page.
+  # Customization functionality (possibility to create a new portlet, change the parameter(s) of existing portlet, delete a portlet, to move the portlet in the region or move the portlet in another region),
+  # Repository - a storage of all known portlets, porjaxs, plug-ins, widgets and mobile Web applications. The repository supports a hierarchy for the portlets. The portlets can be associated with portal page.
 
 == Logical model  ==
 
@@ -21,4 +21,3 @@ Ajax Portal suppots the following base services:
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/db_model.gif">
                                                              Picture 2. Physical model (ORACLE) of Ajax Portal database
-
