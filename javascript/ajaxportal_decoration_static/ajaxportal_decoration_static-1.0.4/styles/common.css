@@ -1,0 +1,33 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.4 Beta1 (28 Nov 2011)                             */
+/*******************************************************************/
+
+.zeroPadding div.portletContent,
+.iframe div.portletContent {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/*
+div.portletContent {
+     overflow: hidden; 
+}
+*/
+.iframe div.portletContent iframe {
+    border: 0px none;
+    width: 100%;
+/*    height: 100%;*/
+/*    width: "99%";*/
+/*    overflow:hide;*/
+}
+
+.noheader div.portletHeader {
+    display: none !important;
+}
+
+.noBehaviourButton div.portletHeader .changeStateButton {
+    display: none !important;
+}
+

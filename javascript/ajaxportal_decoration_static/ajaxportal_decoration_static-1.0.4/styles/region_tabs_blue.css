@@ -1,0 +1,45 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.4 Beta1 (28 Nov 2011)                             */
+/*******************************************************************/
+
+.tabs .portlet div.portletContent,
+.tabs .portletNotActive div.portletContent {
+    background-color: white;
+    border: 1px solid #508FFF;
+}
+
+/* active **********************************************************/
+
+/* not active ******************************************************/
+
+/* tab navigation ************************************************************/
+
+.tabs .tabNavigation .tabItem .tabItemIcon,
+.tabs .tabNavigation .tabItemActive .tabItemIcon {
+    background-image: url(../images/icon_window.gif);
+}
+
+
+.tabs .tabNavigation .tabItemActive,
+.tabs .tabNavigation .tabItem {
+    /*font-weight: bold;*/
+    border-top: 1px solid #508FFF;
+    border-left: 1px solid #508FFF;
+    border-right: 1px solid #508FFF;
+    border-bottom: 1px solid #508FFF;
+
+}
+
+.tabs .tabNavigation .tabItemActive {
+    color: white;
+    background-color: #508FFF;
+
+    background-image: url(../images/background_lines.gif);
+}
+
+.tabs .tabNavigation .tabItem {
+    color: #508FFF;
+    background-color: #DDDDDD;
+}

@@ -1,0 +1,61 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.4 Beta1 (28 Nov 2011)                             */
+/*******************************************************************/
+
+.accordion .portlet,
+.accordion .portletNotActive {
+    border: 1px solid silver;
+}
+
+.accordion .portlet div.portletHeader .portletIcon,
+.accordion .portletNotActive div.portletHeader .portletIcon {
+    background-image: url(../images/icon_window.gif);
+}
+
+.accordion .portlet div.portletHeader,
+.accordion .portletNotActive div.portletHeader {
+    color: black;
+    /*font-weight: bold;*/
+    background-color: #DDDDDD;
+
+    background-repeat: repeat-x;
+    background-position: 2px center;
+    background-image: none;
+}
+
+.accordion .portlet div.portletContent,
+.accordion .portletNotActive div.portletContent {
+    background-color: #EEEEEE;
+}
+
+/*******************************************************************/
+
+.accordion .draggable .portletHeader a .dragIcon {
+    background-image: url(../images/drag_silver.gif);
+}
+
+/*******************************************************************/
+
+.accordion .portlet .portletHeader a .helpButton,
+.accordion .portletNotActive .portletHeader a .helpButton,
+.accordion .editable .portletHeader a:hover .toolButton {
+    background-color: silver;
+
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    background-image: url(../images/tool_gray.gif);
+}
+
+.accordion .editable .portletHeader a .toolButton {
+    background-image: url(../images/tool_gray.gif);
+}
+
+.accordion .portlet .portletHeader a .helpButton,
+.accordion .portletNotActive .portletHeader a .helpButton {
+    background-image: url(../images/question_gray.gif);
+}
