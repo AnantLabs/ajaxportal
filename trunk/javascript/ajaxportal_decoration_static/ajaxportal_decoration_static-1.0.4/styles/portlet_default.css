@@ -1,0 +1,166 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.4 Beta1 (28 Nov 2011)                             */
+/*******************************************************************/
+
+.portletHidden {
+    display: none;
+}
+
+.portlet,
+.portletNotActive {
+    margin: 4px;
+    padding: 0;
+    border: 1px solid #94C8F2;
+}
+
+.portlet div.portletHeader .portletIcon,
+.portletNotActive div.portletHeader .portletIcon {
+    font-size: 18px; 
+    width: 18px;
+    height: 18px;
+    margin: 1px;
+    padding: 0;
+    float: left;
+
+    border: 0;
+
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-image: url(../images/icon_window.gif);
+}
+
+.portlet div.portletHeader,
+.portletNotActive div.portletHeader {
+    margin: 0;
+    padding: 0;
+    color: #0F74BC;
+    background-color: #BDDCF4;
+    background-repeat: repeat-x;
+    background-position: 2px center;
+    background-image: url(../images/header_background_blue.gif);
+
+    cursor: default;
+    white-space: nowrap;
+}
+
+.portlet div.portletHeader .changeStateButton,
+.portletNotActive div.portletHeader .changeStateButton {
+    background-color: #D6E3F2;
+    font-size: 8px; 
+    width: 15px;
+    height: 14px;
+    margin: 2px;
+    padding: 0;
+    float: right;
+
+    border-left: 1px solid #AED3F7;
+    border-top: 1px solid #AED3F7;
+    border-right: 1px solid #6699CC;
+    border-bottom: 1px solid #6699CC;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.portlet div.portletContent,
+.portletNotActive div.portletContent {
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+    background-color: #F6F6FF;
+}
+
+/* active **********************************************************/
+
+.portlet div.portletHeader .changeStateButton {
+    background-image: url(../images/minimazed_blue.gif);
+}
+
+/* not active ******************************************************/
+
+.portletNotActive div.portletHeader .changeStateButton {
+    background-image: url(../images/normal_blue.gif);
+}
+
+.portletNotActive div.portletContent {
+    display: none;
+}
+
+/* buttons ******************************************************/
+
+.helpButton {
+    display: none;
+}
+
+.helpView .portletHeader a .helpButton  {
+    display: inline;
+}
+
+.portlet .portletHeader a .helpButton,
+.portletNotActive .portletHeader a .helpButton,
+.draggable .portletHeader a .dragIcon,
+.editable .portletHeader a .toolButton {
+    font-size: 10px; 
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid transparent;
+    border: "0";
+    margin: 2px 0px 2px 2px;
+    padding: 0;
+
+    float: right;
+
+    background-color: transparent;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+
+/*    display: inline;*/
+}
+
+.draggable .portletHeader a .dragIcon,
+.editable .portletHeader a .toolButton {
+    display: inline;
+}
+
+/*******************************************************************/
+
+.draggable .portletHeader a .dragIcon {
+    background-image: url(../images/drag_blue.gif);
+}
+
+/*******************************************************************/
+
+.portlet .portletHeader a .helpButton,
+.portletNotActive .portletHeader a .helpButton,
+.editable .portletHeader a:hover .toolButton {
+    background-color: #D6E3F2;
+
+    border-left: 1px solid #AED3F7;
+    border-top: 1px solid #AED3F7;
+    border-right: 1px solid #6699CC;
+    border-bottom: 1px solid #6699CC;
+}
+
+.editable .portletHeader a .toolButton {
+    background-image: url(../images/tool_blue.gif);
+}
+
+.portlet .portletHeader a .helpButton,
+.portletNotActive .portletHeader a .helpButton {
+    background-image: url(../images/question_blue.gif);
+}
+
+/*******************************************************************/
+
+fieldset {
+    border: 1px solid #94C8F2;
+}
+
+.portletHeader .transfer {
+    display: none;
+}

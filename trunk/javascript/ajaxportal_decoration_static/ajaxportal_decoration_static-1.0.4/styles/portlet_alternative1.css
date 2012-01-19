@@ -1,0 +1,66 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.4 Beta1 (28 Nov 2011)                             */
+/*******************************************************************/
+
+.portletHidden {
+    display: none;
+}
+
+.portlet {
+    margin: 4px;
+    padding: 0;
+    border: 1px solid #22A;
+    background-color: #22A;
+}
+
+.portletNotActive {
+    display: none;
+}
+
+.portlet div.portletHeader .portletIcon,
+.portletNotActive div.portletHeader .portletIcon {
+}
+
+.portlet div.portletHeader,
+.portletNotActive div.portletHeader {
+    display: none;
+}
+
+.portlet div.portletHeader .changeStateButton,
+.portletNotActive div.portletHeader .changeStateButton {
+}
+
+.portlet div.portletContent,
+.portletNotActive div.portletContent {
+    margin: 6px 0 0 0;
+    padding: 4px 10px 4px 10px;
+    background-color: white;
+}
+
+/* button **********************************************************/
+
+a .helpButton,
+a .dragIcon  {
+    display: none;
+}
+
+/* active **********************************************************/
+
+.portlet div.portletHeader .changeStateButton {
+    background-image: url(../images/minimazed_gray.gif);
+}
+
+/* not active ******************************************************/
+
+.portletNotActive div.portletHeader .changeStateButton {
+    background-image: url(../images/normal_gray.gif);
+}
+
+.portletNotActive div.portletContent {
+}
+
+.portletHeader .transfer {
+    display: none;
+}

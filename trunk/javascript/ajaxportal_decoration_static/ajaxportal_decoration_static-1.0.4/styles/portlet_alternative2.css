@@ -1,0 +1,71 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Sergei Sokolov                                          */
+/* @version 1.0.4 Beta1 (28 Nov 2011)                             */
+/*******************************************************************/
+
+.portletHidden {
+    display: none;
+}
+
+.portlet {
+    margin: 4px;
+    padding: 0;
+    border-top: 1px dashed silver;
+}
+
+.portletNotActive {
+    display: none;
+}
+
+.portlet div.portletHeader .portletIcon,
+.portletNotActive div.portletHeader .portletIcon {
+    display: none;
+}
+
+.portlet div.portletHeader,
+.portletNotActive div.portletHeader {
+    margin: 0;
+    padding: 4px 5px 0 10px;
+    font-weight: bold;
+    float: left;
+    background-color: transparent;
+}
+
+.portlet div.portletHeader .changeStateButton,
+.portletNotActive div.portletHeader .changeStateButton {
+    display: none;
+}
+
+.portlet div.portletContent,
+.portletNotActive div.portletContent {
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+    background-color: white;
+}
+
+/* button **********************************************************/
+
+a .helpButton,
+a .dragIcon  {
+    display: none;
+}
+
+/* active **********************************************************/
+
+.portlet div.portletHeader .changeStateButton {
+    background-image: url(../images/minimazed_gray.gif);
+}
+
+/* not active ******************************************************/
+
+.portletNotActive div.portletHeader .changeStateButton {
+    background-image: url(../images/normal_gray.gif);
+}
+
+.portletNotActive div.portletContent {
+}
+
+.portletHeader .transfer {
+    display: none;
+}
