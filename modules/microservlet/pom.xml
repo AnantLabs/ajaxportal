@@ -46,16 +46,16 @@
         <role>Author</role>
         <role>Software Architect</role>
       </roles>
-      <organization>Warriors of the world</organization>
-      <organizationUrl>http://thebestoftheuniverse.com</organizationUrl>
+      <organization>--</organization>
+      <organizationUrl>http://groups.google.com/group/ajaxportal/</organizationUrl>
       <timezone></timezone>
     </developer>
     <developer>
       <id>02</id>
       <name>Helio Frota</name>
       <email>heliofrota@gmail.com</email>
-      <organization>Warriors of the world</organization>
-      <organizationUrl>http://thebestoftheuniverse.com</organizationUrl>
+      <organization>--</organization>
+      <organizationUrl>http://groups.google.com/group/ajaxportal/</organizationUrl>
       <roles>
         <role>Software Architect</role>
       </roles>
@@ -143,6 +143,12 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>1.9.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
