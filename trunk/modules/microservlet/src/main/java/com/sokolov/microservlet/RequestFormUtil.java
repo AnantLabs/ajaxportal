@@ -11,15 +11,19 @@ import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
 import java.beans.Introspector;
 
-
+/**
+ * Helper class RequestFormUtil.
+ * @author Sergei Sokolov
+ * @version 1.0
+ */
 public class RequestFormUtil {
 
-    /** Hols dispatch parameter name */
+    /** Holds dispatch parameter name. */
     private static final java.lang.String FORM_BEAN_PARAMETER_NAME = "RequestFormBean";
 
     /**
      * Get request form.
-     *
+     * @param request HttpServletRequest
      * @return a value of requestForm property
      */
     final public static RequestForm getRequestForm(HttpServletRequest request) {
@@ -28,7 +32,8 @@ public class RequestFormUtil {
 
     /**
      * Set request form.
-     *
+     * @param request HttpServletRequest
+     * @param requestForm RequestForm
      * @param requestForm a new value of requestForm property
      */
     final public static void setRequestForm(HttpServletRequest request,
@@ -47,6 +52,11 @@ public class RequestFormUtil {
                                                 HttpServletRequest request)
             throws IllegalAccessException {
         try {
+
+        	if (form == null) {
+        		throw new IllegalStateException("The RequestForm is null.");
+        	}
+
             final PropertyDescriptor[] descriptors =
                     Introspector.getBeanInfo(form.getClass()).getPropertyDescriptors();
 
@@ -132,6 +142,9 @@ public class RequestFormUtil {
                    IllegalAccessException, InstantiationException {
         HttpSession session = request.getSession(true);
         RequestForm form = null;
+        if (renderFormAnnotation == null) {
+        	throw new IllegalStateException("RenderFormAnnotation is not set.");
+        }
         if (Scope.SESSION.equals(renderFormAnnotation.scope())) {
             form = (RequestForm) session.getAttribute(renderFormAnnotation.name());
         }

@@ -20,9 +20,10 @@ import java.lang.reflect.Method;
  * @author Sergei Sokolov
  * @version 1.0
  */
+@SuppressWarnings("serial")
 public abstract class AbstractMicroServlet  extends HttpServlet {
 
-    /** Hols dispatch parameter name */
+    /** Hols dispatch parameter name. */
     private static final java.lang.String DISPATCH_PARAMETER_NAME = "method";
 
     /**
@@ -54,10 +55,10 @@ public abstract class AbstractMicroServlet  extends HttpServlet {
     }
 
     /**
-     * Get dispach parameter value.
+     * Get dispatch parameter value.
      *
-     * @param request a http request
-     * @return a value of dispatch parameter
+     * @param request HttpServletRequest
+     * @return String a value of dispatch parameter
      */
     protected String getDispachParameterValue(HttpServletRequest request) {
         return request.getParameter(DISPATCH_PARAMETER_NAME);

@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class RequestFormImpl implements RequestForm {
 
-    /** Holds a list of validation errors */
+    /** Holds a list of validation errors. */
     private List<ValidationError> errors = new ArrayList<ValidationError>();
 
     /**

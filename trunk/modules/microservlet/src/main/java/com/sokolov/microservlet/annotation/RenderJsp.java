@@ -11,6 +11,6 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface RenderJsp {
-    /** Holds path to JSP page */
+    /** Holds path to JSP page. */
     String page();
 }

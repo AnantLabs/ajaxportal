@@ -11,10 +11,10 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Retention (value = RetentionPolicy.RUNTIME)
 public @interface DispatchMethod {
-    
-    /** Holds dispatch value */
+
+    /** Holds dispatch value. */
     String value() default "";
 
-    /** Holds flag - Check register of a dispatch value or not */
+    /** Holds flag - Check register of a dispatch value or not. */
     boolean checkRegister() default false;
 }
