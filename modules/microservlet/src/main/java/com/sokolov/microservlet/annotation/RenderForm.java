@@ -13,13 +13,13 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Retention (value = RetentionPolicy.RUNTIME)
 public @interface RenderForm {
-    
-    /** Holds form bean name (defual value is "form") */
+
+    /** Holds form bean name (defual value is "form"). */
     String name() default "form";
 
-    /** Holds form bean class (required parameter) */
+    /** Holds form bean class (required parameter). */
     Class clazz();
 
-    /** Holds form bean scope (default scope is REQUEST) */
+    /** Holds form bean scope (default scope is REQUEST). */
     Scope scope() default Scope.REQUEST;
 }

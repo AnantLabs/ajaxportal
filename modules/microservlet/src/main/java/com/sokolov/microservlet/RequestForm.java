@@ -21,9 +21,9 @@ public interface RequestForm {
     void validate();
 
     /**
-     * Returns a list of validation errors
+     * Returns a list of validation errors.
      *
-     * @return a list of validation errors
+     * @return List<com.sokolov.microservlet.dto.ValidationError> a list of validation errors
      */
     List<com.sokolov.microservlet.dto.ValidationError> getErrors();
 }

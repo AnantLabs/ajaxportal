@@ -8,10 +8,10 @@ package com.sokolov.microservlet.dto;
  */
 public class ValidationError {
 
-    /** Holds message property */
+    /** Holds message property. */
     private String message;
 
-    /** Holds message property */    
+    /** Holds message property. */
     private String bundleKey;
 
     /**
@@ -31,7 +31,7 @@ public class ValidationError {
     /**
      * Getter for message property.
      *
-     * @return a value of message property
+     * @return String a value of message property
      */
     public String getMessage() {
         return message;
@@ -49,7 +49,7 @@ public class ValidationError {
     /**
      * Getter for bundleKey property.
      *
-     * @return a value of bundleKey property
+     * @return String a value of bundleKey property
      */
     public String getBundleKey() {
         return bundleKey;

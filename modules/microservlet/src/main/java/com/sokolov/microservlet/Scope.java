@@ -7,8 +7,8 @@ package com.sokolov.microservlet;
  * @version 1.0
  */
 public enum Scope {
-    /** Marks REQUEST scope of form bean */
+    /** Marks REQUEST scope of form bean. */
     REQUEST,
-    /** Marks SESSION scope of form bean */    
+    /** Marks SESSION scope of form bean. */
     SESSION
 }
