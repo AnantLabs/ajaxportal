@@ -1,0 +1,85 @@
+/*******************************************************************/
+/* AJAX Portal: LiveView version                                   */
+/* @author Helio Frota                                             */
+/* @version 1.0.4 Beta1 (03 Feb 2012)                              */
+/*******************************************************************/
+
+.standard .portlet,
+.standard .portletNotActive {
+    border: 1px solid #B6AD84;
+}
+
+.standard .portlet div.portletHeader .portletIcon,
+.standard .portletNotActive div.portletHeader .portletIcon {
+    background-image: url(../images/icon_window.gif);
+}
+
+.standard .portlet div.portletHeader,
+.standard .portletNotActive div.portletHeader {
+    color: white;
+    background-color: #238E23;
+    background-image: url(../images/background_lines.gif);
+}
+
+.standard .portlet div.portletHeader .changeStateButton,
+.standard .portletNotActive div.portletHeader .changeStateButton {
+    background-color: white;
+    border-left: 1px solid #147014;
+    border-top: 1px solid #147014;
+    border-right: 1px solid #147014;
+    border-bottom: 1px solid #238E23;
+}
+
+.standard .portlet div.portletContent,
+.standard .portletNotActive div.portletContent {
+    background-color: #B6AD84;
+}
+
+/* active **********************************************************/
+
+.standard .portlet div.portletHeader .changeStateButton {
+    background-image: url(../images/minimazed_gray.gif);
+}
+
+/* not active ******************************************************/
+
+.standard .portletNotActive div.portletHeader .changeStateButton {
+    background-image: url(../images/normal_gray.gif);
+}
+
+/*******************************************************************/
+
+.standard .draggable .portletHeader a .dragIcon {
+    background-image: url(../images/drag_white.gif);
+}
+
+/*******************************************************************/
+
+.standard .portlet .portletHeader a .helpButton,
+.standard .portletNotActive .portletHeader a .helpButton,
+.standard .editable .portletHeader a:hover .toolButton {
+    background-color: silver;
+
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.standard .editable .portletHeader a .toolButton {
+    background-image: url(../images/tool_white.gif);
+}
+
+.standard .editable .portletHeader a:hover .toolButton {
+    background-image: url(../images/tool_gray.gif);
+}
+
+.standard .portlet .portletHeader a .helpButton,
+.standard .portletNotActive .portletHeader a .helpButton {
+    background-image: url(../images/question_white.gif);
+}
+
+.standard .portlet .portletHeader a .helpButton,
+.standard .portletNotActive .portletHeader a .helpButton {
+    background-image: url(../images/question_gray.gif);
+}
