@@ -6,7 +6,7 @@
 
 .standard .portlet,
 .standard .portletNotActive {
-    border: 1px solid #B6AD84;
+    border: 1px solid #EADDA4;
 }
 
 .standard .portlet div.portletHeader .portletIcon,
@@ -32,7 +32,7 @@
 
 .standard .portlet div.portletContent,
 .standard .portletNotActive div.portletContent {
-    background-color: #B6AD84;
+    background-color: #EADDA4;
 }
 
 /* active **********************************************************/
