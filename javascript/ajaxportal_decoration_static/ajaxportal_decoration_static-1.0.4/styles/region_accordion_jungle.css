@@ -6,7 +6,7 @@
 
 .accordion .portlet,
 .accordion .portletNotActive {
-    border: 1px solid #B6AD84;
+    border: 1px solid #EADDA4;
 }
 
 .accordion .portlet div.portletHeader .portletIcon,
@@ -23,7 +23,7 @@
 
 .accordion .portlet div.portletContent,
 .accordion .portletNotActive div.portletContent {
-    background-color: #B6AD84;
+    background-color: #EADDA4;
 }
 
 /*******************************************************************/
