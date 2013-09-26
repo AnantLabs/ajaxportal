@@ -6,7 +6,7 @@
 
 <img src="http://ajaxportal.googlecode.com/svn/trunk/images/sergei_sokolov.jpg">
 
-I'm a lead software engineer with 18 years of development experience. My specialty is database and web development for business applications. Last 6 years I've been concentrated on the development under Java platform, though I had good experience in C, C++, C#, VB (VBScript), Perl and Flash (action script and animation) development. I had system architect role on my two last projects. I had deep experience in architecture documentation development. 
+I'm a lead software engineer with 21 years of development experience. My specialty is database and web development for business applications. Last 6 years I've been concentrated on the development under Java platform, though I had good experience in C, C++, C#, VB (VBScript), Perl and Flash (action script and animation) development. I had system architect role on my two last projects. I had deep experience in architecture documentation development. 
 
 == My books ==
 
