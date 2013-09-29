@@ -1,5 +1,5 @@
 #labels Featured
-=How works JavaScript API in Ajax Portal=
+=Ajax4all Library: How works JavaScript API in Ajax Portal=
 
 *Portal page* defines the layout and positions of each portlet on the portal page. Positions of each portlet may be changed by personalization settings when the page is loaded completely.
 
