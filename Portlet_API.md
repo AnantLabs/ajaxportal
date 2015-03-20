@@ -1,0 +1,113 @@
+# Portlet API #
+**Ajax Portal team proposes Portlet API which is based on** [MicroServlet MVC framework](http://sokolovbook.narod.ru/en/microservlet.html).
+
+Portlet API of Ajax Portal helps to develop Web application which can work as portlet (has portlet descriptor, implement portlet lifecycle, etc.). It means any portlet, which was developed by Portlet API of Ajax Portal, can be used as standard Web application.
+
+Current Portlet API implementation has some difference with JSR 286, but we try to follow JSR 286 in generally. We will propose a new JSR for Java community which will specify  portlets and portals of new generation.
+
+
+## Portal Core ##
+**TBD**
+## Portlet API: Lifecycle ##
+Portlet API uses the same lifecycle like MicroServlet MVC framework:
+  1. Restore form bean
+  1. Apply request values
+  1. Process validations
+  1. Invoke application
+  1. Render response
+
+First three phases support **form bean** creation or get **form bean** from session (for bean with SESSION scope), get parameter values from the request, validation of the parameter values.
+
+Invoke application phase executes **portlet code** in classic meaning.
+
+Render response phase support **view generation** which is based on JSP.
+## Portlet API ##
+Portlet API uses the following annotation which come from MicroServlet API:
+  * RenderForm - annotation defines class, scope, name for request form bean,
+  * RenderJsp - annotation defines render JSP.
+Portlet API creates the own implementation of RenderMode annotation. The annotation marks method which should be executed for portlet **render mode**.
+
+See example of Portlet API:
+```
+public class HelloWorldDispatchPortlet extends AbstractDispatchPortletServlet {
+
+    protected DemoFormExample getRequestForm(RenderRequest request) {
+        return (DemoFormExample) RequestFormUtil
+                .getRequestForm(((RenderRequestImpl)request)
+                        .getHttpServletRequest());
+    }
+
+    @RenderMode   // by default mode = PortletMode.VIEW
+    @RenderForm (name = "DemoFormExample",
+                 clazz = com.sokolov.microservlet.example.DemoFormExample.class,
+                 scope = Scope.SESSION)
+    @RenderJsp (page = "/page/demo.jsp")
+    public void doView(RenderRequest renderRequest,
+                       RenderResponse renderResponse)
+            throws PortletException, IOException {
+        DemoFormExample formExample = getRequestForm(renderRequest);
+        formExample.setParam1("Test");
+    }
+
+    @RenderMode (mode = PortletMode.EDIT)
+    public void doEdit(RenderRequest renderRequest,
+                       RenderResponse renderResponse)
+            throws PortletException, IOException {
+        PrintWriter out = renderResponse.getWriter();
+        out.println("EDIT mode.");
+    }
+
+    @RenderMode (mode = PortletMode.HELP)
+    public void doHelp(RenderRequest request,
+                       RenderResponse response)
+            throws PortletException, IOException {
+        PrintWriter out = response.getWriter();
+        out.println("HELP mode.");
+    }
+
+    @RenderMode (mode = PortletMode.CUSTOM,
+                 name = "HalfPage")
+    @RenderForm (name = "DemoFormExample",
+                 clazz = com.sokolov.microservlet.example.DemoFormExample.class)
+    public void doHalfPage(RenderRequest renderRequest,
+                           RenderResponse renderResponse)
+            throws PortletException, IOException {
+        PrintWriter out = renderResponse.getWriter();
+        out.println("HalfPage mode.");
+
+        DemoFormExample formExample = getRequestForm(renderRequest);
+        out.println("Param1 = " + formExample.getParam1());
+    }
+}
+```
+## Why do we use MicroServlet framework as base of Portlet API? ##
+The next example demonstrates typical code of the portlet (see below). The Portlet API uses the mechanism of getting of request parameters and **form bean** building. If you use Portlet API you can forget about "request.getParameter" in you code.
+```
+public class HelloWorldPortlet1 extends GenericPortlet {
+
+    public void doView(RenderRequest request, RenderResponse response)
+        throws PortletException, IOException{
+
+        String name = (String) request.getParameter("name");
+
+        PrintWriter writer = response.getWriter();
+        writer.write("My name is " + name);
+    }
+}
+```
+The next example demonstrates typical code of the portlet (see below). The Portlet API uses the mechanism of **JSP definition** and **view generation**. If you use Portlet API you can forget about "PortletRequestDispatcher" in you code.
+```
+public class HelloWorldPortlet2 extends GenericPortlet {
+   
+    public void doView(RenderRequest request, RenderResponse response)
+        throws PortletException, IOException {
+
+        String name = (String) request.getParameter("name");
+        request.setAttribute("name", name);
+
+        PortletRequestDispatcher dispatcher = 
+            getPortletContext().getRequestDispatcher("/pages/start.jsp");
+        dispatcher.include(request, response);
+    }
+}
+```

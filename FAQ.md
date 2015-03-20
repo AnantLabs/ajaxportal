@@ -1,0 +1,48 @@
+<h1>FAQ</h1>
+
+<b>How is Ajax used in Ajax Portal?</b>
+Usually the portal page is loaded without content of the portlet.
+The content for each portlet is loaded by Ajax Call, when the portal page is loaded completely.<br>
+Of course, the portal server can download a content of each portlet and put it in the portal page. The portal server puts the high-usage content in the cashe.<br>
+<br>
+<b>What is the principal difference between Ajax Portal and Classic Portal approaches?</b>
+
+<ul><li>Content of the portlets is loaded from the portlet application directly.<br>
+</li><li>Update of any portlet is done without reloading of the portal page. The update is supported by Ajax Call.<br>
+</li><li>It's possible to use standard Web applications as portlets for Ajax Portal.</li></ul>
+
+
+<b>Does Ajax Portal use JSR301 (Portlet Bridge)?</b>
+
+No, Portal Bridge is not required for Ajax Portal functionality. The portlet content and data are loaded by Ajax Calls from the same server (from the same application/portal application).<br>
+<br>
+<br>
+<b>Can I follow JSR286 while developing portlets?</b>
+
+Yes, I propose a portlet container based on MicroServlet framework. In general, this solution follows JSR286.<br>
+<br>
+<br>
+<b>How can I start Ajax Portal development?</b>
+
+It's a good idea to start Ajax Portal development from static version (container and portlet Live Views). You will add all required JavaScript and CSS files in the project and use them on each page of your application. The content on the page has to be divided in portlets. Container usage is optional.<br>
+<br>
+<br>
+<b>What service(s) is(are) required for Ajax Portal functioning?</b>
+
+Personalization Service is required for Ajax Portal functioning only. The service stores the state of each portal, page, container and portlet.<br>
+<br>
+<br>
+<b>Do I need allocated Ajax Portal Server?</b>
+
+Allocated Ajax Portal Server is not needed at the start of your Web application migration to the Ajax Portal Server. You can use JavaScript library on client side. Some services of Ajax Portal may be used as allocated Web applications.<br>
+<br>
+<br>
+<b>Can I use JavaScript library (e.g. jQuery) instead of Ajax Portal?</b>
+
+Yes, you can. In this case your application will use Ajax, but it will not be the Enterprise Portal.<br>
+Of course, you can implement all portal features (by Java Server part) and follow JSR 286. As a result, you will have another realization of portal.<br>
+<br>
+<br>
+<b>What is the easiest way to write portlets for Ajax Portal?</b>
+
+The easest way to write portlet for Ajax Portal is to use MicroServlet framework.

@@ -1,0 +1,149 @@
+# Ajax4all Library: How works JavaScript API in Ajax Portal #
+
+**Portal page** defines the layout and positions of each portlet on the portal page. Positions of each portlet may be changed by personalization settings when the page is loaded completely.
+
+## 1. Transformation of Portlets and Regions ##
+
+**Portlet** is defined by 
+
+&lt;B&gt;
+
+DIV
+
+Unknown end tag for &lt;/b&gt;
+
+ tag. Portlet should by marked by CSS markers (**portlet**, **portletNotActive**, **portletMaximized** and **portletHidden**), which define portlet state.
+
+Portlet can be decorated by:
+  1. JavaScript code on client side,
+  1. JSP or JSF (facelet) tag libraries on server side,
+It's possible to decorate portlet manually by HTML/XHTML code.
+
+Each portlet has the following parts:
+  1. **portlet header** contains icon, portlet title and behavior buttons. It's possible to hide portlet header by **noheader** CSS marker.
+  1. **portlet content** is a wrapper of real content of the portlet which is downloaded from portlet server.
+
+**Regions** help to defined layout of portal page. Region usage gives possibility to provide **Drag and Drop** effect for portlets (it's possible to move a portlet between regions in runtime mode. All changes are saved by Personalization Service of Ajax Portal. Regions define by **TD** tag of HTML table.
+
+The portal page with one Region and Portlet is presented on the picture 1 (see below).
+
+> <img src='http://ajaxportal.googlecode.com/svn/trunk/images/model.gif'>
+<blockquote>Picture 1. Model of portal page</blockquote></li></ul>
+
+The next picture represents the view of the start page of the MicroServlet demo in the browser and HTML code which build this view:<br>
+<br>
+<blockquote><img src='http://ajaxportal.googlecode.com/svn/trunk/images/transformation_example1.gif'>
+<blockquote>Picture 2. MicroServlet demo example</blockquote></blockquote>
+
+
+## 2. Transformation of the links ##
+
+Web application has simple link:
+
+```
+<a href="demo.action?method=list">Cancel</a>
+```
+
+Ajax Portal transform the link in (see example bellow) Ajax Call. The result of Ajax Call after new transformation will be injected in the portlet content wrapper.
+
+```
+<a href="javascript:ajaxCall('/microservlet_demo_users/demo.action?method=list', 'post', getCharset(), '', getTarget('link1'));" id="link1">Cancel</a>
+```
+
+The function getCharset() gets the charset which 1) definded by form (see acceptCharset attribute of the form object) 2) defined by document (see charset attribute of the document object).
+
+The function getTarget gets id of div HTML tag (content of portlet) with "portletContent" value in class attribute.
+
+## 3. Transformation of the form submit to Ajax Submit ##
+
+Ajax Submit is Ajax pattern. The idea is to polling form control and sending the data on the server by Ajax Call. The right way is to change prototype of all HTML form on portal page by the following script (see ajax4all\_submit.js <b>Ajax4All</b> library):
+
+```
+    if (typeof HTMLFormElement != "undefined") {
+        HTMLFormElement.prototype.submit = function executeSubmit() {
+            if ((!this.onsubmit) || this.onsubmit(arguments)) {
+                ajaxSubmit(this, getTarget(this));
+            }
+        }
+        HTMLFormElement.prototype.suportedAjaxSubmit = true;
+        HTMLFormElement.prototype.processControlsForAjaxSubmit = false;
+    }
+```
+
+For IE6.0 and IE7.0 the change of HTML form behavior is provided by manual definition of submit method:
+
+```
+        if (!form.suportedAjaxSubmit) {
+            try {
+                form.submit = function executeSubmit() {
+                    if ((!this.onsubmit) || this.onsubmit()) {
+                        ajaxSubmit(this, getTarget(this));
+                    }
+                }
+                form.suportedAjaxSubmit = true;
+            } catch (e) {}
+        }
+```
+
+For IE browser we have issue with Submit button, because it doesn't call <b>submit</b> method of HTML form. We fix the issue by creation of the copy of the submit button. The copy of  the submit button call <b>submit</b> method of HTML form.
+
+```
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].type == "submit") {
+                if (!isIE) {  
+                    elements[i].type = "button";
+                    elements[i].onclick = function() {
+                        this.form.submit();
+                    }
+                } else {
+                    var button = document.createElement("input");
+                    button.setAttribute("type", "button");
+                    if (elements[i].id) {  
+                        button.setAttribute("id", elements[i].id);
+                    } 
+                    if (elements[i].name) { 
+                        button.setAttribute("name", elements[i].name);
+                    }
+                    if (elements[i].style.cssText) { 
+                        button.setAttribute("style", elements[i].style.cssText);
+                    }
+                    if (elements[i].className) {   
+                        button.setAttribute("class", elements[i].className);
+                    }
+                    button.setAttribute("value", elements[i].value);
+                    button.setAttribute("onclick", function () { this.form.submit(); } );
+
+                    var parentNode = elements[i].parentNode;
+                    var oldSubmitButton = elements[i];    
+                    parentNode.insertBefore(button, elements[i]);
+                    parentNode.removeChild(oldSubmitButton);
+                }
+            }
+        }
+```
+
+## 4. Transformation of the script and style links ##
+
+All links of scripts and style will be moved from source of portlets in the header of the portal page. The link URLs will be transform in absolute URLs. The sources of the scripts and styles will be moved in header of the portal page.
+
+Example of portlet (see script and style declarations):
+
+```
+<html>
+<head>
+    <title>Examples</title>
+    <link rel="stylesheet" type="text/css" href="styles/common.css"/>
+    <!--[if lte IE 6]>
+        <link href="ie.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <style type="text/css">
+        ...
+    </style>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript">
+        ...  
+    </script>
+</head>
+<body>
+    ...
+```
